@@ -30,14 +30,13 @@ static String[] tokenizeText(String text, String model) {
 }
 
 // Eru gives all Valars a NE recognizer method
-static String[] findNamedEntity(String text, String model) {
-    String[] tokenizedText = tokenizeText(text);
+static String[] findNamedEntity(String[] tokenizedText, String model) {
     InputStream iS = new FileInputStream(model);
     TokenNameFinderModel namedEntityModel = new TokenNameFinderModel(iS);
     NameFinderME nameFinder = new NameFinderME(namedEntityModel);  
     Span[] nameSpans = nameFinder.find(tokenizedText);
-    String[] results = new String[nameSpans.length()];
-    for (int i = 0; i < nameSpans.length(); i++) {
+    String[] results = new String[nameSpans.length];
+    for (int i = 0; i < nameSpans.size(); i++) {
         results[i] = nameSpans[i].toString()+ "  " + tokenizedText[nameSpans[i].getStart()];
     }
     return results;
@@ -45,7 +44,8 @@ static String[] findNamedEntity(String text, String model) {
 
 
 String demoMail = loadText("resources/data/emails/scott-s/inbox/1.");
-String[] demo = findNamedEntity(demoMail, neModelFile);
-for (int i = 0; i < demo.length(); i++) {
+String[] tokenizedMail = tokenizeText(demoMail, tModelFile);
+String[] demo = findNamedEntity(tokenizedMail, neModelFile);
+for (int i = 0; i < demo.size(); i++) {
     println(demo[i]);
 }
