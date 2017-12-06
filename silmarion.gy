@@ -10,12 +10,15 @@ import opennlp.tools.util.Span;
 class Illuvatar {
     static void main(String[] args)  {
         println("Eä!");
-        String sentence = "Timothy just said this is an example on name entity recognition using
-        apache OpenNLP tools.";
+        String[] sentence = {"Timothy, Hugo Chavez and Hermes just said this is an example on name entity recognition using apache OpenNLP tools."};
         InputStream iS = new FileInputStream("resources/opennlp_models/en-ner-person.bin");
         TokenNameFinderModel model = new TokenNameFinderModel(iS);
         NameFinderME nameFinder = new NameFinderME(model);
-
+        Span nameSpans[] = nameFinder.find(sentence); 
+       
+      //Printing the spans of the names in the sentence 
+      for(Span s: nameSpans) 
+         System.out.println(s.toString());  
 
         // NameFinderME nameFinder = new NameFinderME();
     }
