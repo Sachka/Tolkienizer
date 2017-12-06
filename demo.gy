@@ -14,6 +14,7 @@ import opennlp.tools.util.Span;
 
 final String tModelFile = "resources/opennlp_models/en-token.bin";
 final String neModelFile = "resources/opennlp_models/en-ner-person.bin";
+final String demoMailFile = "resources/data/emails/scott-s/inbox/2.";
 
 // Eru gives any Valar a text loading method in Eä's charset UTF-8
 static String loadText(String fileName) throws IOException {
@@ -43,8 +44,8 @@ static String[] findNamedEntity(String[] tokenizedText, String model) {
 }
 
 
-String demoMail = loadText("resources/data/emails/scott-s/inbox/1.");
-String[] tokenizedMail = tokenizeText(demoMail, tModelFile);
+String testMail = loadText(demoMailFile);
+String[] tokenizedMail = tokenizeText(testMail, tModelFile);
 String[] demo = findNamedEntity(tokenizedMail, neModelFile);
 for (int i = 0; i < demo.size(); i++) {
     println(demo[i]);
