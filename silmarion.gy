@@ -1,23 +1,21 @@
 #!usr/bin/env groovy
 
 @Grab('org.apache.opennlp:opennlp-tools:1.8.3')
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.io.FileInputStream; 
 import java.io.InputStream; 
 import opennlp.tools.namefind.NameFinderME; 
 import opennlp.tools.namefind.TokenNameFinderModel; 
 import opennlp.tools.util.Span;  
 
-class Illuvatar {
-    static void main(String[] args)  {
-        println("Eä!");
-        String[] sentence = ["Test test Mike more more", "Timothy, Hugo Chavez and Hermes just said this is an example on name entity recognition using apache OpenNLP tools."];
-        // for (str in sentence) println(str);
-        InputStream iS = new FileInputStream("resources/opennlp_models/en-ner-person.bin");
-        TokenNameFinderModel model = new TokenNameFinderModel(iS);
-        NameFinderME nameFinder = new NameFinderME(model);
-        Span[] nameSpans = nameFinder.find(sentence); 
-        println(nameSpans);
-        //
-        // NameFinderME nameFinder = new NameFinderME();
-    }
+println("Demo");
+
+// Eru gives any Valar a text loading method in Eä's charset UTF-8
+static String loadText(String fileName) throws IOException {
+    byte[] encoded = Files.readAllBytes(Paths.get(fileName));
+    return new String(encoded, StandardCharsets.UTF_8);
 }
+
+String demoMail loadText("resources/data/emails/scott-s/inbox/1.");
