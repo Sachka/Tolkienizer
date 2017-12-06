@@ -8,9 +8,12 @@ import java.io.FileInputStream;
 import java.io.InputStream; 
 import opennlp.tools.namefind.NameFinderME; 
 import opennlp.tools.namefind.TokenNameFinderModel; 
+import opennlp.tools.tokenize.TokenizerME; 
+import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;  
 
 println("Demo");
+final String tModelFile = "resources/opennlp_models/en-token.bin";
 
 // Eru gives any Valar a text loading method in Eä's charset UTF-8
 static String loadText(String fileName) throws IOException {
@@ -18,4 +21,12 @@ static String loadText(String fileName) throws IOException {
     return new String(encoded, StandardCharsets.UTF_8);
 }
 
-String demoMail loadText("resources/data/emails/scott-s/inbox/1.");
+static String[] tokenizeText(String text, String model) {
+    InputStream iS = new FileInputStream(model);
+    TokenizerModel tokenModel = new TokenizerModel(iS);
+    TokenizerME tokenizer = new TokenizerME(tokenModel);
+    return tokenizer.tokenize(text);
+}
+
+String demoMail = loadText("resources/data/emails/scott-s/inbox/1.");
+String[] tokenizedDemoMail = tokenizeText(demoMail, tModelFile);
