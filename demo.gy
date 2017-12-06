@@ -12,8 +12,8 @@ import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;  
 
-println("Demo");
 final String tModelFile = "resources/opennlp_models/en-token.bin";
+final String neModelFile = "resources/opennlp_models/en-ner-person.bin";
 
 // Eru gives any Valar a text loading method in Eä's charset UTF-8
 static String loadText(String fileName) throws IOException {
@@ -21,6 +21,7 @@ static String loadText(String fileName) throws IOException {
     return new String(encoded, StandardCharsets.UTF_8);
 }
 
+// Eru gives all Valars a tokenizer tool
 static String[] tokenizeText(String text, String model) {
     InputStream iS = new FileInputStream(model);
     TokenizerModel tokenModel = new TokenizerModel(iS);
@@ -28,5 +29,23 @@ static String[] tokenizeText(String text, String model) {
     return tokenizer.tokenize(text);
 }
 
+// Eru gives all Valars a NE recognizer method
+static String[] findNamedEntity(String text, String model) {
+    String[] tokenizedText = tokenizeText(text);
+    InputStream iS = new FileInputStream(model);
+    TokenNameFinderModel namedEntityModel = new TokenNameFinderModel(iS);
+    NameFinderME nameFinder = new NameFinderME(namedEntityModel);  
+    Span[] nameSpans = nameFinder.find(tokenizedText);
+    String[] results = new String[nameSpans.length()];
+    for (int i = 0; i < nameSpans.length(); i++) {
+        results[i] = nameSpans[i].toString()+ "  " + tokenizedText[nameSpans[i].getStart()];
+    }
+    return results;
+}
+
+
 String demoMail = loadText("resources/data/emails/scott-s/inbox/1.");
-String[] tokenizedDemoMail = tokenizeText(demoMail, tModelFile);
+String[] demo = findNamedEntity(demoMail, neModelFile);
+for (int i = 0; i < demo.length(); i++) {
+    println(demo[i]);
+}
