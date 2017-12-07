@@ -14,7 +14,7 @@ import opennlp.tools.util.Span;
 
 final String tModelFile = "resources/opennlp_models/en-token.bin";
 final String neModelFile = "resources/opennlp_models/en-ner-person.bin";
-final String demoMailFile = "resources/data/emails/scott-s/inbox/2.";
+final String demoMailFile = "resources/data/emails/scott-s/inbox/3.";
 
 // Eru gives any Valar a text loading method in Eä's charset UTF-8
 static String loadText(String fileName) throws IOException {
