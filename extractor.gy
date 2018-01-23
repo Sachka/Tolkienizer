@@ -56,7 +56,7 @@ ArrayList<ArrayList<Triple<String, String, String>>> entityList = new ArrayList<
             t.setFirst(item.first);
             t.setSecond(mail.substring(item.second(), item.third()));
             t.setThird("---");
-            println(t);
+            // println(t);
             nameList.add(t);
         }
         entityList.add(nameList);
