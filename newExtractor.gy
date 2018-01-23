@@ -2,41 +2,74 @@
 package groovy
 @Grab ('edu.stanford.nlp:stanford-corenlp:3.8.0')
 @Grab ('edu.stanford.nlp:stanford-corenlp:3.8.0:models')
-@Grab ('org.slf4j:slf4j-log4j12:1.7.25')
-import edu.stanford.nlp.pipeline.*;
-import edu.stanford.nlp.util.CoreMap;
-import edu.stanford.nlp.trees.Tree;
-import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
-import edu.stanford.nlp.dcoref.CorefChain;
-import edu.stanford.nlp.semgraph.SemanticGraph;
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
-import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation;
-import edu.stanford.nlp.dcoref.CorefCoreAnnotations.CorefChainAnnotation;
-import java.util.*;
+@Grab ('org.slf4j:slf4j-log4j12:1.7.25') // for warnings
+import edu.stanford.nlp.pipeline.*
+import edu.stanford.nlp.util.CoreMap
+import edu.stanford.nlp.trees.Tree
+import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation
+import edu.stanford.nlp.dcoref.CorefChain
+import edu.stanford.nlp.semgraph.SemanticGraph
+import edu.stanford.nlp.ling.CoreLabel
+import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation
+import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation
+import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation
+import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation
+import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation
+import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation
+import edu.stanford.nlp.dcoref.CorefCoreAnnotations.CorefChainAnnotation
+import java.util.*
 
-Properties props = new Properties();
-props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
-StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-String text = "I want to ride my bicycle, Carlos Sagano want to ride my bike";
-Annotation document = new Annotation(text);
-pipeline.annotate(document);
-List<CoreMap> sentences = document.get(SentencesAnnotation.class);
-for(CoreMap sentence: sentences) {
-    for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
-    // this is the text of the token
-    String word = token.get(TextAnnotation.class);
-    // this is the POS tag of the token
-    String pos = token.get(PartOfSpeechAnnotation.class);
-    // this is the NER label of the token
-    String ne = token.get(NamedEntityTagAnnotation.class);
+props = new Properties()
+props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref")
+pipeline = new StanfordCoreNLP(props)
+text = "I want to ride my bicycle, Carlos Sagano want to ride my bike"
+document = new Annotation(text)
+pipeline.annotate(document)
+sentences = document.get(SentencesAnnotation)
+sudonizer = new Sudonizer(new File("./resources/places.txt"))
+
+for(sentence in sentences) {
+    for (token in sentence.get(TokensAnnotation)) {
+        // this is the text of the token
+        word = token.get(TextAnnotation.class)
+        // this is the POS tag of the token
+        pos = token.get(PartOfSpeechAnnotation.class)
+        // this is the NER label of the token
+        ne = token.get(NamedEntityTagAnnotation.class)
+        if (ne != "O") {
+            sudonizer.addEntityMapping(word)
+            word = sudonizer.getSudoMapped(word)
+        }
+        print "$word "
     }
-    Tree tree = sentence.get(TreeAnnotation.class);
-    SemanticGraph dependencies = sentence.get(CollapsedCCProcessedDependenciesAnnotation.class);
+    println ""
+    tree = sentence.get(TreeAnnotation)
+    dependencies = sentence.get(CollapsedCCProcessedDependenciesAnnotation)
 }
-Map<Integer, CorefChain> graph = document.get(CorefChainAnnotation.class);
+graph = document.get(CorefChainAnnotation)
 
+
+class Sudonizer {
+    def ne2tolkien = [:]
+    def tolkien2ne = [:]
+    def usableNames = []
+    
+    Sudonizer(File namesFile) {
+        usableNames = namesFile.readLines()
+    }
+    
+    void addEntityMapping(entity) {
+        def nextName = usableNames[0]
+        usableNames = usableNames[1..-1]
+        ne2tolkien[entity] = nextName
+        tolkien2ne[nextName] = entity
+    }
+    
+    String getSudoMapped(entity) {
+        return ne2tolkien[entity]
+    }
+     
+   String getEntityMapped(sudo) {
+       return tolkien2ne[sudo]
+   }
+}
