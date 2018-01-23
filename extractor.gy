@@ -1,5 +1,6 @@
 #!usr/bin/env groovy
 @Grab ('edu.stanford.nlp:stanford-corenlp:3.8.0')
+@Grab ('org.slf4j:slf4j-log4j12:1.7.25')
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -64,6 +65,14 @@ ArrayList<ArrayList<Triple<String, String, String>>> entityList = new ArrayList<
     return entityList
 }
 
+// This prints a mail (int) with tagged NE, from a list of mails, using a classifier to show NE tags
+static void printNEInMail(Integer mailNumber, ArrayList<String> mL, AbstractSequenceClassifier cl) {
+    if (mailNumber < mL.size()) println(cl.classifyWithInlineXML(mL.get(mailNumber)));
+    else println("Invalid mail number");
+}
+    
+
+
 // ITERATIVE PROGRAM
 
 // LOADING MAILS TO MEMORY
@@ -73,11 +82,9 @@ loadMailsToArray(corpusPath, mails);
 println(mails.size() + " mails loaded correctly.");
 
 // TEST STANFORD CORENLP
-println();
 String serializedClassifier = "./resources/stanford_corenlp/english.all.3class.distsim.crf.ser.gz";
 AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifier(serializedClassifier);
-println();
-List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails);
-println(NEList.size());
-println(mails.size());
+// List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails);
+// println(NEList.size()+ " mails analysed correctly.");
+printNEInMail(856, mails, classifier);
 
