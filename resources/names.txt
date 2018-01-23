@@ -1,4 +1,3 @@
-Name	Gender	Race	Other Names
 Adalbert Bolger	m	Hobbit		
 Adaldrida Bolger	f	Hobbit		
 Adalgar Bolger	m	Hobbit		

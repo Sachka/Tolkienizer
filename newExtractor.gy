@@ -1,8 +1,8 @@
 #!usr/bin/env groovy
-package groovy
+package Tolkienizer
 @Grab ('edu.stanford.nlp:stanford-corenlp:3.8.0')
 @Grab ('edu.stanford.nlp:stanford-corenlp:3.8.0:models')
-@Grab ('org.slf4j:slf4j-log4j12:1.7.25') // for warnings
+//@Grab ('org.slf4j:slf4j-log4j12:1.7.25') // for warnings
 import edu.stanford.nlp.pipeline.*
 import edu.stanford.nlp.pipeline.GenderAnnotator;
 import edu.stanford.nlp.pipeline.RegexNERAnnotator;
@@ -34,9 +34,11 @@ text = "I want to ride my bicycle, Scott Kennedy and john lennon want to ride my
 document = new Annotation(text)
 pipeline.annotate(document)
 sentences = document.get(SentencesAnnotation)
-sudonizer = new Sudonizer(new File("./resources/places.txt"))
+sudonizer = new PersonSudonizer(new File("./resources/names.txt"))
 
 for(sentence in sentences) {
+    def firstName
+    def lastName
     for (token in sentence.get(TokensAnnotation)) {
         // this is the text of the token
         word = token.get(TextAnnotation.class)
@@ -46,10 +48,17 @@ for(sentence in sentences) {
         ne = token.get(NamedEntityTagAnnotation.class)
 
         if (ne != "O") {
-            sudonizer.addEntityMapping(word)
-            word = sudonizer.getSudoMapped(word)
-        }
-        print "$word "
+            if (firstName == null) {
+                firstName = word
+            } else {
+                lastName = word
+                person = new PersonWrapper(gender:"m", firstName:firstName, lastName:lastName)
+                sudonized = sudonizer.addMalePerson(person)
+                print "$sudonized.firstName $sudonized.lastName "
+                firstName = null
+                lastName = null
+            }
+        } else print "$word "
     }
     println ""
     tree = sentence.get(TreeAnnotation)
@@ -61,29 +70,3 @@ PrintWriter out = new PrintWriter(System.out)
 pipeline.conllPrint(document, w)
 pipeline.prettyPrint(document, out);
 pipeline.run()
-
-
-class Sudonizer {
-    def ne2tolkien = [:]
-    def tolkien2ne = [:]
-    def usableNames = []
-    
-    Sudonizer(File namesFile) {
-        usableNames = namesFile.readLines()
-    }
-    
-    void addEntityMapping(entity) {
-        def nextName = usableNames[0]
-        usableNames = usableNames[1..-1]
-        ne2tolkien[entity] = nextName
-        tolkien2ne[nextName] = entity
-    }
-    
-    String getSudoMapped(entity) {
-        return ne2tolkien[entity]
-    }
-     
-   String getEntityMapped(sudo) {
-       return tolkien2ne[sudo]
-   }
-}

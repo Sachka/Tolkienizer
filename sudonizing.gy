@@ -1,0 +1,101 @@
+package Tolkienizer
+
+void main() {
+	;
+}
+
+class Sudonizer {
+    def ne2tolkien = [:]
+    def tolkien2ne = [:]
+    def usableNames = []
+    
+    Sudonizer(File namesFile) {
+        usableNames = namesFile.readLines()
+    }
+    
+    void addEntityMapping(entity) {
+        def nextName = usableNames[0]
+        usableNames = usableNames[1..-1]
+        ne2tolkien[entity] = nextName
+        tolkien2ne[nextName] = entity
+    }
+    
+    String getSudoMapped(entity) {
+        return ne2tolkien[entity]
+    }
+     
+   String getEntityMapped(sudo) {
+       return tolkien2ne[sudo]
+   }
+}
+
+class PersonWrapper {
+	def gender
+	def firstName
+	def lastName
+}
+
+class PersonSudonizer {
+	def persons = []
+	def person2Tolkienkin = [:]
+	def tolkienkin2person = [:]
+	def firstNameMapper = [:]
+	def lastNameMapper = [:]
+	def usableFemaleFirstNames = []
+	def usableFemaleLastNames = []
+	def usableMaleFirstNames = []
+	def usableMaleLastNames = []
+	
+	PersonSudonizer(mappingFile) {
+		def mappings = mappingFile.readLines()
+		for (femaleName in  mappings.findAll({it.split("\t")[1] == "f"})) {
+			def id = femaleName.split("\t")
+			if (id[0].split(" ").length > 1)  {
+				def (firstName, lastName) = id[0].split(" ")
+				usableFemaleFirstNames << firstName
+				usableFemaleLastNames << lastName
+			} else {
+				usableFemaleFirstNames << id[0]
+			}
+		}
+		for (maleName in  mappings.findAll({it.split("\t")[1] == "m"})) {
+			def id = maleName.split("\t")
+			if (id[0].split(" ").length > 1)  {
+				def (firstName, lastName) = id[0].split(" ")
+				usableMaleFirstNames << firstName
+				usableMaleLastNames << lastName
+			} else {
+				usableMaleFirstNames << id[0]
+			}
+		}
+	}
+	
+	def addMalePerson(person) {
+		persons << person
+		def sudonized = new PersonWrapper(gender : person.gender, firstName : getMaleFirstNameFor(person.firstName), lastName: getMaleLastNameFor(person.lastName))
+		person2Tolkienkin[person] = sudonized
+		tolkienkin2person[sudonized] = person
+		return sudonized
+	}
+	
+	def getMaleFirstNameFor(nonsudo) {
+		if (firstNameMapper[nonsudo] != null) {
+			return firstNameMapper[nonsudo]
+		}
+		def nextName = usableMaleFirstNames[0]
+		usableMaleFirstNames = usableMaleFirstNames[1..-1]
+		firstNameMapper[nonsudo] = nextName
+		return nextName
+	}
+	
+	def getMaleLastNameFor(nonsudo) {
+		if (lastNameMapper[nonsudo] != null) {
+			return lastNameMapper[nonsudo]
+		}
+		def nextName = usableMaleLastNames[0]
+		usableMaleLastNames = usableMaleLastNames[1..-1]
+		lastNameMapper[nonsudo] = nextName
+		return nextName
+	}
+	
+}
