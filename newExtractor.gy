@@ -22,7 +22,7 @@ import java.util.*;
 Properties props = new Properties();
 props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
 StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-String text = "I want to ride my bicicle, Carlos Sagano want to ride my bike";
+String text = "I want to ride my bicycle, Carlos Sagano want to ride my bike";
 Annotation document = new Annotation(text);
 pipeline.annotate(document);
 List<CoreMap> sentences = document.get(SentencesAnnotation.class);
