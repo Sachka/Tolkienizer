@@ -20,9 +20,12 @@ import edu.stanford.nlp.dcoref.CorefCoreAnnotations.CorefChainAnnotation
 import java.util.*
 
 props = new Properties()
-props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref")
+props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, regexner, gender")
+props.setProperty("gender.maleNamesFile","edu/stanford/nlp/models/gender/male_first_names.txt");
+props.setProperty("gender.femaleNamesFile","edu/stanford/nlp/models/gender/female_first_names.txt");
+props.setProperty("regexner.mappings", "edu/stanford/nlp/models/regexner/type_map_clean");
 pipeline = new StanfordCoreNLP(props)
-text = "I want to ride my bicycle, Carlos Sagano want to ride my bike"
+text = "I want to ride my bicycle, Carlos Sagano wants to ride my bike"
 document = new Annotation(text)
 pipeline.annotate(document)
 sentences = document.get(SentencesAnnotation)
