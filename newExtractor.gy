@@ -22,6 +22,7 @@ import edu.stanford.nlp.dcoref.CorefCoreAnnotations.CorefChainAnnotation
 import java.util.*
 import java.io.Writer
 import java.io.FileWriter
+import java.io.PrintWriter
 
 props = new Properties()
 props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, regexner, gender")
@@ -56,7 +57,9 @@ for(sentence in sentences) {
 }
 graph = document.get(CorefChainAnnotation)
 Writer w = new FileWriter("./out")
+PrintWriter out = new PrintWriter(System.out)
 pipeline.conllPrint(document, w)
+pipeline.prettyPrint(document, out);
 pipeline.run()
 
 
