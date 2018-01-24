@@ -20,11 +20,11 @@ class Sudonizer {
         tolkien2ne[nextName] = entity
     }
     
-    String getSudoMapped(entity) {
+   	def getSudoMapped(entity) {
         return ne2tolkien[entity]
     }
      
-   String getEntityMapped(sudo) {
+   def getEntityMapped(sudo) {
        return tolkien2ne[sudo]
    }
 }
@@ -68,6 +68,39 @@ class PersonSudonizer {
 				usableMaleFirstNames << id[0]
 			}
 		}
+	}
+	
+	def addPerson(person) {
+		if (person.gender == "f") return addFemalePerson(person)
+		return addMalePerson(person)
+	}
+	
+	def addFemalePerson(person) {
+		persons << person
+		def sudonized = new PersonWrapper(gender : person.gender, firstName : getFemaleFirstNameFor(person.firstName), lastName: getFemaleLastNameFor(person.lastName))
+		person2Tolkienkin[person] = sudonized
+		tolkienkin2person[sudonized] = person
+		return sudonized
+	}
+	
+	def getFemaleFirstNameFor(nonsudo) {
+		if (firstNameMapper[nonsudo] != null) {
+			return firstNameMapper[nonsudo]
+		}
+		def nextName = usableFemaleFirstNames[0]
+		usableFemaleFirstNames = usableFemaleFirstNames[1..-1]
+		firstNameMapper[nonsudo] = nextName
+		return nextName
+	}
+	
+	def getFemaleLastNameFor(nonsudo) {
+		if (lastNameMapper[nonsudo] != null) {
+			return lastNameMapper[nonsudo]
+		}
+		def nextName = usableFemaleLastNames[0]
+		usableFemaleLastNames = usableFemaleLastNames[1..-1]
+		lastNameMapper[nonsudo] = nextName
+		return nextName
 	}
 	
 	def addMalePerson(person) {

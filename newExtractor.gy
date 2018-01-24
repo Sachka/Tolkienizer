@@ -53,7 +53,7 @@ for(sentence in sentences) {
             } else {
                 lastName = word
                 person = new PersonWrapper(gender:"m", firstName:firstName, lastName:lastName)
-                sudonized = sudonizer.addMalePerson(person)
+                sudonized = sudonizer.addPerson(person)
                 print "$sudonized.firstName $sudonized.lastName "
                 firstName = null
                 lastName = null
