@@ -1,1736 +1,1374 @@
-Abyss
-Tarlang's Neck
-Achad Tarlang 
-Adorn
-Adurant
-Aelin-uial
-Aeluin
-Tarn Aeluin
-Afros
-Agar
-Gwathló
-Agathurush
-River Greyflood
-Glittering Caves
-Aglarond
-Pass of Aglon
-Aglon
-Akallabêth
-Atlantë
-Aldalómë
-Aldburg
-Isle of Almaren 
-Alqualondë
-Aman
-Fangorn Forest
-Ambaróna
-Mount Doom
-Amon Amarth
-Amon Anwar
-Halifirien
-Amon Darthir
-Amon Dîn
-Amon Ereb
-Amon Ethir
-Amon Gwareth
-Amon Hen
-Amon Lanc
-Dol Guldur
-Amon Lhaw
-Amon Obel
-Amon Rûdh
-Weathertop
-Amon Sûl
-Taniquetil
-Amon Uilos
-Anach
-Pass of Anach
-Númenor
-Anadûnê 
-Aman
-Ancient West 
-Anfalas
-Andafalassë
-Langstrand
-Númenor
-Andor
-Andram
-Andrast
-Andrath
-Caves of Androth 
-River of Anduin
-Andúne Pelo
-West Fence
-Andúnië
-Andustar
-Anfalas
-Anfauglith
-Angband
-Angamando 
-Angband
-Anghabar
-Realm of Angmar
-Angmar
-Isen
-Angren
-River Isen
-Isengard
-Angrenost
-Gate of the Noldor
-Annon-in-Gelydh
-Annúminas
-Anórien
-Antaro
-Araman
-Arandor
-Kingsland
-Archet
-Arda
-Ard-galen
-Argonath
-Armenelos
-Arnach
-Lossarnach
-Arnor
-Aros
-River of Aros
-Arossiach
-Arthedain
-Gondor
-Arthor na Challonnas
-Arnor
-Arthor na Forlonnas
-Arthórien
-Arvernien
-Ascar
-River of Ascar
-Ered Lithui
-Ash Mountains
-Astulat
-Númenor
-Atalantë
-Fords of Isen
-Athrad Angren
-Avallónë
-Avathar
-Dimrill Dale
-Azanulbizar
-Bag End
-Bagshot Row
-Isle of Balar
-Balar
-Bamfurlong
-Maggot's Farm
-Fanuidhol
-Bandushathûr
-Cloudyhead
-House of Ransom
-Bar-en-Danwedh
-House of Ransom
-Bar-en-Nibin-noeg
-Ras Mewrim
-Bar-in-Mŷl‎
-Bar Erib
+Deeping-road
+Ened
+Dol Baran
+Back-door
+River Thalos
+Old Road
+Trann
+Huts of the raft-elves
+Side-door
+Udul
+East Bight
+Lake-town
+North Gate
+Kelos
+Kingdom under the Mountain
+The Red Mountains
+Everholt
+Tower of Ringil
+Hyarmentir
 Bar-erib
-Barad-dûr
-Barad Eithel
-Barad Nimras
-Baranduin
-Brandywine River
-Caradhras
-Barazinbar
-Redhorn
-Barrow-downs
-Barrowfield
-Battle Pit
-Dagorlad
-Battle Plain
-Bay of Balar
-Bay of Belfalas
-Bay of Andúnië
-Bay of Eldamar
-Bay of Eldanna
-Bay of Rómenna
-Belegaer
-Belegost
-Beleriand
-Belfalas
-Bent Seas
-Beorn's Hall
-Beorn's House
-Bindbole Wood
-Bindbale Wood
-Nimbrethil
-Birchwoods of Nimbrethil
-Black Crack
-Black Gate
-Morannon
-Mordor
-Black Land
-Moria
-Black Pit
-Black Pits
-Morthond
-Blackroot
-Morthond River 
-Aman
-Blessed Realm
-Blue Mountains
-Bombadil's House
-Bonfire Glade
-Astulat
-Bony ridge
-The Bounds
-Branda-nîn
-Brandywine River
-Brandywine Bridge
-Bridge of Stonebows
-Bree
-Bree-hill
-Bree Hill
-Bree-land
-Breredon
-Brethil
-Bridge of Esgalduin
-Last Bridge
-Bridge of Mitheithel
-Brandywine Bridge
-Bridge of Stonebows
-Bridgefields
-Brilthor
-River Brilthor
-Ford of Brithiach
+Cirith Ninniach
+Ramdal
 Brithiach
-Brithombar
-Brithon
-River Brithon
-Brockenbores
-Brodda's hall
-Brown Lands
-Bruinen
-River Loudwater
-Buck Hill
-Buckland
-Buckland Gate
-Buckland Road
-Bucklebury
-Bucklebury Ferry
-Bucklebury Ford
-Budge Ford
-Ford
-Budgeford Village
-Fanuidhol
-Bundushathûr
-Cloudyhead
-Bywater
-Bywater Pool
-Bywater Road
-Cabed-en-Aras
-Cabed Naeramarth
-Cair Andros
-Calacirya
+Bamfurlong
+South Road of Eriador
+Spring of Silverlode 
+Avallónë
+Arda
+River of Little Gelion
+Caves of Androth 
+Umbar
+Dead Marshes
+Gladden Fields
+Sûthburg
+Morannon
+Alqualondë
 Calacirian
+Coldfells
+Helm's Gate
+Almaren
+River Lhûn 
+March of Maedhros
+Greylin
+Ered Nimrais
+Tower Hills
+River Sernui
+Isengard
+Brilthor
+Ilmarin
+Bay of Eldanna
+Hírilorn
+South Road
+The Riddermark
+Stronghold of Udûn
+Nobottle
+Duilwen
+White Downs
+Encircling Mountains
+Inland Sea
+Deeping-stream
+Long Cleeve
+Hill of Guard
+Stair Falls
+Nísinen
+Taur-en-Faroth
+Old Guesthouse
+North Cape
+Staddle
+Hyarastorni
+North Farthing
+Lockholes at Michael Delving 
+Haunted Pass
+House of the Hundred Chimneys
+Amon Uilos
+Elerrína
+Sea of Núrnen
+Ered Mithrin
+Ringil
 Calembel
-Calenardhon
-Calenhad
-Calmindon
-Cape Balar
-Andrast
-Cape of Andrast
-Forochel
-Cape of Forochel
+Rivil's Well
+Underharrow
+Gorge of Aglon
+Wetwang
+Evereven
+Nan Curunír
+Mountains of Lune
+Celon River
+Caves of Androth
+Realm of Angmar
+Argonath
+Forest of Region
+Nunduinë
+Haudh-en-Nirnaeth
+Durin's Bridge
+Doors of Night
 Carach Angren
-Isenmouthe
-Caradhras
-Redhorn
-Caragdûr
-Caras Galadhon
-Carchost
-Cardolan
-Carn Dûm
+River Anduin 
+Kings' Norbury 
+Nan Elmoth
+Amon Lhaw
+House of Oromë
+Halls of Aulë
+Sirith
+Woods of Oromë
+Sauron's Road
+Withywindle
+Calenhad
+Great Smials
+Dor Daedeloth
+Dol Tarlang
+Withered Wold
+River Poros
+Bandushathûr
+First Deep
+Ered Lithui
+Cape Balar
+Armenelos
+Dorwinion
+Andustar
+Oromet
+Dor Dínen
+Meduseld
+Falls of Rauros
+Ossiriand
+Bay of Belfalas
+West Pass
+Far Shore
+Wells of Ivrin
 Carnen
 River Redwater
-Carrock
-Causeway Forts
-Glittering Caves
-Caverns of Helm's Deep
-Aglarond
-Nargothrond
-Caverns of Narog
-Caverns of the Oaritsi
-Androth
-Caves of Androth
-Menegroth
-Caves of Menegroth
-River Running
-Celduin
-Celebdil
-Silvertine
-Celebrant
-River Silverlode
-Celebros
-River Celebros
-Celon
-Celon River
-Celos
-Celos River
-Central Highlands
-Cerin Amroth
-Chamber of Mazarbul
-Chamber of Records
-Cracks of Doom
-Chambers of Fire
-Sammath Naur
-Chetwood
-Qerkaringa
-Chill Gulf
-Ciril
-Ciril River
-Cirith Dúath
-High Pass
-Cirith Forn en Andrath
-Cirith Gorgor
-Cirith Ninniach
-Rainbow Cleft
-Cirith Thoronath
-Cirith Ungol
-Osgiliath
-Citadel of Stars
-Umbar
-City of the Corsairs
-Fanuidhol
-Cloudyhead
-Cobas Haven
-Bay of Belfalas
-Côf Belfalas 
-Coldfells
-Combe
-Field of Cormallen
-Cormallen
-Ezellohar
-Corollairë
-Ezellohar
-Coron Oiolairë
-Court of the Fountain in Minas Tirith
-Court of the Fountain
-Cracks of Doom
-Crickhollow
-Crissaegrim
-Cirith Thoronath
-Cristhorn
-Crossings of the Taeglin
-Crossings of Teiglin
-Cross-roads
-Cross Roads of the Fallen King
-Cuiviénen
-Cûl Bîn
-Cûl Veleg
-Cûm-nan-Arasaith
-Mound of Avarice
-Dagorlad
-Dale
-Dark Door
-Dark Gate
-Dark Land
-Dark Lands of Middle-earth
-Dark Mountains
-Mountains of Mirkwood
-Dead Marshes
-Fornost Erain
-Deadmen's Dike
-Death Down
-Aman
-Deathless Lands
-Eressëa
-Helm's Deep
-Deeping
-Deephallow
-Deeping-coomb
-Deeping Coomb
-Deeping-road
-Deeping-stream
-Deeping Stream
-Deeping Wall
-Cabed-en-Aras
-Deer's Leap
-Taur-nu-Fuin
-Deldúwath
-Derndingle
-Desert of Lostladen
-Desolation of the Dragon
-Desolation of Smaug
-Desolation of the Morannon
-Dimbar
-Dimholt
-Dimrill Dale
-Great Gates
-Dimrill Gate
-Dimrill Stair
-Dimrost
-Dingle
-Withywindle Valley
-Dol Amroth
-Dol Baran
-Dol Guldur
-Dol Tarlang
-Dome of Stars
-Tower of the Stone
-Door of Night
-Doors of Night
-Doors of Durin
-Hollin Gate
-Dor Caranthir
-Thargelion
-Dor-Cúarthol
-Dor Daedeloth
-Dor Daidelos
-Dor Dínen
-Dor-en-Ernil
-Dor Firn-i-Guinar
-Land of the Dead that Live
-Dor-lómin
-Anfauglith
-Dor-Nu-Fauglith
-Doriath
-Dorthonion
-Dorwinion
-Barrow-downs
-Downlands
-The Drowns
-Drowns
-Drengist
-Drúadan Forest
-Drúwaith Iaur
-Dry River
-Duilwen
-Nan Dungortheb
-Dungortheb
-Dunharrow
-Dúnharg
-Dunland
-Durin's Bridge
-Durin's Tower
-Durthang
-Dwaling
-Dwarf-road of Beleriand
-Dwarf-Road
-Dwarrowdelf
-Khazad-dûm
-Dwimorberg
-Dwimordene
-Lórien
-Eagles' Eyrie
-East Beleriand
-East Bight
-Eastemnet
-East Emnet
-Eastern Eriador
-Eastfarthing
-East Farthing
-Great Gates
-East-gate
-East-lands
-East Lórien
-Buckland
-East March
-East Wall of Rohan
-Eastfold
-Fangorn Forest
-Eastwood
-Echad i Sedryn
-Bar-en-Dunwedh
-Ered Lómin
-Echoing Hills 
-Echoriad
-Echoriath
-Edge of the Wild
-Edhellond
-Edoras
-Egladil
-Eglador
-Doriath
-Eglamar
-Eglarest
-Eilenach
-Eilenaer
-Halifirien
-Eithel Ivrin
-Eithel Nínui
-Eithel Sirion
-Ekkaia
-Eldalondë
-Eldalondë the Green
-Eldamar
-Númenor
-Elennanórê
-Elerrína
-Taniquetil
-Elostirion
-Elros' Tower
-Elvenhome
-Calacirian
-Eressêa
-Elwing's tower
-Emerië
-Emyn Arnen
-Emyn Beraid
-Tower Hills
-Emyn Duir
-Mountains of Mirkwood
-Emyn Eglain
-Emyn Muil
-Emyn-nu-Fuin
-Mountains of Mirkwood
-Emyn Uial
-Hills of Evendim
-Enchanted Isles
-Enchanted River
-Encircling Mountains
-Echoriath
-Ekkaia
-Encircling Sea
-Endless Stair
-Endor
-Middle-earth
-Ened
-Enedwaith
-Entwade
-Entwash
-River Entwash
-Entwash Vale
-Entwood
-The Éothéod
-Éothéod
-Ephel Brandir
-Ephel Dúath
-Lonely Mountain
-Erebor
-Erech
-Iron Mountains
-Ered Engrin
-Ered Gorgoroth
-Ered Lindon
-Ered Luin
-Ered Lithui
-Ered Lómin
-Grey Mountains
-Ered Mithrin
-White Mountains
-Ered Nimrais
-Ered Wethrin
-Eregion
-Erelas
-White House of Erendis
-Erendis
-Tol Eressëa
-Eressëa
-Eriador
-Erui
-Firienholt
-Eryn Fuir
-Mirkwood
-Eryn Galen
-Greenwood the Great
-Mirkwood
-Eryn Vorn
-Greenwood the Great
-Esgalduin
-Esgalduin
-Lake-town
-Esgaroth
-Estolad
-Ethir Anduin
-Ethraid Engrin
-Fords of Isen
-Ethring
-Ettendales
-Ettenmoors
-Evereven
-Valinor
-Everholt
-Firien Wood
-Evernight
-Shadowy Seas
-Ezellohar
-Falas
-Falls of Esgalduin
-Eithel Ivrin
-Falls of Irvin
-Rauros
-Falls of Rauros
-Falls of Sirion
-Fangorn Forest
-Fanuidhol
-Cloudyhead
-Far Downs
-Far Harad
-Haerast
-Far Shore
-Aman
-Far West
-Fôs' Almir
-Faskalan
-Fôs' Almir
-Faskala-númen
-Fen Hollen
-Fen of Serech
-Fenmarch
-Fens of Sirion
-Aeluin-uial
-Ferry Lane
-Field of Celebrant
-Field of Cormallen
-Fingolfin's Cairn
-Firienholt
-Firienholt
-Firien Wood
-First Deep
-First Hall
-Firth of Drengist
-Firth of Rómenna
-Foen
-Folde
-Ford of Brithiach
-Brithiach
-Ford of Bruinen
-Sarn Athrad
-Ford of Stones 
-Fords of Isen
-Forest Gate
-Brethil
-Forest of Brethil
-Forest of Neldoreth
-Forest of Region
-Forest River
-Forest Road
-Forgotten Villages
-Forlindon
-Forlond
-Formenos
-Amon Anwar
-Fornarthan
-Fornost Erain
-Forochel
-Lands of Forodwaith
-Forodwaith
-Forostar
-The Forsaken Inn
-Forsaken Inn
-Fôs' Almir
-Eithel Nínui
-Fountain of Tinúviel
-Fox Downs
-Framsburg
-Frogmorton
-Front Gate
-Front Porch
-Belegost
-Gabilgathod
-Gamwich
-Gap of Calenardhon
-Gap of Rohan
-Gardens of Lórien
-Dark Door
-Gate of the Dead
-Gate of the Noldor
-Annon-In-Gadydh
-Gate Stream
-Sirannon
-Gates of Morning
-Gates of Sirion
-Gelion
-Gilrain
-Ginglith
-Girdle of Arda
-Girdle of Melian
-Girdley Island
-Gladden Fields
-Gladden River
-Glanduin
-Mering Stream
-Glanhír
-Glithui
-Glittering Caves
-Aglarond
-Goblin-gate
-Back-door
-Goblin-town
-Golden Gates
-Golden Wood
-Lórien
-Gollum's Lake
-Gondolin
-Gondor
-Swans of Gorbelgod
-Gorbelgod
-Pass of Aglon
-Gorge of Aglon
-Ered Gorgoroth
-Gorgoroth
-Plateau of Gorgoroth
-East Road
-Great East Road
-Swanfleet
-Great Fens
-Great Gulf
-Great Hall of Thráin
-Great Lakes
-Great Lands
-Middle-earth
-Great Mound
-Haudh-en-Ndengin
-Great Plains
-Great Rift
-Anduin
-Great River
-Great Shelf
-Eagles' Eyrie 
-Great Smials
-Great Southern Forests
-Great West Road
-Great Willow
-Greater Gelion
-Green Dragon
-Green Hill Country
-Green Hills
-Pinnath Gelin
-Green Hills
-Greenfields
-Greenholm
-Greenway
-Mirkwood
-Greenwood the Great
-Grey Havens
-Mithlond
-Grey Mountains
-Ancient Grey Mountains
-Grey Wood
-Greyflood
-River Gwathlo
-Greylin
-Grinding Ice
-Helcaraxë
-Grindwall
-Gruir
-Talath Dirnen
-Guarded Plain
-Gulf of Lune
-Gulf of Lhûn
-Gundabad
-Gwathló
-River of Gwathló
-Gwathir
-Greywood
-Hadhodrond
-Haeren
-Haerast
-Amon Anwar
-Halifirien
-Brodda's hall
-Hall of Brodda
-Hall of Fire
-Mansions of Aulë
-Halls of Aulë
-Khazad-dûm
-Halls of Durin
-Halls of Mandos
-Hanstovánen
-Harad
-Harad Road
-Hardbottle
-Harlindon
-Harlond in Gondor
-Harlond in Lindon
-Harnen
-River Harner
-South Gondor
-Harondor
-Harrowdale
-Haudh-en-Elleth
-Hill of the Slain
-Haudh-en-Ndengin
-Hill of the Slain
-Haudh-en-Nirnaeth
-Haudh in Gwanûr
-Dwimorberg
-Haunted Mountain
-Cirith Gorgor
-Haunted Pass
-Avallónë
-Haven of the Eldar
-Haven of the Swans
-Alqualondë
-Grey Havens
-Havens of Mithlond
-Mouths of Sirion
-Havens of Sirion
-Umbar
-Haven of Umbar
-Buckland Gate
-Hay Gate
-Haysend
-Heats of the South
-The Hedge
-Helcar
-Sea of Helcar
-Helcaraxë
-Helevorn
-Lake Helevorn
-Helm's Deep
-Helm's Dike
-Helm's Gate
-Henneth Annûn
-Hidden Ferries
-Hidden Way
-Court of the Fountain in Minas Tirith
-High Court
-Taur-en-Faroth
-High Faroth 
 High Hay
-The Hedge
-High Pass
-Hildórien
-Amon Anwar
-Hill of Awe
-Halifirien
-Hill of Guard
-Amon Lhaw
-Hill of Hearing
-Hill of Himring
-Taniquetil
-Hill of Ilmarin
-Hill of Oromet
-Amon Hen
-Hill of Seeing
-Amon Ethir
-Hill of Spies
-Amon Lhaw
-Hill of the Ear
-Amon Hen
-Hill of the Eye
-The Hill
-Emyn Eglain
-Hills of Eglamar
-Hills of Evendim
-Emyn Uial
-Hills of Scary
-Himlad
-Himring
-Hírilorn
-Hithlum
-Hisilómë
-Misty Mountains
-Hithaeglir
-Hither Lands
-Hither Shore
-Nevrast
-Hithlum
-Hoarwell
-River Mitheithel
-Hobbiton
-Hobbiton Hill
-The Hill
-Hobbiton Road
-Hollin
-Eregion
-Doors of Durin
-Hollin Gate
-West-door
-Hollin Ridge
-Hornburg
-Hornrock
-House of Oromë
-House of the Hundred Chimneys
-House of the Kings
-House of the Stewards
-House of Tulkas
-Houses of Healing
-Halls of Mandos
-House of the Dead
-Huts of the raft-elves
-Hyarastorni
-Hyarmentir
-Hyarnustar
-Hyarrostar
-Iant Iaur
-Icebay of Forochel
-Ice of the North
-Helcaraxë 
-Idril's secret way
-Trann
-i Drann
-The Shire
-Illuin
-Ilmarin
-Imlad Morgul
-Morgul Vale 
-Rivendell
-Imladris
-Imloth Melui
-Imrath Gondraith
-Stonewain Valley 
-Inner Seas
-Sea of Rhûn
-Inland Sea
-Sea of Helcar
-Inland Sea of Helcar
-Írensaga
-Angband
-Iron Fortress 
-Iron Hills
-Iron Mountains
-Isen
-Isengard
-Isenmouthe
-Ishmalog
-Almaren
-Isle of Almaren
-Isle of Balar
-Isle of Elenna
-Tol Eressëa
-Isle of Eressëa
-Meneltarma
-Isle of Meneltarma
-Tol-in-Gaurhoth
-Isle of Werewolves
-Isles of the West
-Aman
-Ithilien
-Pools of Ivrin
-Ivrin
-Eithel Irvin 
-Ivrin's Well
-Ivy Bush
-Kalormë
-Rivendell
-Karningul
-Celos
-Kelos
-Khand
-Moria
-Khazad-dûm
-Mirrormere
-Kheled-zâram
-Kibil-nâla
-Spring of Silverlode 
-Kingdom of the South
-Gondor 
-Kingdom under the Mountain
-Erebor 
-King's Court
-King's House
-Kingsland
-Arandor in Númenor 
-Arnor
-Kingsland 
-Fornost Erain
-Kings' Norbury 
-Ciril
-Kiril
-Cirith Ungol
-Kirith Ungol
-Kôr
-Kortirion
-Ladros
-Helevorn
-Lake Helevorn
-Lake Mithrim
-Lake Evendim
-Lake Nenuial
-Lake-town
-Esgaroth 
-Lamedon
-Lammoth
-Lampwrights' Street
-Rath Celerdain 
-Land of Bow-Helm
-Dor Firn-i-Cúarthol 
-Dor Firn-i-Guinar
-Land of the Dead that Live
-Lands Under the Wave
-Anduin
-Langflood
-River Anduin 
-Langstrand
-Anfalas 
-Langwell
-River Langwell
-Lanthir Lamath
-Last Bridge
-Bridge of Mitheithel 
-Rivendell
-Last Homely House
-Methedras
-Last Mountain 
-Last Shore
-Eressëa
-Calacirian
-Lothlórien
-Laurelindórenan
-Lórien 
-Lebennin
-Lefnui
-River Lefnui
-Legolin
-River Legolin
-Lhûn
-River Lune 
-Linaewen
-Lindon
-Lothlórien
-Lindórinan
-Lórien 
-Linhir
-Lisgardh
-Lithir
-River Lithir
-Lithlad
-Little Delving
-Little Gelion
-River of Little Gelion
-Lockholes
-Lockholes at Michael Delving 
-Loeg Ningloron
-Gladden Fields 
-Lond Daer
-Lond Daer Enedh 
-Lone-lands
-Tol Eressëa
-Lonely Isle 
-Lonely Mountain
-Erebor 
-Longbottom
-Long Cleeve
-Long Lake
-Long Marshes
-Andram
-The Long Wall
-Lórellin
-Lothlórien
-Lórien
-Lórinand
-Lórien 
-Losgar
-Lossarnach
-Eressêa
-Lost Isle
-Desert of Lostladen
+Straits of the World
+Dor Daidelos
+Quarry
+Mountains of Mirkwood
+Undying Lands
+Battle Pit
+River Greyflood
 Lostladen
-Lothlann
-Lothlórien
-Loudwater
-River Bruinen 
-Lower Halls
-Barad-dûr
+Bree-hill
+Shadowy Mountains 
+Arthórien
+Bree
+Agathurush
+Wizard's Vale
+West-gate of Moria
+Greater Gelion
+Anadûnê 
+River Gladden
+Heats of the South
+East Road
+Minas Tirith of Gondor 
+Chetwood
+Fornarthan
+East-gate
+Fangorn Forest
+Ondoluncanando
+Avathar
+Arvernien
+Oiolossë
+River Brithon
+Greenfields
+Aglarond
+Brockenbores
+Novrod
+Arthedain
+Nan-tathren
+Far West
+Falls of Sirion
+Tumladen of Gondor
+White Towers
+Black Crack
+Icebay of Forochel
+Mounds of Mundburg
+Dunland
+Rushey
+East Emnet
+Mindeb
+Lake Evendim
+Ulmonan
+Isle of Balar
+Sorontil
+North Road of Ithilien
+Chamber of Records
+Erendis
+Nurn
+Fôs' Almir
+Siril
+Hornburg
+Helevorn
+Esgaroth
+Green Dragon
+Hildórien
+West Beleriand
+Aros
+Methedras
+Dagorlad
+Aelin-uial
+Ninglor
+River Legolin
+Aelin-uial 
+Rhosgobel
+Barazinbar
+Legolin
+Rath Dínen
+Eglador
+Aeluin
+Otherworld
+Spider's Ring
+Mansions of Aulë
+Cûl Bîn
+Khazad-dûm 
 Lugbúrz
-Lhûn
-Lune
-River Lhûn 
-Luvailin
-Shadowmere 
-Bamfurlong
-Maggot's Farm
-Maggot's Lane
-Maglor's Gap
-Máhanaxar
+Afros
+Overbourn
+Little Delving
+Brithon
+Desolation of the Morannon
+Elostirion
+Ciril River
+Overbourn Marshes
+The Marish]
+Tumhalad
+Rivendell
+Eithel Nínui
+Nan Dungortheb
+Fords of Isen
+Cirith Dúath
+Mount Gram
+Mithe
+The Forsaken Inn
+Blessed Realm
+Qerkaringa
+Lammoth
+Shadowmere
+White Mountains
+Gamwich
+Ocean
+Pass of Sirion
+Sunlendings
+Old Forest
+Tongue
+Menegroth
+Meneltarma
+Forodwaith
+Lockholes
+Shadowy Spring
+Sea of Rhûn
+Stonewain Valley
+Mount Mindolluin
+Lórellin
+River Taeglin 
+Helcar
+Mittalmar
+Caragdûr
+Linhir
+Outer Dark
+Fingolfin's Cairn
+Tarnost
+Taur e-Ndaedelos
+Mound of Dunlendings
+Helm's Dike
+River Mitheithel
+Minas Tirith of Beleriand
+River of Aros
+Western Shore
+Eastwood
+Eglarest
+North Moors
+Hidden Ferries
+Brodda's hall
+Land of the Dead that Live
+West of the World
+Hadhodrond
+Erelas
+Tower of Cirith Ungol
+Morgai
+Hay Gate
+Amon Sûl
+Dor Firn-i-Cúarthol 
+Grey Wood
+Akallabêth
+Tumunzahar
+Dark Door
+Tol Uinen
+Abyss
+Encircling Sea
+Sea of Ringil
+Brithombar
+Tar-Minastir
+Calenardhon
+Red Mountains
+Orocarni 
+Tyrn Gorthad
+Caves of Menegroth
+First Hall
+Dark Land
+Sharabhund 
+Gorbelgod
+Ravenhill
+Adurant
+Deadmen's Dike
+Orfalch Echor
+Kibil-nâla
+Starkhorn
+River Ringwil
+Ancient Grey Mountains
+Court of the Fountain
+Desolation of the Dragon
+Evernight
+Ered Wethrin
+Ered Luin
+Kiril
+Isle of Meneltarma
+Tower of the Stone
+Paths of the Dead
+Amon Anwar
+River Running
+Dor-Cúarthol
+Girdley Island
+Cardolan
+Kirith Ungol
+Tuckborough
+Emyn-nu-Fuin
+Norbury
+Old Ford
+Buckland
+Haysend
+Watchwood
+Formenos
+Belfalas
+Forlindon
+Dor-en-Ernil
+Bonfire Glade
+The Bounds
+Gate Stream
+Araman
+Meres of Twilight
+Eastemnet
+East Beleriand
+Elvenhome
+Sea of Helcar
+Sandyman's Old Mill
+Nameless Land
+Entwade
+South Ithilien
+Halifirien
+River Silverlode
+Seat of Seeing
+i Drann
+Orocarni
+Pass of Aglon
+Narog
+Crissaegrim
+Mound of Avarice
+Front Porch
+Valimar
+Stockbrook
+Minhiriath
+Mindolluin
+Lórien 
+Prancing Pony
+Mithrim
+Lórinand
+New Haven
+River of Ascar
+Langstrand
+South Road of Gondor
+Illuin
+Agar
+Thrihyrne
+Amon Hen
+Great Gulf
+Havens of Mithlond
+Old Winyards
+Rhimdath
+Taur-Na-Neldor
+River Brilthor
+Vinyamar
+Gate of the Noldor
+Amon Dîn
+Nether Dark
+Downlands
+Anghabar
+Lake Helevorn
+Falas
+River Entwash
+Calmindon
+Tighfield
+Dimrill Gate
+Annon-In-Gadydh
+River Loudwater
+Wilderland
+Yôzâyan
+Great Plains
+Tasarinan
+Falls of Irvin
+Budge Ford
+Aeluin-uial
+North Ithilien
+Emyn Arnen
+Parth Galen
+Sauron's Temple
+Caverns of Narog
+Langflood
+Cross-roads
+River Morgulduin
+Water-valley
+Fenmarch
+Westermanton
+Rohan
+Antaro
+Echoing Hills 
+Dark Lands of Middle-earth
+Undergate
+Astulat
+Hill of Seeing
+Mountains of Terror
+Cûl Veleg
+River Siril
+Great Lands
+South Kingdom
+Haeren
+Ivrin
+Lake Mithrim
+Gap of Rohan
+Thangorodrim
+Ethraid Engrin
+Deephallow
+Dimrost
+Dungortheb
+Bywater Pool
+Wells of Varda
+Rammas Echor
+Rauros
+Shirebourn River
+Woods of Núath
+Tumladen of Gondolin
+Mering Stream
+Forostar
+Forochel
+Ephel Brandir
+Thistle Brook
+Imlad Morgul
+Market-pool
+Emyn Eglain
+The Mark
+Waymeet
+Echoriad
+Dimholt
+Beorn's Hall
+Inner Seas
+Long Marshes
+Utumno
+Eregion
+Celon
+White Mountain
+Orrostar
+Great Shelf
+Great Hall of Feasts
+Rath Celerdain
+Hill of Awe
+Hither Shore
+Ormal
+Lefnui
+Last Homely House
+Cabed Naeramarth
+River Mindeb
+Southward Road
+Beorn's House
+Tharbad
+Belegost
+Shadowy Seas
+Pillars of the King 
+Sûza
+Oatbarton
+Isle of Almaren 
+Narrows of the Forest
+Tarn Aeluin
+Ered Engrin
+Tarmasundar
+The Yale
+Ciril
+Far Downs
+Amon Gwareth
+Lost Isle
+Hall of Fire
+Rhudaur
+High Pass
+Underhill
+Fox Downs
+Forest of Brethil
+Tower of Ecthelion
+Tindrock
+Kalormë
+Fountain of Tinúviel
+Wild Wood
+Gabilgathod
+Lond Daer Enedh
+Dwimorberg
+Ford of Bruinen
+Lothlórien
+Deeping Coomb
+Old World
+Ettendales
+Stair of the Hold
+Egladil
 Mahanaxar
+Nen Girith
+Pass of Anach
+Stock Road
+Iant Iaur
+Southfarthing
+Westemnet
+Harlond in Gondor
+Isle of Elenna
+Forgotten Villages
+Khazad-dûm
+Brethil
+Great Lakes
+Belegaer
+Echoriath
+Hisilómë
+Enedwaith
+Gate of the Dead
+Great Mound
+Númenor
+The Prancing Pony
+Dimrill Stair
+Walls of the Sun
+Sundering Seas
+Ford of Stones 
+Hills of Eglamar
+Amon Darthir
+Gondor
+Gondor 
+River Snowbourn
+Second Hall
+Black Gate
+Cross Roads of the Fallen King
+Great Fens
+Hobbiton Hill
+Orc-holds
+River Langwell
+Nen Lalaith
+Bruinen
+Swans of Gorbelgod
+Hills of Scary
+Budgeford Village
+Gap of Calenardhon
+Little Gelion
+Maggot's Lane
+Waking Water
+Taur-na-Foen
+Eagles' Eyrie
+Dwaling
+House of Tulkas
+Hardbottle
+Blue Mountains
+Durin's Tower
+Dimbar
+Long Lake
+Echad i Sedryn
+Silvertine
+Dolmed
+Barad Nimras
+Enchanted Isles
+Celebros
+Brown Lands
+Angamando 
+Fen Hollen
+Eagles' Eyrie 
+Cûm-nan-Arasaith
+Barrowfield
+Emyn Muil
+Luvailin
+Deldúwath
+Erui
+Withy-path
+Isenmouthe
+Ost-in-Edhil
+Helm's Deep
+Caverns of the Oaritsi
+Eastfold
+Northern Dark
+Tol Eressëa
+Sunlands
+Tol Sirion
+King's House
+River Isen
+Treegarth of Orthanc
+Way of Escape
+Hollin Ridge
+Tookland
+Esgalduin
+Mount of the Pine Tree
+Old South Road of Beleriand
+Núath
+Mount Fang
+Celos
+Sennas Iaur
+Lossarnach
+Lake Nenuial
+Firth of Drengist
+Hills of Evendim
+Erebor 
+Dwarrowdelf
+Cobas Haven
+Angren
+Central Highlands
+Three-Farthing Stone
+Tomb of the Kings
+Ravines of Teiglin
+Rhûn
+Fens of Sirion
+Gilrain
+Tanyasalpë
+Sarn Gebir
+Cirith Ungol
+Verna
+Imloth Melui
+Langwell
+Seven Gates of Gondolin
+Glanhír
+Ivy Bush
+Anórien
+Green Hills
+Dark Gate
+Hyarnustar
+Mountains of Angmar
+Redwater
+South Downs
+Drúwaith Iaur
+Cracks of Doom
+Tol Sirion 
+Gelion
+Narchost
+Withywindle Valley
+Eithel Sirion
+Celebdil
+Andor
+Lothlann
+Trollshaws
+Baranduin
+Ginglith
+Tauremornalómë
+Westfold Vale
+Anfalas
+Place of the Fountain
+Nivrim
+Dunharrow
+Harlindon
+Shirebourn
+Esgaroth 
+Sernui
+Eithel Ivrin
+Dingle
+Mound of Avarice 
+Death Down
+Eressêa
+Obel Halad
+Lamedon
+House of the Stewards
+High Faroth 
+Carchost
+Cerin Amroth
+Adorn
+Haudh in Gwanûr
+Gardens of Lórien
+Elros' Tower
+The Shire
+Valmar
+Methed-en-glad
+Pinnath Gelin
+Cape of Forochel
+North Kingdom
+Ered Lómin
+Bywater Road
+Cloudyhead
+Great River
+Edhellond
+Woodhall
+Drowns
+Eithel Irvin 
+Nogrod
+Barad Eithel
+Seventh Level
+Grey Havens
+North Undeep
+Lonely Isle 
+Branda-nîn
+North Road
+Steward's Door
+Men-i-Naugrim
+Lindórinan
+Sirannon
+Foen
+Bay of Andúnië
+Nindalf
+House of Ransom
+Ered Gorgoroth 
+Cloudyhead 
+Glanduin
+Whitwell
+Yellow Mountains
+Edge of the Wild
+Arandor
+Gruir
+Amon Lanc
+Lond Daer Enedh 
+River Carnen
+Angband
+Celduin
+Ring of Isengard
+Ethring
+Lisgardh
+Enchanted River
+Old Grange
+Deeping Stream
+Oiomúrë
+Radhrim
+Westernesse
+Great Southern Forests
+Elennanórê
+Window of the West
+Taniquetil
+Gundabad
+Shathûr
+River Morthond
+Window-Curtain
+Rhovanion
+Valley of Udûn
+Cuiviénen
+Pelóri
+House of Nienna
+Folde
+Last Shore
+Bay of Eldamar
+Forest Road
+Eithil Ivrin
+Great Hall of Thráin
+Sarn Athrad
+Caradhras
+Lórien
+Coron Oiolairë
+Havens of Sirion
+East March
+Faskala-númen
+Minas Anor
+Durthang
+Mount of the Pine Trees
+Sammath Naur
+River Hoarwell 
+Shelob's Lair
+Minas Morgul
+Fangorn
+Causeway Forts
+Mithe Steps
+Crickhollow
+Gorgoroth
+Drengist
+Anach
+Balar
+The Éothéod
+Tookbank
+Lithir
+Pincup
+Sarn Athrad of Eriador
+Udûn
+North Marches
+Bar-in-Mŷl‎
+Kingsland
+Black Pits
+Cair Andros
+Haven of the Eldar
+River Harner
+Lands of Forodwaith
+Lands Under the Wave
+Fornost Erain
+Citadel of Stars
+Region
+Parth Celebrant 
+River Lithir
+Black Land
+Talath Rhûnen
+Bent Seas
+Seat of Hearing
+Ferry Lane
+Hill of Ilmarin
+East Lórien
+Redhorn Gate
+Dwimordene
+Ard-galen
+Mountains of Aman
+Aglon
+Khand
+Swanfleet
+Greenwood the Great
 Ring of Doom 
+River Gwathlo
+Éothéod
+Isle of Eressëa
+Buckland Road
+Minas Tirith
+Halls of Durin
+Standelf
+Deeping
+Hobbiton Road
+Windle-reach
+Straight Stair
+Forest Road 
+Cristhorn
+Gulf of Lhûn
+Udûn of Mordor
+Stock
+Goblin-town
+Beleriand
+Lonely Mountain
+Glithui
+Stock-brook
+Erebor
+River of Gwathló
+Mordor
+Bree Hill
+Water of Awakening
+Lhûn
+Númendor
+Greenholm
+Onodló
+Endor
+Two Watchers
+Firien Wood
+Pelargir
+Field of Cormallen
+Túna
+Walls of the World
+Merethrond
+Arnach
+Himlad
+South Gondor
+River Lune 
+Mornan
+Dorthonion
+Moors of the Neweglu
+Kingdom of the South
+Dark Mountains
+Chamber of Mazarbul
+Field of Celebrant
+Slag-hills
+Orodruin
+Estolad
+Mountains of Shadow 
+White Tower
+Vinyalondë
+Phûrunargian
+Hobbiton
+Bar-en-Dunwedh
+Dor-Nu-Fauglith
+Haerast
+Hill of Oromet
+Gates of Sirion
+West Fence
+Bagshot Row
+Kingsland 
 Malduin
+North Downs
+Mount Everwhite 
+Imrath Gondraith
+Firth of Rómenna
+Houses of Healing
+Bar Erib
+Anfauglith
+Grey Mountains
+Sandyman's Mill
+High Court
+Carrock
+Morgul-road
+River Rivil
+Mere of Dead Faces
+Westfarthing
+Írensaga
+Ezellohar
+Redhorn
+The Drowns
+Tarlang's Neck
+Celebrant
+South Farthing
+Eryn Galen
+Torech Ungol
+Underhill village
+Lower Halls
+Tower of the King
+Sindanórie
+Thalos
+Walls of the Night
+Hidden Way
+Dor Caranthir
+Taras
+Morgul Pass
+Ishmalog
+Withered Heath
+Haudh-en-Elleth
+Inland Sea of Helcar
+Harondor
+Taur-im-Duinath
+Iron Hills
+Region of Everlasting Cold
+Morthond River 
+Mar-nu-Falmar
+Golden Gates
+Harrowdale
+Tol Brandir
+Overhill
+Old Púkel land
+Firienholt
+Outer Darkness
+Guarded Plain
+Wizard's Isle
+Troll's Cave
+Fen of Serech
+Outlands
+Mound of Riders
+Lebennin
+Androth
+Archet
+Elwing's tower
+Mirrormere
+Vale of Sirion
+Helcaraxë
+Ice of the North
+Fornost
+Eressëa
+Rivil
+Barad-dûr
+Bar-en-Danwedh
+Bony ridge
+Eriador
+Ekkaia
+River Ringló
+Nîn-in-Eilph
+Dwarf-road of Beleriand
+Ford of Brithiach
+Walls of Moria
+Haven of the Swans
+Andafalassë
+Gondolin
+Min-Rimmon
+Celos River
+Idril's secret way
+Nindamos
+Forest of Neldoreth
+Nísimaldar
+Town Hole
+Front Gate
+Doors of Durin
+Rerir
+Moria
+Sirion
+Maglor's Gap
+Wall's End
+Nenning
+Last Bridge
+Framsburg
+Bree-land
+Crossings of Teiglin
+Maggot's Farm
+Bridgefields
+Hyarrostar
+Greenway
+Eilenach
+Gates of Morning
+Entwood
+Eldalondë the Green
+Isen
+Mount Dolmed
+Breredon
+East Wall of Rohan
+Atalantë
+Mindon Eldaliéva
+Westlands
+City of the Corsairs
+Straight Road
+Máhanaxar
+Calacirya
+Nen Hithoel
+White House of Erendis
+Mount Doom
+Mountains of Mithrim
+Land of Bow-Helm
+Iron Fortress 
+Sauron's Isle
+Northern Waste
+Noirinan
+Withy-weir
+Dimrill Dale
+Ithilien
+Dor Firn-i-Guinar
+Twenty-First Hall of the North-end
+Lone-lands
+Hornrock
+Eldamar
+Lond Daer
+Newbury
+Andrast
+Chill Gulf
+Tol Fuin
+Mount Rerir
+River Nimrodel
+South Undeep
+Amon Ethir
+Bridge of Mitheithel 
+Frogmorton
+Undertowers
+Westfold
+Lune
+Whispering Wood
+Shadowmere 
+Dúnharg
+The Hill
+West-mark
+Tavrobel
+Loeg Ningloron
+Ring of Doom
+Amon Rûdh
+Hollin
+Aldalómë
+Cabed-en-Aras
+Nozgrod
+Haven of Umbar
+Anfalas 
+Azanulbizar
+Reunited Kingdom
+Hill of the Slain
+Cormallen
+Desert of Lostladen
+Thousand Caves
+Erech
+Wood of Anwar
+South Lane
+King's Court
+Gladden Fields 
+Ettenmoors
+Birchwoods of Nimbrethil
+Golden Wood
+Ringló
+Barrow-downs
+Mithlond
+Mundburg
+Tower of Ingwë
+Ethir Anduin
+Hither Lands
+Girdle of Arda
+Ford
+North Stair
+Harad
+Harlond in Lindon
+Valinor
+Upbourn
+House of the Dead
+Michel Delving
+Ash Mountains
+Drúadan Forest
+Gulf of Lune
+Gwathir
+Arossiach
+Aman
+Bombadil's House
+Bag End
+Rainbow Cleft
+Ephel Dúath
+Andram
+Falls
+Orthanc 
+Rochand
+Caverns of Helm's Deep
+Gladden River
+River of Anduin
+Cirith Thoronath
+Pine-mountain
+West-door
+Iron Mountains
+Hill of the Ear
+Bundushathûr
+Grindwall
+Hill of the Eye
+Battle Plain
+Orthanc
+Orod-na-Thôn
+Dol Guldur
+Emerië
+Ivrin's Well
+Party Field
+Ondolindë
+Côf Belfalas 
+Hoarwell
+Harad and beyond
+The Hedge
+Endless Stair
+Isle of Almaren
+The Naith
+Eastern Eriador
+Kheled-zâram
+Whitfurrows
+Weathertop
+Deeping-coomb
+Fanuidhol
+Buck Hill
+Desolation of Smaug
+Bywater
+Carn Dûm
+Void
+Deer's Leap
+Hithaeglir
+Winding Stair
+Rûnaer
+Black Pit
+Ras Mewrim
+Lindon
+Loudwater
+Mitheithel
+Bucklebury Ferry
+Shire
+Wargs' Clearing
+Arnor
+River Sirith
+Falls of Esgalduin
+Silverlode
+Zirakzigil
+Twilight Meres
+Osgiliath
+Bindbale Wood
+Palisor
+Henneth Annûn
+Outer Lands
+Old Bridge
+Entwash Vale
+Waste
+Kortirion
+Morgul Vale 
+Tirion
+Aldburg
+Nienna
+Brandywine Bridge
+Sandyman's Mill]
+Dry River
+Harnen
+Treebeard's Hill
+River Celebros
+Anduin
+Woody End
+Misty Mountains
+Cirith Gorgor
+Wold of Rohan
+Dol Amroth
+Snowbourn
+Edoras
+Greywood
+Ascar
+Angmar
+Tolfalas
+Minas Ithil
+Tol-in-Gaurhoth
+The Pelóri 
+Thorin's Halls
+Great Gates
+Stoningland
+West-gate of Bree
+Great Rift
+Losgar
+Lithlad
+Lampwrights' Street
+Valandor
+Rathlóriel
+Forest Gate
+Green Hill Country
+Arthor na Challonnas
+River Celebrant
+Gwathló
+Nargothrond
+Nimrodel
+Rómenna
+Emyn Duir
+Emyn Beraid
+Tol Morwen
+Northerland 
+Weather Hills
+Himring
+Hill of Spies
+Old Mill
+Annúminas
+Eastfarthing
+Dor-lómin
+Glittering Caves
+Needlehole
+Caras Galadhon
+Bindbole Wood
+Shadowy Mountains
+Way of Running Waters
+Dome of Stars
+Anórien 
+Great East Road
+Bridge of Esgalduin
+Girdle of Melian
+Tasarinan 
+Morthond
+Ered Gorgoroth
+Athrad Angren
+Faskalan
+Pool-side
+Achad Tarlang 
+Annon-in-Gelydh
+East Farthing
+Door of Night
+Amon Obel
+Eryn Fuir
+Wellinghall
+Hithlum
+Andúne Pelo
+Bucklebury Ford
+Bridge of Stonebows
+Taur-nu-Fuin
+Mouths of Sirion
+Lake Nisinen
+Hithaeglir 
+Undeeps
+Woodland Realm
+Nenuial
+Eglamar
+Nen Echui
+Deeping Wall
+Bucklebury
+Tirith Aear
+Linaewen
+Tol Galen
+Atalantë 
+Ered Lindon
+Ungoliant's Lair
+Blackroot Vale
+Amon Amarth
+Deathless Lands
+Plateau of Gorgoroth
+Andrath
+Noman-lands
+Hall of Brodda
+Pools of Ivrin
+New Lands
+Hollin Gate
+Rushdown
+Ancient West 
+Under-way
+Ravines of Taeglin
+Stonewain Valley 
+Last Mountain 
+Angrenost
+Old Forest Road
+Doriath
+Withywindle River
+Bridge of Mitheithel
+Grinding Ice
+Mount Gundabad
+Western Sea
+Southward Road 
+Thargelion
+Poros
+Great West Road
+Mountains of the East
+River Nenning
+Nimbrethil
+Eldalondë
+Buckland Gate
+The Long Wall
+Sîr Ninglor
+Ondosto
+Old South Road of Middle-earth
+Pool of Bywater
+Mill
+Longbottom
+Cape of Andrast
+Arandor in Númenor 
+Tumladen
+Dwarf-Road
+Moors of the Nibin-noeg
+Haunted Mountain
+Neldoreth
+Lanthir Lamath
+Cirith Forn en Andrath
+Middle-earth
+Kôr
+Near Harad
+Ambaróna
+House of the Kings
+Talath Dirnen
+Eryn Vorn
+Serni
+Court of the Fountain in Minas Tirith
+Helcaraxë 
+Nevrast
+Isle of Werewolves
+Sea-ward Tower
+Nardol
+Entwash
+Nanduhirrion 
+Combe
+Westmarch
+Imladris
+Mount Taras
+Forest River
+Shadowy Isles
+Willowbottom
+Ondonórë
+Emyn Uial
+Marshes of Nevrast
+Eilenaer
+Rushock Bog
+Taeglin
+Midgewater Marshes
+Forlond
+Rath Celerdain 
+Bar-en-Nibin-noeg
+Arthor na Forlonnas
+Sarn Ford
+Umboth-muilin
+Mouths of Entwash
+Amon Ereb
+Corollairë
+Bay of Rómenna
+Great Willow
+Temple of Sauron
+Hall of Feasts 
+Hanstovánen
+Crossings of the Taeglin
+Morgulduin
+Uttermost West
+Atlantë
+Brandywine River
+Rushy
+Pelennor
+Derndingle
+River Narog
+Mouths of Anduin
+Blackroot
+Greyflood
+River Lefnui
+Karningul
+West Road
+Far Harad
+Goblin-gate
+Isles of the West
+Hill of Himring
+Forsaken Inn
+Tauremorna
+Gollum's Lake
+Outer Sea
+Towers of the Teeth
+Ras Morthil
 River Malduin
 Halls of Mandos
-Mansions of Aulë
-March of Maedhros
-The Marish]
-The Riddermark
-The Mark
-Mar-nu-Falmar
-Atalantë 
-Market-pool
-Marshes of Nevrast
-Meduseld
-Men-i-Naugrim
-Forest Road 
-Menegroth
-Meneltarma
-Mere of Dead Faces
-Meres of Twilight
-Aelin-uial 
-Great Hall of Feasts
-Merethrond
-Hall of Feasts 
-Mering Stream
-Methed-en-glad
-Methedras
-Michel Delving
-Middle-earth
-Midgewater Marshes
-Old Mill
-Mill
-Sandyman's Old Mill
-Sandyman's Mill]
-Minas Anor
-Minas Morgul
-Minas Ithil
-Minas Morgul
-Minas Tirith
-Minas Tirith of Gondor 
-Minas Tirith of Beleriand
-Minas Tirith
-Tol Sirion 
-Mindeb
-River Mindeb
-Mindolluin
-Mount Mindolluin
-Mindon Eldaliéva
-Minhiriath
-Min-Rimmon
-Mirkwood
-Mirrormere
-Misty Mountains
-Hithaeglir 
-Mithe
-Mithe Steps
-Mitheithel
-River Hoarwell 
-Grey Havens
-Mithlond
-Mithrim
-Mittalmar
-Moors of the Nibin-noeg
-Moors of the Neweglu
-Moors of the Nibin-noeg
-Morannon
-Mordor
-Morgai
-Morgul Pass
-Morgul-road
-Morgulduin
-River Morgulduin
-Moria
-Khazad-dûm 
-Blackroot Vale
-Mornan
-Morthond
-River Morthond
-Cûm-nan-Arasaith
-Mound of Avarice 
-Mound of Dunlendings
-Mound of Riders
-Mounds of Mundburg
-Dolmed
-Mount Dolmed
-Mount Doom
-Taniquetil
-Mount Everwhite 
-Mount Fang
-Orthanc 
-Mount Gram
-Gundabad
-Mount Gundabad
-Mindolluin
-Mount Mindolluin
-Orod-na-Thôn
-Mount of the Pine Tree
-Mount of the Pine Trees
-Rerir
-Mount Rerir
-Taras
-Mount Taras
-Pelóri
-Mountains of Aman
-The Pelóri 
-Mountains of Angmar
-Blue Mountains
-Mountains of Lune
-Ered Luin
-Mountains of Mirkwood
-Mountains of Mithrim
-Ered Wethrin
-Mountains of Shadow 
-Ephel Dúath
-Mountains of Shadow 
-Mountains of Terror
-Ered Gorgoroth 
-Ered Gorgoroth
-Mountains of the East
-Orocarni 
-Ethir Anduin
-Mouths of Anduin
-Mouths of Entwash
-Mouths of Sirion
-Mundburg
-Minas Tirith of Gondor 
-The Naith
-Mordor
-Nameless Land
-Nan Curunír
-Nan Dungortheb
-Nan Elmoth
-Nan-tathren
-Tasarinan 
-Dimrill Dale
-Nanduhirrion 
-Narchost
-Nardol
-Nargothrond
-Narog
-River Narog
-Narrows of the Forest
-Near Harad
-Needlehole
-Forest of Neldoreth
-Neldoreth
-Cuiviénen
-Nen Echui
-Nen Girith
-Dimrost
-Nen Hithoel
-Nen Lalaith
-Nenning
-River Nenning
-Nenuial
-Lake Evendim
-Nether Dark
-Nevrast
-Hither Shore
-Nevrast
-Lond Daer Enedh
-New Haven
-New Lands
-Newbury
-House of Nienna
-Nienna
-Nimbrethil
-Nimrodel
-River Nimrodel
-Nindalf
-Nindamos
-Gladden River
-Ninglor
-River Gladden
-Nîn-in-Eilph
-Swanfleet
-Nísimaldar
-Nísinen
-Lake Nisinen
-Nivrim
-Nobottle
-Nogrod
-Noirinan
-Noman-lands
-Fornost
-Norbury
-North Cape
-North Downs
-North Farthing
-Buckland Gate
-North Gate
-North Ithilien
-Arnor
-North Kingdom
-North Marches
-North Moors
-North Road
-North Road of Ithilien
-Southward Road 
-North Stair
-North Undeep
-Eriador
-Northerland 
-Northern Dark
-Northern Waste
-Novrod
-Nogrod 
-Núath
-Woods of Núath
-Númenor
-Númendor
-Nunduinë
-Nurn
-Oatbarton
-Obel Halad
-Ocean
-Taniquetil
-Oiolossë
-Oiomúrë
-Iant Iaur
-Old Bridge
-Old Ford
-Old Forest
-Old Forest Road
-Old Grange
-Old Guesthouse
-Sennas Iaur
-Old Mill
-Drúwaith Iaur
-Old Púkel land
-Old Road
-Old South Road of Beleriand
-Old South Road of Middle-earth
-Old Winyards
-Old World
-Ondolindë
-Gondolin
-Ondoluncanando
-Stonewain Valley
-Gondor
-Ondonórë
-Ondosto
-Onodló
-Entwash
-Orc-holds
-Orfalch Echor
-Ormal
-Orocarni
-The Red Mountains
-Red Mountains
-Orod-na-Thôn
-Pine-mountain
-Mount Doom
-Orodruin
-Oromet
-Orrostar
-Orthanc
-Osgiliath
-Ossiriand
-Ost-in-Edhil
-Valinor
-Otherworld
-Void
-Outer Dark
-Outer Darkness
-Outer Lands
-Outer Sea
-Outlands
-Overbourn
-Overbourn Marshes
-Overhill
-Palisor
-Field of Celebrant
-Parth Celebrant 
-Parth Galen
-Party Field
-Pass of Aglon
-Anach
-Pass of Anach
+Harad Road
 Pastures of Yavanna
-Paths of the Dead
-Pelargir
-Pelennor
-Pelóri
-Phûrunargian
-Khazad-dûm 
-Argonath
-Pillars of the King 
-Pincup
-Orod-na-Thôn
-Pine-mountain
-Pinnath Gelin
-Place of the Fountain
-Pool of Bywater
-Pool-side
-Pools of Ivrin
-Eithel Ivrin
-Poros
-River Poros
-The Prancing Pony
-Prancing Pony
-Qerkaringa
-Quarry
-Radhrim
-Rainbow Cleft
-Cirith Ninniach
-Ramdal
-Rammas Echor
-Ras Mewrim
-Ras Morthil
-Andrast
-Rath Celerdain
-Rath Dínen
-Rathlóriel
-Rauros
-Ravenhill
-Ravines of Taeglin
-Ravines of Teiglin
-Cabed-en-Aras
-Caradhras
-Redhorn
+Chambers of Fire
 Pass of Caradhras
-Redhorn Gate
-Redwater
-River Carnen
-Forest of Region
-Region
-Region of Everlasting Cold
-Reunited Kingdom
-Rhimdath
-Rhosgobel
-Rhovanion
-Rhudaur
-Rhûn
-Min-Rimmon
-Máhanaxar
-Ring of Doom
-Ring of Isengard
-Ringil
-Tower of Ringil
-Sea of Ringil
-Ringló
-River Ringló
 Ringwil
-River Ringwil
-Rivendell
-Imladris
-River Running
-Rivil
-River Rivil
-Rivil's Well
-Rohan
-Rochand
-Rómenna
-Rhûn
-Rûnaer
-Rushdown
-Rushock Bog
-Rushey
-Rushy
-Sammath Naur
-Old Mill
-Sandyman's Mill
-Sarn Athrad
-Sarn Ford
-Sarn Athrad of Eriador
-Sarn Gebir
-Sauron's Isle
-Tol Sirion
-Sauron's Road
-Sauron's Temple
-Sea of Helcar
-Sea of Núrnen
-Sea of Rhûn
-Sea of Ringil
-Seat of Hearing
-Seat of Seeing
-Sea-ward Tower
-Second Hall
-Serni
-Sernui
-River Sernui
-Seven Gates of Gondolin
-Seventh Level
-Luvailin
-Shadowmere
-Enchanted Isles
-Shadowy Isles
-Ered Wethrin
-Shadowy Mountains 
-Ephel Dúath
-Shadowy Mountains
-Shadowy Seas
-Shadowy Spring
-Amon Rûdh
-Sharabhund 
-Shathûr
-Cloudyhead 
-Shelob's Lair
-The Shire
-Shire
-Shirebourn
-Shirebourn River
-Side-door
-Celebrant
-Silverlode
-River Celebrant
-Celebdil
-Silvertine
-Sindanórie
-Sirannon
-Siril
-River Siril
-Sirion
-River Sirion
-Sirith
-River Sirith
-Gladden River
-Sîr Ninglor
-Slag-hills
-Snowbourn
-River Snowbourn
-Sorontil
-South Downs
-Southfarthing
-South Farthing
-South Gondor
-South Ithilien
-Gondor
-South Kingdom
-South Lane
-South Road of Eriador
-South Road
-South Road of Gondor
-South Undeep
-Southward Road
-Spider's Ring
-Staddle
-Stair Falls
-Stair of the Hold
-Standelf
-Starkhorn
-Fen Hollen
-Steward's Door
-Stock
-Stock Road
-Stock-brook
-Stockbrook
-Stonewain Valley
-Gondor
-Stoningland
-Straight Road
-Straight Stair
-Straits of the World
-Sundering Seas
-Belegaer
-Sunlands
-Harad and beyond
-Sunlendings
-Anórien 
-Hornburg
-Sûthburg
-Sûza
-The Shire
-Swanfleet
-Taeglin
-River Taeglin 
-Talath Dirnen
-Thargelion
-Talath Rhûnen
-Taniquetil
-Fôs' Almir
-Tanyasalpë
-Tar-Minastir
-Tarlang's Neck
-Tarmasundar
-Aeluin
-Tarn Aeluin
-Tarnost
-Tasarinan
-Nan-tathren
-Tauremorna
-Fangorn
-Fangorn Forest
-Tauremornalómë
+Andúnië
 Mirkwood
-Taur e-Ndaedelos
-Taur-en-Faroth
-Taur-im-Duinath
-Dorthonion
-Taur-na-Foen
-Forest of Neldoreth
-Taur-Na-Neldor
-Taur-nu-Fuin
-Tavrobel
-Temple of Sauron
-Thalos
-River Thalos
-Thangorodrim
-Tharbad
-Thargelion
-Thistle Brook
-Thorin's Halls
-Menegroth
-Thousand Caves
-Three-Farthing Stone
-Thrihyrne
-Tighfield
-Tindrock
-Tol Brandir
-Tirion
-Tirith Aear
-Tol Brandir
-Tol Eressëa
-Eressëa
-Tol Fuin
-Tol Galen
-Tol-in-Gaurhoth
-Tol Sirion
-Tol Morwen
-Tol Sirion
-Tol Uinen
-Tolfalas
-Tomb of the Kings
-Tongue
-Tookbank
-Tookland
-Shelob's Lair
-Torech Ungol
-Tower Hills
-Tower of Cirith Ungol
-Tower of Ecthelion
-White Tower
-Mindon Eldaliéva
-Tower of Ingwë
-Tower of the King
-Tower of the Stone
-Towers of the Teeth
-Narchost
-Carchost
-Town Hole
-Treebeard's Hill
-Treegarth of Orthanc
-Troll's Cave
-Trollshaws
-Tuckborough
-Tumhalad
-Tumladen
-Tumladen of Gondolin
-Tumladen
-Tumladen of Gondor
-Tumunzahar
-Nozgrod
-Túna
-Twenty-First Hall of the North-end
-Aelin-uial
-Twilight Meres
-Two Watchers
-Barrow-downs
-Tyrn Gorthad
-Udul
-Stronghold of Udûn
-Udûn
-Utumno
-Valley of Udûn
-Udûn of Mordor
-Umbar
-Aelin-uial
-Umboth-muilin
-Twilight Meres
-Undeeps
-North Undeep
-South Undeep
-Undergate
-Underhill village
-Underhill
-Under-way
-Underharrow
-Undertowers
-Undying Lands
-Ungoliant's Lair
-Ulmonan
-Upbourn
-Uttermost West
-Utumno
-Vale of Sirion
-Valinor
-Valandor
-Valimar
-Valmar
-Valinor
-Verna
-Vinyalondë
-Lond Daer Enedh
-Vinyamar
-Void
-Waking Water
-Cuiviénen
-Wall's End
-Ramdal
-Walls of Moria
-Walls of the Night
-Walls of the Sun
-Walls of the World
-Wargs' Clearing
-Waste
-Desolation of Smaug
-Treegarth of Orthanc
-Watchwood
-Water-valley
-Water of Awakening
-Cuiviénen
-Way of Escape
-Way of Running Waters
-Waymeet
-Weather Hills
-Weathertop
-Wellinghall
-Wells of Ivrin
-Eithil Ivrin
-Wells of Varda
-Doors of Durin
-West-door
-Hollin Gate
-West-gate of Bree
-Doors of Durin
-West-gate of Moria
-West-mark
-West Beleriand
-Uttermost West
-West of the World
-West Pass
-Pass of Sirion
-West Road
-Westemnet
-Westermanton
-Annúminas
-Western Sea
-Belegaer
-Western Shore
-Falas
-Westernesse
-Númenor
-Westfarthing
-Westfold
-Westfold Vale
-Westlands
-Westmarch
-Wetwang
-Nindalf
-Whispering Wood
-Firien Wood
-White Downs
-White House of Erendis
-White Mountain
-Taniquetil
-White Mountains
-Ered Nimrais
-Tower of Ecthelion
-White Tower
-Minas Tirith
-White Towers
-Whitfurrows
-Whitwell
-Wild Wood
-Rhovanion
-Wilderland
-Willowbottom
-Windle-reach
-Winding Stair
-Window-Curtain
-Falls
-Window of the West
-Henneth Annûn
-Withered Heath
-Withered Wold
-Brown Lands
-Withywindle Valley
-Withywindle
-Withywindle River
-Withy-path
-Withy-weir
-Wizard's Isle
-Tol-in-Gaurhoth
-Nan Curunír
-Wizard's Vale
-Nan Curunír
-Wold of Rohan
-Wood of Anwar
-Firien Wood
-Woods of Oromë
-Woodhall
-Woodland Realm
-Woody End
-The Yale
-Yellow Mountains
-Yôzâyan
-Celebdil
-Zirakzigil
-Silvertine
+Haudh-en-Ndengin
+River Bruinen 
+Ladros
+Laurelindórenan
+East-lands
+River Sirion
+Nogrod 
+Bay of Balar
+Hill of Hearing
+Dale

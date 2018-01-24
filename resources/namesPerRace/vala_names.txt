@@ -1,0 +1,15 @@
+Aulë	m	Vala		
+Estë	f	Vala		
+Lórien	m	Vala	Irmo	
+Mandos	m	Vala	Námo	
+Manwë	m	Vala		
+Melkor	m	Vala	Morgoth	
+Nessa	f	Vala		
+Nienna	f	Vala		
+Oromë	m	Vala		
+Tulkas	m	Vala		
+Ulmo	m	Vala		
+Vairë	f	Vala		
+Vána	f	Vala		
+Varda	f	Vala	Elbereth	
+Yavanna	f	Vala		

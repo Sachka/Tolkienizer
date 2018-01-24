@@ -1,0 +1,52 @@
+Azaghâl	m	Dwarf		
+Balin	m	Dwarf		
+Bifur	m	Dwarf		
+Bofur	m	Dwarf		
+Bombur	m	Dwarf		
+Borin	m	Dwarf		
+Dáin I	m	Dwarf		
+Dáin II	m	Dwarf	Ironfoot	
+Dís	f	Dwarf		
+Dori	m	Dwarf		
+Durin I	m	Dwarf		
+Durin II	m	Dwarf		
+Durin III	m	Dwarf		
+Durin IV	m	Dwarf		
+Durin V	m	Dwarf		
+Durin VI	m	Dwarf		
+Durin VII	m	Dwarf		
+Dwalin	m	Dwarf		
+Farin	m	Dwarf		
+Fíli	m	Dwarf		
+Flói	m	Dwarf		
+Frár	m	Dwarf		
+Frerin	m	Dwarf		
+Frór	m	Dwarf		
+Fundin	m	Dwarf		
+Gamil Zirak	m	Dwarf		
+Gimli	m	Dwarf		
+Glóin	m	Dwarf		
+Glóin	m	Dwarf		
+Gróin	m	Dwarf		
+Grór	m	Dwarf		
+Ibûn	m	Dwarf		
+Khîm	m	Dwarf		
+Kíli	m	Dwarf		
+Lóni	m	Dwarf		
+Mîm	m	Dwarf		
+Náin I	m	Dwarf		
+Náin II	m	Dwarf		
+Náli	m	Dwarf		
+Nár	m	Dwarf		
+Narvi	m	Dwarf		
+Nori	m	Dwarf		
+Óin	m	Dwarf		
+Óin	m	Dwarf		
+Ori	m	Dwarf		
+Telchar	m	Dwarf		
+Thorin I	m	Dwarf		
+Thorin II Oakenshield	m	Dwarf		
+Thorin III Stonehelm	m	Dwarf		
+Thráin I	m	Dwarf		
+Thráin II	m	Dwarf		
+Thrór	m	Dwarf		

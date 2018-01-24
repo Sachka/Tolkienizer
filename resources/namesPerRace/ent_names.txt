@@ -1,0 +1,6 @@
+Beechbone	m	Ent		
+Bregalad	m	Ent	Quickbeam	
+Fimbrethil	f	Ent	Wandlimb	
+Finglas	m	Ent		
+Fladrif	m	Ent		
+Treebeard	m	Ent	Fangorn	

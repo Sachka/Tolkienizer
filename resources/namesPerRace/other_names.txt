@@ -1,0 +1,8 @@
+Aerandir	m	unknown		
+Erellont	m	unknown		
+Goldberry	f	unknown		
+Gothmog	m	unknown		
+Tom Bombadil	m	unknown		
+Thuringwethil	f	vampire		
+Carcharoth	m	werewolf	Anfauglir	
+Draugluin	m	werewolf		

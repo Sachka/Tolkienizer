@@ -1,0 +1,18 @@
+Azog	m	Orc		
+Bolg	m	Orc		
+Golfimbul	m	Orc		
+Gorbag	m	Orc		
+Grishnákh	m	Orc		
+Lagduf	m	Orc		
+Lugdush	m	Orc		
+Mauhúr	m	Orc		
+Muzgash	m	Orc		
+Radbug	m	Orc		
+Shagrat	m	Orc		
+Snaga	m	Orc		
+Snaga	m	Orc		
+Ufthak	m	Orc		
+Uglúk	m	Orc		
+Bert	m	Troll		
+Bill	m	Troll	William Huggins	
+Tom	m	Troll		

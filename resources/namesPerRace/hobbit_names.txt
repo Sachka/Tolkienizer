@@ -1,0 +1,237 @@
+Adalbert Bolger	m	Hobbit		
+Adaldrida Bolger	f	Hobbit		
+Adalgar Bolger	m	Hobbit		
+Adalgrim Took	m	Hobbit		
+Adamanta Chubb	f	Hobbit		
+Adelard Took	m	Hobbit		
+Alfrida	f	Hobbit		
+Amaranth Brandybuck	f	Hobbit		
+Amethyst Hornblower	f	Hobbit		
+Andwise Roper	m	Hobbit	Andy	
+Angelica Baggins	f	Hobbit		
+Anson Roper	m	Hobbit		
+Asphodel Brandybuck	f	Hobbit		
+Balbo Baggins	m	Hobbit		
+Bandobras Took	m	Hobbit		
+Basso Boffin	m	Hobbit		
+Belba Baggins	f	Hobbit		
+Bell Goodchild	f	Hobbit		
+Belladonna Took	f	Hobbit		
+Berilac Brandybuck	m	Hobbit		
+Berylla Boffin	f	Hobbit		
+Bilbo Baggins	m	Hobbit		
+Gardner	m	Hobbit		
+Bingo Baggins	m	Hobbit		
+Blanco	m	Hobbit		
+Blanco Bracegirdle	m	Hobbit		
+Bob	m	Hobbit		
+Bodo Proudfoot	m	Hobbit		
+Bosco Boffin	m	Hobbit		
+Bowman Cotton	m	Hobbit	Nick	
+Briffo Boffin	m	Hobbit		
+Bruno Bracegirdle	m	Hobbit		
+Bucca	m	Hobbit		
+Buffo Boffin	m	Hobbit		
+Bungo Baggins	m	Hobbit		
+Sackville	f	Hobbit		
+Carl Cotton	m	Hobbit		
+Celandine Brandybuck	f	Hobbit		
+Chica Chubb	f	Hobbit		
+Cora Goodbody	f	Hobbit		
+Cotman	m	Hobbit		
+Cottar	m	Hobbit		
+Daisy Baggins	f	Hobbit		
+Gardner	f	Hobbit		
+Déagol	m	Hobbit	Nahald	
+Diamond	f	Hobbit		
+Dina Diggle	f	Hobbit		
+Dinodas Brandybuck	m	Hobbit		
+Doderic Brandybuck	m	Hobbit		
+Dodinas Brandybuck	m	Hobbit		
+Donnamira Took	f	Hobbit		
+Dora Baggins	f	Hobbit		
+Drogo Baggins	m	Hobbit		
+Druda Burrows	f	Hobbit		
+Dudo Baggins	m	Hobbit		
+Banks	f	Hobbit		
+Gardner	f	Hobbit		
+Elfstan Fairbairn	m	Hobbit		
+Erling Greenhand	m	Hobbit		
+Esmeralda Brandybuck	f	Hobbit		
+Estella Bolger	f	Hobbit		
+Everard Took	m	Hobbit		
+Falco Chubb-Baggins	m	Hobbit		
+Faramir Took	m	Hobbit		
+Fastolph Bolger	m	Hobbit		
+Fastred	m	Hobbit		
+Ferdinand Took	m	Hobbit		
+Ferumbras Took I	m	Hobbit		
+Ferumbras Took II	m	Hobbit		
+Ferumbras Took III	m	Hobbit		
+Filibert Bolger	m	Hobbit		
+Fíriel Fairbairn	f	Hobbit		
+Flambard Took	m	Hobbit		
+Folco Boffin	m	Hobbit		
+Fortinbras Took I	m	Hobbit		
+Fortinbras Took II	m	Hobbit		
+Fosco Baggins	m	Hobbit		
+Fredegar Bolger	m	Hobbit	Fatty	
+Frodo Baggins	m	Hobbit		
+Gardner	m	Hobbit		
+Gerda Boffin	f	Hobbit		
+Gerontius Took	m	Hobbit	Old Took	
+Gilly Brownlock	f	Hobbit		
+Goldilocks Gardner	f	Hobbit		
+Gollum	m	Hobbit	Sméagol, Trahald	
+Gorbadoc Brandybuck	m	Hobbit		
+Gorbulas Brandybuck	m	Hobbit		
+Gorhendad Brandybuck	m	Hobbit		
+Gormadoc Brandybuck	m	Hobbit		
+Griffo Boffin	m	Hobbit		
+Gruffo Boffin	m	Hobbit		
+Gundabald Bolger	m	Hobbit		
+Gundahad Bolger	m	Hobbit		
+Gundahar Bolger	m	Hobbit		
+Gundolpho Bolger	m	Hobbit		
+Halfast Gamgee	m	Hobbit	Hal	
+Halfred Gamgee	m	Hobbit		
+Halfred Greenhand	m	Hobbit		
+Hamfast of Gamwich	m	Hobbit		
+Hamfast Gamgee	m	Hobbit	Gaffer	
+Hamfast Gardner	m	Hobbit		
+Hamson Gamgee	m	Hobbit		
+Hanna Goldworthy	f	Hobbit		
+Harding of the Hill	m	Hobbit		
+Hending	m	Hobbit		
+Heribald Bolger	m	Hobbit		
+Herugar Bolger	m	Hobbit		
+Hilda Bracegirdle	f	Hobbit		
+Hildibrand Took	m	Hobbit		
+Hildifons Took	m	Hobbit		
+Hildigard Took	f	Hobbit		
+Hildigrim Took	m	Hobbit		
+Hob Gammidge	m	Hobbit		
+Hayward	m	Hobbit		
+Hobson Gamgee	m	Hobbit	Roper	
+Holfast Gardner	m	Hobbit		
+Holman Cotton	m	Hobbit	Long Hom	
+Holman Greenhand	m	Hobbit		
+Hugo Boffin	m	Hobbit		
+Hugo Bracegirdle	m	Hobbit		
+Ilberic Brandybuck	m	Hobbit		
+Isembard Took	m	Hobbit		
+Isembold Took	m	Hobbit		
+Isengar Took	m	Hobbit		
+Isengrim Took I	m	Hobbit		
+Isengrim Took II	m	Hobbit		
+Isengrim Took III	m	Hobbit		
+Isumbras Took I	m	Hobbit		
+Isumbras Took II	m	Hobbit		
+Isumbras Took III	m	Hobbit		
+Isumbras Took IV	m	Hobbit		
+Ivy Goodenough	f	Hobbit		
+Jago Boffin	m	Hobbit		
+Jessamine Boffin	f	Hobbit		
+Lalia Clayhanger	f	Hobbit		
+Largo Baggins	m	Hobbit		
+Laura Grubb	f	Hobbit		
+Lavender Grubb	f	Hobbit		
+Lily Baggins	f	Hobbit		
+Brown	f	Hobbit		
+Linda Baggins	f	Hobbit		
+Lobelia Sackville-Baggins	f	Hobbit		
+Longo Baggins	m	Hobbit		
+Lotho Sackville-Baggins	m	Hobbit		
+Madoc Brandybuck	m	Hobbit		
+Farmer Maggot	m	Hobbit		
+Malva Headstrong	f	Hobbit		
+Marcho	m	Hobbit		
+Marigold Gamgee	f	Hobbit		
+Marmadas Brandybuck	m	Hobbit		
+Marmadoc Brandybuck	m	Hobbit		
+Marroc Brandybuck	m	Hobbit		
+May Gamgee	f	Hobbit		
+Melilot Brandybuck	f	Hobbit		
+Menegilda Goold	f	Hobbit		
+Mentha Brandybuck	f	Hobbit		
+Meriadoc Brandybuck	m	Hobbit	Holdwine, Merry	
+Merimac Brandybuck	m	Hobbit		
+Merimas Brandybuck	m	Hobbit		
+Gardner	m	Hobbit		
+Milo Burrows	m	Hobbit		
+Mimosa Bunce	f	Hobbit		
+Minto Burrows	m	Hobbit		
+Mirabella Took	f	Hobbit		
+Moro Burrows	m	Hobbit		
+Mosco Burrows	m	Hobbit		
+Mungo Baggins	m	Hobbit		
+Myrtle Burrows	f	Hobbit		
+Nina Lightfoot	f	Hobbit		
+Nob	m	Hobbit		
+Nora Bolger	f	Hobbit		
+Proudfoot	m	Hobbit		
+Odovacar Bolger	m	Hobbit		
+Olo Proudfoot	m	Hobbit		
+Orgulas Brandybuck	m	Hobbit		
+Sackville-Baggins	m	Hobbit		
+Otto Boffin	m	Hobbit		
+Paladin Took I	m	Hobbit		
+Paladin Took II	m	Hobbit		
+Pansy Baggins	f	Hobbit		
+Pearl Took	f	Hobbit		
+Peony Baggins	f	Hobbit		
+Peregrin Took	m	Hobbit	Pippin	
+Pervinca Took	f	Hobbit		
+Pimpernel Took	f	Hobbit		
+Gardner	m	Hobbit		
+Polo Baggins	m	Hobbit		
+Ponto Baggins I	m	Hobbit		
+Ponto Baggins II	m	Hobbit		
+Poppy Chubb-Baggins	f	Hobbit		
+Porto Baggins	m	Hobbit		
+Posco Baggins	m	Hobbit		
+Primrose Boffin	f	Hobbit		
+Gardner	f	Hobbit		
+Primula Brandybuck	f	Hobbit		
+Prisca Baggins	f	Hobbit		
+Reginard Took	m	Hobbit		
+Gardner	m	Hobbit		
+Robin Smallburrow	m	Hobbit		
+Rollo Boffin	m	Hobbit		
+Rorimac Brandybuck	m	Hobbit	Rory	
+Rosa Baggins	f	Hobbit		
+Rosamunda Took	f	Hobbit		
+Rose	f	Hobbit		
+Gardner	f	Hobbit		
+Rosie Cotton	f	Hobbit		
+Rowan	f	Hobbit		
+Ruby Bolger	f	Hobbit		
+Gardner	f	Hobbit		
+Rudibert Bolger	m	Hobbit		
+Rudigar Bolger	m	Hobbit		
+Rudolph Bolger	m	Hobbit		
+Rufus Burrows	m	Hobbit		
+Sadoc Brandybuck	m	Hobbit		
+Salvia Brandybuck	f	Hobbit		
+Samwise Gamgee	m	Hobbit	Sam	
+Proudfoot	m	Hobbit		
+Sapphira Brockhouse	f	Hobbit		
+Saradas Brandybuck	m	Hobbit		
+Saradoc Brandybuck	m	Hobbit		
+Seredic Brandybuck	m	Hobbit		
+Sigismond Took	m	Hobbit		
+Tanta Hornblower	f	Hobbit		
+Theobald Bolger	m	Hobbit		
+Tobold Hornblower	m	Hobbit		
+Togo Goodbody	m	Hobbit		
+Tolman Cotton	m	Hobbit		
+Tolman Gardner	m	Hobbit	Tom	
+Tosto Boffin	m	Hobbit		
+Uffo Boffin	m	Hobbit		
+Vigo Boffin	m	Hobbit		
+Wilcome Cotton	m	Hobbit	Jolly	
+Wilibald Bolger	m	Hobbit		
+Wilimar Bolger	m	Hobbit		
+Will Whitfoot	m	Hobbit		
+Banks	m	Hobbit		
+Wiseman Gamwich	m	Hobbit		

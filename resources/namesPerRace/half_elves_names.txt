@@ -1,0 +1,12 @@
+Arwen	f	Half-elf	Undómiel	
+Dior	m	Half-elf	Aranel, Eluchíl	
+Eärendil	m	Half-elf	Ardamírë, Azrubêl	
+Elladan	m	Half-elf		
+Elrohir	m	Half-elf		
+Elrond	m	Half-elf		
+Elros	m	Half-elf	Minyatur	
+Eluréd	m	Half-elf		
+Elurín	m	Half-elf		
+Elwing	f	Half-elf		
+Galador	m	Half-elf		
+Gilmith	f	Half-elf		

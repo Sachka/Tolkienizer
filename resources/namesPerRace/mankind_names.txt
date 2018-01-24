@@ -1,0 +1,364 @@
+Adanel	f	Man		
+Adrahil I	m	Man		
+Adrahil II	m	Man		
+Ar-Adûnakhôr	m	Man	Herunúmen	
+Aerin	f	Man		
+Aghan	m	Man		
+Ailinel	f	Man		
+Tar-Alcarin	m	Man		
+Tar-Aldarion	m	Man	Anardil
+Aldor	m	Man		
+Algund	m	Man		
+Almarian	f	Man		
+Almiel	f	Man		
+Amandil	m	Man		
+Tar-Amandil	m	Man	Aphanuzir	
+Amlach	m	Man		
+Amlaith	m	Man		
+Anardil	m	Man		
+Anárion	m	Man		
+Tar-Anárion	m	Man		
+Anborn	m	Man		
+Tar-Ancalimë	f	Man	Emerwen Aranel	
+Tar-Ancalimon	m	Man		
+Andreth	f	Man	Saelind	
+Andróg	m	Man		
+Angbor	m	Man		
+Angelimar	m	Man		
+Angelimir	m	Man		
+Angrim	m	Man		
+Arador	m	Man		
+Araglas	m	Man		
+Aragorn I	m	Man		
+Aragorn II Elessar	m	Man	Elessar, Estel, Strider	
+Aragost	m	Man		
+Arahad I	m	Man		
+Arahad II	m	Man		
+Arahael	m	Man		
+Aranarth	m	Man		
+Aranuir	m	Man		
+Araphant	m	Man		
+Araphor	m	Man		
+Arassuil	m	Man		
+Aratan	m	Man		
+Arathorn I	m	Man		
+Arathorn II	m	Man		
+Araval	m	Man		
+Aravir	m	Man		
+Aravorn	m	Man		
+Arciryas	m	Man		
+Tar-Ardamin	m	Man	Abattârik	
+Ardamir	m	Man		
+Argeleb I	m	Man		
+Argeleb II	m	Man		
+Argonui	m	Man		
+Artamir	m	Man		
+Arthad	m	Man		
+Arvedui	m	Man		
+Arvegil	m	Man		
+Arveleg I	m	Man		
+Arveleg II	m	Man		
+Asgon	m	Man		
+Atanalcar	m	Man		
+Tar-Atanamir	m	Man		
+Atanatar I	m	Man		
+Atanatar II	m	Man		
+Aulendil	m	Man		
+Axantur	m	Man		
+Bain	m	Man		
+Baldor	m	Man		
+Barach	m	Man		
+Baragund	m	Man		
+Barahir	m	Man		
+Barahir	m	Man		
+Barahir	m	Man		
+Baran	m	Man		
+Baranor	m	Man		
+Bard II	m	Man		
+Bard the Bowman	m	Man		
+Barliman Butterbur	m	Man		
+Beldir	m	Man		
+Beldis	f	Man		
+Belecthor I	m	Man		
+Belecthor II	m	Man		
+Beleg	m	Man		
+Belegorn	m	Man		
+Belegund	m	Man		
+Belemir	m	Man		
+Belen	m	Man		
+Bëor	m	Man	Balan	
+Beorn	m	Man		
+Bereg	m	Man		
+Beregar	m	Man		
+Beregond	m	Man		
+Beregond	m	Man		
+Beren	m	Man		
+Beren Erchamion	m	Man	Camlost	
+Bereth	f	Man		
+Bergil	m	Man		
+Beril	f	Man		
+Berúthiel	f	Man		
+Bill Ferny	m	Man		
+Bór	m	Man		
+Borlach	m	Man		
+Borlad	m	Man		
+Boromir	m	Man		
+Boromir	m	Man		
+Boromir	m	Man		
+Boron	m	Man		
+Borondir	m	Man		
+Borthand	m	Man		
+Brand	m	Man		
+Brandir	m	Man		
+Brego	m	Man		
+Bregolas	m	Man		
+Brodda	m	Man		
+Brytta	m	Man	Léofa	
+Calimehtar	m	Man		
+Caliondo	m	Man		
+Calmacil	m	Man		
+Tar-Calmacil	m	Man	Belzagar	
+Castamir the Usurper	m	Man		
+Celebrindor	m	Man		
+Celepharn	m	Man		
+Cemendur	m	Man		
+Ceorl	m	Man		
+Cirion	m	Man		
+Ciryandil	m	Man		
+Tar-Ciryatan	m	Man	Balkumagân	
+Ciryatur	m	Man		
+Ciryon	m	Man		
+Dagnir	m	Man		
+Dairuin	m	Man		
+Damrod	m	Man		
+Denethor I	m	Man		
+Denethor II	m	Man		
+Déor	m	Man		
+Déorwine	m	Man		
+Derufin	m	Man		
+Dervorin	m	Man		
+Dior	m	Man		
+Dírhael	m	Man		
+Dírhavel	m	Man		
+Dorlas	m	Man		
+Duilin	m	Man		
+Duinhir	m	Man		
+Dúnhere	m	Man		
+Eärendil	m	Man		
+Eärendur	m	Man		
+Eärendur	m	Man		
+Eärendur	m	Man		
+Eärnil I	m	Man		
+Eärnil II	m	Man		
+Eärnur	m	Man		
+Ecthelion I	m	Man		
+Ecthelion II	m	Man		
+Egalmoth	m	Man		
+Eilinel	f	Man		
+Elatan	m	Man		
+Elboron	m	Man		
+Eldacar	m	Man		
+Eldacar	m	Man	Vinitharya	
+Eldarion	m	Man		
+Elendil	m	Man		
+Tar-Elendil	m	Man	Parmaitë	
+Elendur	m	Man		
+Elfhelm	m	Man		
+Elfhild	f	Man		
+Elfwine	m	Man		
+Emeldir	f	Man		
+Eofor	m	Man		
+Éomer	m	Man		
+Éomund	m	Man		
+Eorl the Young	m	Man		
+Éothain	m	Man		
+Éowyn	f	Man		
+Eradan	m	Man		
+Erchirion	m	Man		
+Erendis	f	Man	Elestirnë	
+Erkenbrand	m	Man		
+Estelmo	m	Man		
+Faramir	m	Man		
+Fastred	m	Man		
+Fastred	m	Man		
+Fengel	m	Man		
+Findegil	m	Man		
+Finduilas	f	Man		
+Folca	m	Man		
+Folcred	m	Man		
+Folcwine	m	Man		
+Forlong	m	Man		
+Forthwini	m	Man		
+Forweg	m	Man		
+Fram	m	Man		
+Fréa	m	Man		
+Fréaláf Hildeson	m	Man		
+Fréawine	m	Man		
+Freca	m	Man		
+Frumgar	m	Man		
+Fuinur	m	Man		
+Galdor the Tall	m	Man		
+Gálmód	m	Man		
+Gamling	m	Man		
+Gárulf	m	Man		
+Gethron	m	Man		
+Ghân-buri-Ghân	m	Man		
+Gildis	f	Man		
+Gildor	m	Man		
+Gilraen	f	Man		
+Gimilkhâd	m	Man		
+Gimilzagar	m	Man		
+Ar-Gimilzôr	m	Man	Telemnar	
+Girion	m	Man		
+Gléowine	m	Man		
+Glirhuin	m	Man		
+Glóredhel	f	Man		
+Golasgil	m	Man		
+Goldwine	m	Man		
+Gorlim	m	Man		
+Gram	m	Man		
+Gríma Wormtongue	m	Man	Wormtongue	
+Grimbeorn	m	Man		
+Grimbold	m	Man		
+Grithnir	m	Man		
+Gundor	m	Man		
+Guthláf	m	Man		
+Hador	m	Man		
+Hador Lórindol	m	Man		
+Halbarad	m	Man		
+Haldad	m	Man		
+Haldan	m	Man		
+Haldar	m	Man		
+Haldir	m	Man		
+Haleth	f	Man		
+Hallacar	m	Man	Mámandil	
+Hallas	m	Man		
+Hallatan	m	Man		
+Halmir	m	Man		
+Háma	m	Man		
+Harding	m	Man		
+Hareth	m	Man		
+Harry Goatleaf	m	Man		
+Hatholdir	m	Man		
+Helm Hammerhand	m	Man		
+Herefara	m	Man		
+Herion	m	Man		
+Herubrand	m	Man		
+Herucalmo	m	Man	Anducal	
+Herumor	m	Man		
+Hirgon	m	Man		
+Hiril	f	Man		
+Hirluin	m	Man		
+Horn	m	Man		
+Hundar	f	Man		
+Hunthor	m	Man		
+Huor	m	Man		
+Húrin	m	Man		
+Húrin I	m	Man		
+Húrin II	m	Man		
+Hyarmendacil I	m	Man		
+Hyarmendacil II	m	Man		
+Îbal	m	Man		
+Imrahil	m	Man		
+Inzilbêth	f	Man		
+Ioreth	f	Man		
+Iorlas	m	Man		
+Írildë	f	Man		
+Isildur	m	Man		
+Isilmë	f	Man		
+Isilmo	m	Man		
+Ivorwen	f	Man		
+Khamûl	m	Man		
+Léod	m	Man		
+Lindissë	f	Man		
+Lindórië	f	Man		
+Lorgan	m	Man		
+Lothíriel	f	Man		
+Mablung	m	Man		
+Mairen	f	Man		
+Malach	m	Man		
+Malantur	m	Man		
+Mallor	m	Man		
+Malvegil	m	Man		
+Manwendil	m	Man		
+Marach	m	Man		
+Mardil Voronwë	m	Man		
+Marhari	m	Man		
+Marhwini	m	Man		
+Mat Heathertoes	m	Man		
+Meneldil	m	Man		
+Tar-Meneldur	m	Man	Írimon	
+Minardil	m	Man		
+Minastan	m	Man		
+Tar-Minastir	m	Man		
+Tar-Míriel	f	Man	Zimraphel	
+Morwen	f	Man		
+Morwen Steelsheen	f	Man		
+Narmacil I	m	Man		
+Narmacil II	m	Man		
+Nessanië	f	Man		
+Niënor	f	Man		
+Nolondil	m	Man		
+Númendil	m	Man		
+Núneth	f	Man		
+Ondoher	m	Man		
+Orchaldor	m	Man		
+Orodreth	m	Man		
+Oromendil	m	Man		
+Ostoher	m	Man		
+Tar-Palantir	m	Man	Inziladûn	
+Pelendur	m	Man		
+Ar-Pharazôn	m	Man	Calion	
+Rían	f	Man		
+Rómendacil I	m	Man	Tarostar	
+Rómendacil II	m	Man	Minalcar	
+Rowlie Appledore	m	Man		
+Sador	m	Man		
+Saeros	m	Man		
+Ar-Sakalthôr	m	Man	Falassion	
+Silmariën	f	Man		
+Siriondil	m	Man		
+Soronto	m	Man		
+Tar-Súrion	m	Man		
+Tarannon	m	Man	Falastur	
+Tarcil	m	Man		
+Targon	m	Man		
+Tarondor	m	Man		
+Tarondor	m	Man		
+Ted Sandyman	m	Man		
+Tar-Telemmaitë	m	Man		
+Telemnar	m	Man		
+Tar-Telperiën	f	Man		
+Telumehtar	m	Man	Umbardacil	
+Thengel	m	Man		
+Théoden	m	Man		
+Théodred	m	Man		
+Thorondir	m	Man		
+Tindómiel	f	Man		
+Tuor	m	Man		
+Turgon	m	Man		
+Túrin I	m	Man		
+Túrin II	m	Man		
+Túrin Turambar	m	Man	Adanedhel, Agarwaen, Gorthol, Mormegil, Neithan, Thurin	
+Ulbar	m	Man		
+Uldor	m	Man		
+Ulfang the Black	m	Man		
+Ulfast	m	Man		
+Ulrad	m	Man		
+Ulwarth	m	Man		
+Valacar	m	Man		
+Valandil	m	Man		
+Valandil	m	Man		
+Tar-Vanimeldë	f	Man		
+Vardamir	m	Man	Nólimon	
+Vardilmë	f	Man		
+Vëantur	m	Man		
+Vidugavia	m	Man		
+Vidumavi	f	Man		
+Vorondil the Hunter	m	Man		
+Walda	m	Man		
+Wulf	m	Man		
+Yávien	f	Man		
+Zamîn	f	Man		
+Zimrahin	f	Man	Meldis	
+Ar-Zimrathôn	m	Man	Hostamir	

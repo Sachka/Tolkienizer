@@ -1,0 +1,15 @@
+Alatar	m	Maia		
+Arien	f	Maia		
+Eönwë	m	Maia		
+Gandalf	m	Maia	Mithrandir, Olórin	
+Gothmog	m	Maia		
+Ilmarë	f	Maia		
+Melian	f	Maia		
+Ossë	m	Maia		
+Pallando	m	Maia		
+Radagast	m	Maia	Aiwendil	
+Salmar	m	Maia		
+Saruman	m	Maia	Curumo	
+Sauron	m	Maia	Annatar	
+Tilion	m	Maia		
+Uinen	f	Maia		

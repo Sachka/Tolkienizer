@@ -1,0 +1,24 @@
+Shelob	f	spider		
+Ungoliant	m	spider		
+Arod	m	horse		
+Arroch	?	horse		
+Asfaloth	?	horse		
+Felaróf	m	horse		
+Firefoot	m	horse		
+Hasufel	m	horse		
+Nahar	m	horse		
+Shadowfax	m	horse		
+Ancalagon	m	dragon		
+Glaurung	m	dragon		
+Smaug	m	dragon		
+Gwaihir	m	eagle		
+Landroval	m	eagle		
+Meneldor	m	eagle		
+Thorondor	m	eagle		
+Bill	m	pony		
+Fatty Lumpkin	m	pony		
+Strider	m	pony		
+Stybba	m	pony		
+Carc	m	raven		
+Roäc	m	raven		
+Huan	m	wolf		

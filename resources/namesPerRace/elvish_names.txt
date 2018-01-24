@@ -1,0 +1,89 @@
+Aegnor	m	Elf	Aikanáro, Ambaráto	
+Amarië	f	Elf		
+Amdír	m	Elf		
+Amras	m	Elf	Telufinwë, Umbarto	
+Amrod	m	Elf	Ambarussa, Pityafinwë	
+Amroth	m	Elf		
+Anairë	f	Elf		
+Angrod	m	Elf	Angaráto	
+Annael	m	Elf		
+Aranwë	m	Elf		
+Aredhel	f	Elf	Ar-Feiniel, Írissë	
+Argon	m	Elf	Arakáno	
+Arminas	m	Elf		
+Beleg Cúthalion	m	Elf		
+Caranthir	m	Elf	Carnistir, Morifinwë	
+Celeborn	m	Elf	Teleporno	
+Celebrían	f	Elf		
+Celebrimbor	m	Elf		
+Celegorm	m	Elf	Turcafinwë, Tyelkormo	
+Círdan	m	Elf		
+Curufin	m	Elf	Atarinkë, Curufinwë	
+Daeron	m	Elf		
+Denethor	m	Elf		
+Eärwen	f	Elf		
+Ecthelion of the Fountain	m	Elf		
+Edrahil	m	Elf		
+Egalmoth	m	Elf		
+Eldalótë	f	Elf		
+Elemmakil	m	Elf		
+Elemmírë	?	Elf		
+Elenwë	f	Elf		
+Elmo	m	Elf		
+Enel	m	Elf		
+Enerdhil	m	Elf		
+Eöl	m	Elf		
+Erestor	m	Elf		
+Fëanor	m	Elf	Curufinwë, Fëanáro	
+Finarfin	m	Elf	Arafinwë, Ingalaurë	
+Findis	f	Elf		
+Finduilas	f	Elf	Faelivrin	
+Fingolfin	m	Elf	Aracáno, Ñolofinwë	
+Fingon	m	Elf	Findekáno	
+Finrod	m	Elf	Findaráto, Ingoldo, Nóm	
+Finwë	m	Elf	Ñoldóran	
+Galadhon	m	Elf		
+Galadriel	f	Elf	Alatáriel, Artanis, Nerwen	
+Galathil	m	Elf		
+Galdor	m	Elf		
+Galion	m	Elf		
+Gelmir	m	Elf		
+Gelmir	m	Elf		
+Gildor Inglorion	m	Elf		
+Gil-galad	m	Elf	Artanáro, Ereinion, Rodnor	
+Glorfindel	m	Elf		
+Glorfindel	m	Elf		
+Guilin	m	Elf		
+Gwindor	m	Elf		
+Haldir	m	Elf		
+Idril	f	Elf	Celebrindal	
+Imin	m	Elf		
+Indis	f	Elf		
+Ingwë	m	Elf		
+Ingwion	m	Elf		
+Irimë	f	Elf		
+Legolas	m	Elf		
+Lenwë	m	Elf		
+Lúthien	f	Elf	Tinúviel	
+Mablung	m	Elf		
+Maedhros	m	Elf		
+Maeglin	m	Elf		
+Maglor	m	Elf		
+Mahtan	m	Elf		
+Míriel Therindë	f	Elf		
+Mithrellas	f	Elf		
+Nellas	f	Elf		
+Nerdanel	f	Elf		
+Nimloth	f	Elf		
+Olwë	m	Elf		
+Orodreth	m	Elf		
+Oropher	m	Elf		
+Orophin	m	Elf		
+Pengolodh	m	Elf		
+Rúmil	m	Elf		
+Rúmil	m	Elf		
+Tata	m	Elf		
+Thingol	m	Elf	Elwë	
+Thranduil	m	Elf		
+Turgon	m	Elf		
+Voronwë	m	Elf	Aranwion	
