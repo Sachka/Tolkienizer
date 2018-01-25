@@ -82,9 +82,32 @@ loadMailsToArray(corpusPath, mails);
 println(mails.size() + " mails loaded correctly.");
 
 // TEST STANFORD CORENLP
-String serializedClassifier = "./resources/stanford_corenlp/english.all.3class.distsim.crf.ser.gz";
+String serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz";
 AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifier(serializedClassifier);
 // List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails);
 // println(NEList.size()+ " mails analysed correctly.");
-printNEInMail(856, mails, classifier);
+// printNEInMail(856, mails, classifier);
+ll = createNEList(classifier, mails)
+println(ll.size() + " mails tagged.");
 
+org = 0
+person = 0
+loc = 0
+for (mail in ll) {
+    for (tlist in mail) {
+        for (t in tlist) {
+            if (t.first().equals("PERSON")) {
+                person++
+            }
+            else if (t.first().equals("ORGANIZATION")) {
+                org++
+            }
+            else if (t.first().equals("LOCATION")) {
+                loc++
+            }
+        }
+    }
+}
+println(org + " ORGS")
+println(loc + " LOCS")
+println(person + " HUMANS")
