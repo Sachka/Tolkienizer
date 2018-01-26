@@ -182,10 +182,8 @@ class PersonSudonizer implements Sudonizer {
 	
 }
 
-random = new Random()
-
 class OrgSudonizer implements Sudonizer {
-	
+	def random = new Random()
 	def suffixes = [", co.", " ltd.", " Father & Sons", "©", "®", " Energy Company", " Deliveries", " Services", " Entreprises"]
 	def voc = []
 	def entityToSudo = [:]
@@ -198,7 +196,7 @@ class OrgSudonizer implements Sudonizer {
 	def generate() {
 		def idx1 = random.nextInt(voc.size())
 		def idx2 = random.nextInt(voc.size())
-		def idxSffix = random.nextInt(suffixes.size())
+		def idxSuffix = random.nextInt(suffixes.size())
 		def generatedName = voc[idx1] + " & " + voc[idx2] + suffixes[idxSuffix]
 		if (idx1 == idx2 || sudoToEntity.keySet().contains(generatedName)) {
 			return generate()
@@ -208,7 +206,7 @@ class OrgSudonizer implements Sudonizer {
 	
 	def sudonize(rawString) {
 		if (entityToSudo[rawString] == null) {
-			sudo = generate()
+			def sudo = generate()
 			entityToSudo[rawString] = sudo
 			sudoToEntity[sudo] = rawString
 		}
