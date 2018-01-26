@@ -1,74 +1,73 @@
 #!usr/bin/env groovy
+
+package tolkienizer
+
 @Grab ('edu.stanford.nlp:stanford-corenlp:3.8.0')
-@Grab ('org.slf4j:slf4j-log4j12:1.7.25')
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.io.File;
-import java.io.StringReader;
-import java.util.List;
-import java.util.ArrayList;
-import edu.stanford.nlp.ie.AbstractSequenceClassifier;
-import edu.stanford.nlp.ie.crf.*;
-import edu.stanford.nlp.io.IOUtils;
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.stanford.nlp.util.*;
-import edu.stanford.nlp.pipeline.*;
+@Grab ('org.slf4j:slf4j-log4j12:1.7.10')
+import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.io.File
+import java.io.StringReader
+import java.util.List
+import java.util.ArrayList
+import edu.stanford.nlp.ie.AbstractSequenceClassifier
+import edu.stanford.nlp.ie.crf.*
+import edu.stanford.nlp.io.IOUtils
+import edu.stanford.nlp.ling.CoreLabel
+import edu.stanford.nlp.ling.CoreAnnotations
+import edu.stanford.nlp.util.*
+import edu.stanford.nlp.pipeline.*
 import edu.stanford.nlp.process.PTBTokenizer
-import edu.stanford.nlp.ling.HasWord;
-import edu.stanford.nlp.process.CoreLabelTokenFactory;
+import edu.stanford.nlp.ling.HasWord
+import edu.stanford.nlp.process.CoreLabelTokenFactory
 
 
 // This function reads all mails and loads them into an ArrayList for testing purposes
-static void loadMailsToArray(File dataDir, ArrayList<String> mailList) throws IOException {
-    for (File child : dataDir.listFiles()) {
-        if (child.isFile()) {
-            byte[] encodedMail = Files.readAllBytes(Paths.get(child.getAbsolutePath()));
-            mailList.add(new String(encodedMail, StandardCharsets.UTF_8));
-        } else {
-            loadMailsToArray(child, mailList);
-        }
+void loadMailsToArray(dataDir, mailList) throws IOException {
+    dataDir.eachFile() { child ->
+        if (child.isFile()) mailList.add(new String(Files.readAllBytes(Paths.get(child.getAbsolutePath())), StandardCharsets.UTF_8))
+        else loadMailsToArray(child, mailList)
     }
 }
+
 // This function returns a tokenized string
-static tokenizeMail(String mail) {
-    String[] array = mail.split("\n");
-    String cat = new String();
-    for (String sentence : array) {
-        PTBTokenizer<CoreLabel> ptbt = new PTBTokenizer<>(new StringReader(sentence), new CoreLabelTokenFactory(), "");
+def tokenizeMail(mail) {
+    splittedMail = mail.split("\n")
+    cat = ""
+    for (sentence in splittedMail) {
+        ptbt = new PTBTokenizer<CoreLabel>(new StringReader(sentence), new CoreLabelTokenFactory(), "")
         while (ptbt.hasNext()) {
-            CoreLabel label = ptbt.next();
-            cat = cat + label + " ";
+            slabel = ptbt.next()
+            cat = cat + label + " "
         }
-        cat = cat.trim() + "\n";
+        cat = cat.trim() + "\n"
     }
-    return cat;
+    return cat
 }
 
 // This function returns a list of recognized NE
-static ArrayList<ArrayList<Triple<String, String, String>>> createNEList(AbstractSequenceClassifier cl, ArrayList<String> mailList) {
-ArrayList<ArrayList<Triple<String, String, String>>> entityList = new ArrayList<ArrayList<Triple<String, String, String>>>();
-    for (String mail : mailList) {
-        List<Triple<String, Integer, Integer>> list = cl.classifyToCharacterOffsets(mail);
-        List<Triple<String, String, String>> nameList = new ArrayList<Triple<String, String, String>>();
-        for (Triple<String, Integer, Integer> item : list) {
-            Triple t = new Triple(String, String, String);
-            t.setFirst(item.first);
-            t.setSecond(mail.substring(item.second(), item.third()));
-            t.setThird("---");
-            // println(t);
-            nameList.add(t);
+def createNEList(abstractSequenceClassifier, mailList) {
+    entityList = []
+    for (mail in mailList) {
+        offsetList = abstractSequenceClassifier.classifyToCharacterOffsets(mail)
+         nameList = []
+        for (item in offsetList) {
+            triple = new Triple(String, String, String)
+            triple.setFirst(item.first)
+            triple.setSecond(mail.substring(item.second(), item.third()))
+            triple.setThird("---")
+            nameList.add(triple)
         }
-        entityList.add(nameList);
+        entityList.add(nameList)
     }
     return entityList
 }
 
 // This prints a mail (int) with tagged NE, from a list of mails, using a classifier to show NE tags
-static void printNEInMail(Integer mailNumber, ArrayList<String> mL, AbstractSequenceClassifier cl) {
-    if (mailNumber < mL.size()) println(cl.classifyWithInlineXML(mL.get(mailNumber)));
-    else println("Invalid mail number");
+void printNEInMail(ImailNumber, listOfMails, abstractSequenceClassifier) {
+    if (mailNumber < listOfMails.size()) println abstractSequenceClassifier.classifyWithInlineXML(listOfMails.get(mailNumber))
+    else println "Invalid mail number"
 }
     
 
@@ -76,38 +75,39 @@ static void printNEInMail(Integer mailNumber, ArrayList<String> mL, AbstractSequ
 // ITERATIVE PROGRAM
 
 // LOADING MAILS TO MEMORY
-File corpusPath = new File("./resources/data/");
-ArrayList<String> mails = new ArrayList<String>();
-loadMailsToArray(corpusPath, mails);
-println(mails.size() + " mails loaded correctly.");
+corpusPath = new File("./resources/data/")
+mails = []
+loadMailsToArray(corpusPath, mails)
+println "$mails.size mails loaded correctly."
 
 // TEST STANFORD CORENLP
-String serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz";
-AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifier(serializedClassifier);
-// List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails);
-// println(NEList.size()+ " mails analysed correctly.");
-// printNEInMail(856, mails, classifier);
+serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
+classifier = CRFClassifier.getClassifier(serializedClassifier)
+// List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails)
+// println(NEList.size()+ " mails analysed correctly.")
+// printNEInMail(856, mails, classifier)
 ll = createNEList(classifier, mails)
-println(ll.size() + " mails tagged.");
+println "$ll.size mails tagged."
 
-org = 0
-person = 0
-loc = 0
+org = [] as Set
+person = [] as Set
+loc = [] as Set
 for (mail in ll) {
     for (tlist in mail) {
         for (t in tlist) {
+            println t.second()
             if (t.first().equals("PERSON")) {
-                person++
+                person << t.second()
             }
             else if (t.first().equals("ORGANIZATION")) {
-                org++
+                org << t.second()
             }
             else if (t.first().equals("LOCATION")) {
-                loc++
+                loc << t.second()
             }
         }
     }
 }
-println(org + " ORGS")
-println(loc + " LOCS")
-println(person + " HUMANS")
+println "$org.size ORGS"
+println "$loc.size LOCS"
+println "$person.size HUMANS"
