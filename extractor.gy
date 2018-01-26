@@ -95,7 +95,6 @@ loc = [] as Set
 for (mail in ll) {
     for (tlist in mail) {
         for (t in tlist) {
-            println t.second()
             if (t.first().equals("PERSON")) {
                 person << t.second()
             }
@@ -108,6 +107,6 @@ for (mail in ll) {
         }
     }
 }
-println "$org.size ORGS"
-println "$loc.size LOCS"
-println "$person.size HUMANS"
+println "$org.size() ORGS"
+println "$loc.size() LOCS"
+println "$person.size() HUMANS"
