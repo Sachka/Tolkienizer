@@ -194,6 +194,7 @@ class OrgSudonizer implements Sudonizer {
 	}
 	
 	def generate() {
+
 		def idx1 = random.nextInt(voc.size())
 		def idx2 = random.nextInt(voc.size())
 		def idxSuffix = random.nextInt(suffixes.size())
