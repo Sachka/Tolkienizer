@@ -1,22 +1,29 @@
 package tolkienizer
 
+import groovy.transform.*
+
 void main() {
 	;
 }
 
-class Sudonizer {
+interface Sudonizer {
+	def sudonize(rawString)
+}
+
+class SimpleSudonizer {
     def ne2tolkien = [:]
     def tolkien2ne = [:]
     def usableNames = []
+	def idx = 0 //cyclic reading
     
-    Sudonizer(File namesFile) {
+    SimpleSudonizer(namesFile) {
         usableNames = namesFile.readLines()
     }
     
     void addEntityMapping(entity) {
-        def nextName = usableNames[0]
-        usableNames = usableNames[1..-1]
-        ne2tolkien[entity] = nextName
+        def nextName = usableNames[idx]
+		idx = ++idx % usableNames.size() //cyclic reading
+		ne2tolkien[entity] = nextName
         tolkien2ne[nextName] = entity
     }
     
@@ -27,47 +34,74 @@ class Sudonizer {
    def getEntityMapped(sudo) {
        return tolkien2ne[sudo]
    }
+
+	def sudonize(rawString) {
+		if (getSudoMapped(rawString) == null) addEntityMapping(rawString)
+		return getSudoMapped(rawString)
+	}
 }
 
 class PersonWrapper {
 	def gender
 	def firstName
 	def lastName
+	
+	String toString() {
+		return firstName + (lastName == null ? "" : " $lastName")
+	}
 }
 
-class PersonSudonizer {
-	def persons = []
+class PersonSudonizer implements Sudonizer {
+	def persons = [] as Set
 	def person2Tolkienkin = [:]
 	def tolkienkin2person = [:]
 	def firstNameMapper = [:]
 	def lastNameMapper = [:]
-	def usableFemaleFirstNames = []
-	def usableFemaleLastNames = []
-	def usableMaleFirstNames = []
-	def usableMaleLastNames = []
+	def usableFemaleFirstNames = [] as Set
+	def femaleIdx = 0
+	def usableFemaleLastNames = [] as Set
+	def femaleLastNameIdx = 0
+	def usableMaleFirstNames = [] as Set
+	def maleIdx = 0
+	def usableMaleLastNames = [] as Set
+	def maleLastNameIdx = 0
 	
 	PersonSudonizer(mappingFile) {
 		def mappings = mappingFile.readLines()
 		for (femaleName in  mappings.findAll({it.split("\t")[1] == "f"})) {
 			def id = femaleName.split("\t")
 			if (id[0].split(" ").length > 1)  {
-				def (firstName, lastName) = id[0].split(" ")
+				def firstName = id[0].split(" ")[0]
+				def lastName = id[0].split(" ")[1..-1].join(" ")
 				usableFemaleFirstNames << firstName
 				usableFemaleLastNames << lastName
+				usableFemaleLastNames << "daughter of " + firstName
+				usableMaleLastNames << "son of " + firstName
 			} else {
 				usableFemaleFirstNames << id[0]
+				usableFemaleLastNames << "daughter of " + id[0]
+				usableMaleLastNames << "son of " + id[0]
 			}
 		}
-		for (maleName in  mappings.findAll({it.split("\t")[1] == "m"})) {
+		for (maleName in  mappings.findAll({it.split("\t")[1] != "f"})) {
 			def id = maleName.split("\t")
 			if (id[0].split(" ").length > 1)  {
-				def (firstName, lastName) = id[0].split(" ")
+				def firstName = id[0].split(" ")[0]
+				def lastName = id[0].split(" ")[1..-1].join(" ")
 				usableMaleFirstNames << firstName
 				usableMaleLastNames << lastName
+				usableMaleLastNames << "son of " + firstName
+				usableFemaleLastNames << "daughter of " + firstName
 			} else {
 				usableMaleFirstNames << id[0]
+				usableMaleLastNames << "son of " + id[0]
+				usableFemaleLastNames << "daughter of " + id[0]
 			}
 		}
+		usableFemaleFirstNames = usableFemaleFirstNames as List
+		usableFemaleLastNames = usableFemaleLastNames as List
+		usableMaleFirstNames = usableMaleFirstNames as List
+		usableMaleLastNames = usableMaleLastNames as List
 	}
 	
 	def addPerson(person) {
@@ -87,18 +121,19 @@ class PersonSudonizer {
 		if (firstNameMapper[nonsudo] != null) {
 			return firstNameMapper[nonsudo]
 		}
-		def nextName = usableFemaleFirstNames[0]
-		usableFemaleFirstNames = usableFemaleFirstNames[1..-1]
+		def nextName = usableFemaleFirstNames[femaleIdx]
+		femaleIdx = ++femaleIdx % usableFemaleFirstNames.size() //cyclic reading
 		firstNameMapper[nonsudo] = nextName
 		return nextName
 	}
 	
 	def getFemaleLastNameFor(nonsudo) {
+		if (nonsudo == null) return null
 		if (lastNameMapper[nonsudo] != null) {
 			return lastNameMapper[nonsudo]
 		}
-		def nextName = usableFemaleLastNames[0]
-		usableFemaleLastNames = usableFemaleLastNames[1..-1]
+		def nextName = usableFemaleLastNames[femaleLastNameIdx]
+		femaleLastNameIdx = ++femaleLastNameIdx % usableFemaleLastNames.size() //cyclic reading
 		lastNameMapper[nonsudo] = nextName
 		return nextName
 	}
@@ -115,20 +150,70 @@ class PersonSudonizer {
 		if (firstNameMapper[nonsudo] != null) {
 			return firstNameMapper[nonsudo]
 		}
-		def nextName = usableMaleFirstNames[0]
-		usableMaleFirstNames = usableMaleFirstNames[1..-1]
+		def nextName = usableMaleFirstNames[maleIdx]
+		maleIdx = ++maleIdx % usableMaleFirstNames.size() //cyclic reading
 		firstNameMapper[nonsudo] = nextName
 		return nextName
 	}
 	
 	def getMaleLastNameFor(nonsudo) {
+		if (nonsudo == null) return null
 		if (lastNameMapper[nonsudo] != null) {
 			return lastNameMapper[nonsudo]
 		}
-		def nextName = usableMaleLastNames[0]
-		usableMaleLastNames = usableMaleLastNames[1..-1]
+		def nextName = usableMaleLastNames[maleLastNameIdx]
+		maleLastNameIdx = ++maleLastNameIdx % usableMaleLastNames.size() //cyclic reading
 		lastNameMapper[nonsudo] = nextName
 		return nextName
 	}
+	
+	def sudonize(rawString) {
+		def rawInfos = rawString.split(" ")
+		def info = rawInfos[1..-1]
+		def fName = info[0]
+		def lName = null
+		if (info.size() != 1) {
+			lName = info[-1]
+		}
+		def person = new PersonWrapper(gender : rawInfos[0], firstName : fName, lastName :  lName)
+		if (person2Tolkienkin[person] == null) addPerson(person)
+		return person2Tolkienkin[person]
+	}
+	
+}
+
+random = new Random()
+
+class OrgSudonizer implements Sudonizer {
+	
+	def suffixes = [", co.", " ltd.", " Father & Sons", "©", "®", " Energy Company", " Deliveries", " Services", " Entreprises"]
+	def voc = []
+	def entityToSudo = [:]
+	def sudoToEntity = [:]
+	
+	OrgSudonizer(vocFile) {
+		voc = vocFile.readLines()
+	}
+	
+	def generate() {
+		def idx1 = random.nextInt(voc.size())
+		def idx2 = random.nextInt(voc.size())
+		def idxSffix = random.nextInt(suffixes.size())
+		def generatedName = voc[idx1] + " & " + voc[idx2] + suffixes[idxSuffix]
+		if (idx1 == idx2 || sudoToEntity.keySet().contains(generatedName)) {
+			return generate()
+		}
+		return generatedName
+	}
+	
+	def sudonize(rawString) {
+		if (entityToSudo[rawString] == null) {
+			sudo = generate()
+			entityToSudo[rawString] = sudo
+			sudoToEntity[sudo] = rawString
+		}
+		return entityToSudo[rawString]
+	}
+	
 	
 }

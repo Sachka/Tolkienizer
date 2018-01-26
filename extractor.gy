@@ -7,10 +7,7 @@ package tolkienizer
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
-import java.io.File
 import java.io.StringReader
-import java.util.List
-import java.util.ArrayList
 import edu.stanford.nlp.ie.AbstractSequenceClassifier
 import edu.stanford.nlp.ie.crf.*
 import edu.stanford.nlp.io.IOUtils
@@ -55,7 +52,7 @@ def createNEList(abstractSequenceClassifier, mailList) {
         for (item in offsetList) {
             triple = new Triple(String, String, String)
             triple.setFirst(item.first)
-            triple.setSecond(mail.substring(item.second(), item.third()))
+            triple.setSecond(mail.substring(item.second(), item.third()).trim())
             triple.setThird("---")
             nameList.add(triple)
         }
@@ -89,6 +86,12 @@ classifier = CRFClassifier.getClassifier(serializedClassifier)
 ll = createNEList(classifier, mails)
 println "$ll.size mails tagged."
 
+sudonizersMap =["LOCATION": new SimpleSudonizer(new File("./resources/places.txt")), "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt")), "PERSON": new PersonSudonizer(new File("./resources/names.txt"))]
+
+def sudonize(type, toSudonize) {
+	return sudonizersMap[type] == null ? null : sudonizersMap[type].sudonize(toSudonize)
+}
+
 org = [] as Set
 person = [] as Set
 loc = [] as Set
@@ -97,16 +100,19 @@ for (mail in ll) {
         for (t in tlist) {
             if (t.first().equals("PERSON")) {
                 person << t.second()
+                println sudonize(t.first(), "m " + t.second())
             }
             else if (t.first().equals("ORGANIZATION")) {
                 org << t.second()
+                println sudonize(t.first(), t.second())
             }
             else if (t.first().equals("LOCATION")) {
                 loc << t.second()
+                println sudonize(t.first(), t.second())
             }
         }
     }
 }
-println "$org.size() ORGS"
-println "$loc.size() LOCS"
-println "$person.size() HUMANS"
+println "${org.size()} ORGS"
+println "${loc.size()} LOCS"
+println "${person.size()} HUMANS"
