@@ -19,6 +19,8 @@ import edu.stanford.nlp.process.PTBTokenizer
 import edu.stanford.nlp.ling.HasWord
 import edu.stanford.nlp.process.CoreLabelTokenFactory
 import java.io.FileInputStream
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 
 
@@ -45,12 +47,40 @@ def tokenizeMail(mail) {
     return cat
 }
 
+// This function returns a list of recognized NE using Regular Expressions as dectection method
+def createSupplementaryNEList(mailList, regexMAP) {
+    entityList = []
+    patternDict = [:]
+    for (entry in regexMap.entrySet()) {
+        Pattern p = Pattern.compile((entry.getValue()))
+        patternDict[entry.getKey()] = p
+    }
+    println(patternDict)
+
+    for (mail in mailList) {
+        neList = []
+        tokenized_mail = mail
+        patternDict.each { cat, p ->
+            m = p.matcher(tokenized_mail)
+            if (m.find()) {
+                triple = new Triple(String, String, String)
+                triple.setFirst(cat)
+                triple.setSecond(m.group(0))
+                triple.setThird("---")
+                neList.add(triple)
+            }
+        }
+        entityList.add(neList)
+    }
+    return entityList
+}
+
 // This function returns a list of recognized NE
 def createNEList(abstractSequenceClassifier, mailList, genderMapping) {
     entityList = []
     for (mail in mailList) {
         offsetList = abstractSequenceClassifier.classifyToCharacterOffsets(mail)
-         nameList = []
+        nameList = []
         for (item in offsetList) {
             triple = new Triple(String, String, String)
             name = mail.substring(item.second(), item.third()).trim()
@@ -60,7 +90,7 @@ def createNEList(abstractSequenceClassifier, mailList, genderMapping) {
             // >>>>> GENDER MAPPING TEST
             fname = name.split(" ")[0]
             if (item.first.equals("PERSON")) {
-                gender = genderMapping.get(fname)
+                gender = genderMapping.get(fname.toLowerCase())
                 if (gender == null) gender = "UNDEFINED"
                 triple.setSecond(gender[0].toLowerCase() + " " + name)
                 triple.setThird(gender)
@@ -81,18 +111,26 @@ void printNEInMail(ImailNumber, listOfMails, abstractSequenceClassifier) {
     
 
 
-// ITERATIVE PROGRAM
+// ** ITERATIVE PROGRAM **
 
 // LOADING MAILS TO MEMORY
-genderMapFile = "./resources/stanford_corenlp/gender_map"
-genderMap = new Properties()
-genderMap.load(new FileInputStream(genderMapFile))
 corpusPath = new File("./resources/data/")
 mails = []
 loadMailsToArray(corpusPath, mails)
 println "$mails.size mails loaded correctly."
 
-// TEST STANFORD CORENLP
+// LOADING PROPERTIES
+genderMapFile = "./resources/stanford_corenlp/gender_map"
+genderMap = new Properties()
+genderMap.load(new FileInputStream(genderMapFile))
+
+regexMapFile = "./resources/stanford_corenlp/email_url_regex"
+regexMap = new Properties()
+regexMap.load(new FileInputStream(regexMapFile))
+
+
+
+// CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
 serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
 classifier = CRFClassifier.getClassifier(serializedClassifier)
 // List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails)
@@ -100,7 +138,13 @@ classifier = CRFClassifier.getClassifier(serializedClassifier)
 // printNEInMail(856, mails, classifier)
 ll = createNEList(classifier, mails, genderMap)
 println(ll.get(10))
+rl = createSupplementaryNEList(mails, regexMap)
+println(rl.get(122))
+System.exit(0)
 println "$ll.size mails tagged."
+
+// REGEX NE EXTRACTION
+
 
 sudonizersMap =["LOCATION": new SimpleSudonizer(new File("./resources/places.txt")), "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt")), "PERSON": new PersonSudonizer(new File("./resources/names.txt"))]
 
