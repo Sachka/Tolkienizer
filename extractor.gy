@@ -155,7 +155,6 @@ println "$rl.size mails tagged with a REGEX Classifier."
 
 
 
-System.exit(0)
 sudonizersMap =["LOCATION": new SimpleSudonizer(new File("./resources/places.txt")), "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt")), "PERSON": new PersonSudonizer(new File("./resources/names.txt"))]
 
 def sudonize(type, toSudonize) {
