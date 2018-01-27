@@ -112,6 +112,10 @@ void printNEInMail(ImailNumber, listOfMails, abstractSequenceClassifier) {
     if (mailNumber < listOfMails.size()) println abstractSequenceClassifier.classifyWithInlineXML(listOfMails.get(mailNumber))
     else println "Invalid mail number"
 }
+
+void tolkienize(mailList, neList, neExtendedList, tNElist, tNEextendedList) {
+    println("TODO")
+}
     
 
 
@@ -138,9 +142,9 @@ regexMap.load(new FileInputStream(regexMapFile))
 // CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
 serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
 classifier = CRFClassifier.getClassifier(serializedClassifier)
-// ll = createNEList(classifier, mails, genderMap)
-// println(ll[0])
-// println "$ll.size mails tagged with a CRFCLassifier."
+ll = createNEList(classifier, mails, genderMap)
+println(ll[0])
+println "$ll.size mails tagged with a CRFCLassifier."
 println()
 
 
