@@ -18,6 +18,8 @@ import edu.stanford.nlp.pipeline.*
 import edu.stanford.nlp.process.PTBTokenizer
 import edu.stanford.nlp.ling.HasWord
 import edu.stanford.nlp.process.CoreLabelTokenFactory
+import java.io.FileInputStream
+
 
 
 // This function reads all mails and loads them into an ArrayList for testing purposes
@@ -44,16 +46,26 @@ def tokenizeMail(mail) {
 }
 
 // This function returns a list of recognized NE
-def createNEList(abstractSequenceClassifier, mailList) {
+def createNEList(abstractSequenceClassifier, mailList, genderMapping) {
     entityList = []
     for (mail in mailList) {
         offsetList = abstractSequenceClassifier.classifyToCharacterOffsets(mail)
          nameList = []
         for (item in offsetList) {
             triple = new Triple(String, String, String)
+            name = mail.substring(item.second(), item.third()).trim()
             triple.setFirst(item.first)
-            triple.setSecond(mail.substring(item.second(), item.third()).trim())
+            triple.setSecond(name)
             triple.setThird("---")
+            // >>>>> GENDER MAPPING TEST
+            fname = name.split(" ")[0]
+            if (item.first.equals("PERSON")) {
+                gender = genderMapping.get(fname)
+                if (gender == null) gender = "UNDEFINED"
+                triple.setSecond(gender[0].toLowerCase() + " " + name)
+                triple.setThird(gender)
+            }
+            // >>>>>
             nameList.add(triple)
         }
         entityList.add(nameList)
@@ -72,6 +84,9 @@ void printNEInMail(ImailNumber, listOfMails, abstractSequenceClassifier) {
 // ITERATIVE PROGRAM
 
 // LOADING MAILS TO MEMORY
+genderMapFile = "./resources/stanford_corenlp/gender_map"
+genderMap = new Properties()
+genderMap.load(new FileInputStream(genderMapFile))
 corpusPath = new File("./resources/data/")
 mails = []
 loadMailsToArray(corpusPath, mails)
@@ -83,7 +98,8 @@ classifier = CRFClassifier.getClassifier(serializedClassifier)
 // List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails)
 // println(NEList.size()+ " mails analysed correctly.")
 // printNEInMail(856, mails, classifier)
-ll = createNEList(classifier, mails)
+ll = createNEList(classifier, mails, genderMap)
+println(ll.get(10))
 println "$ll.size mails tagged."
 
 sudonizersMap =["LOCATION": new SimpleSudonizer(new File("./resources/places.txt")), "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt")), "PERSON": new PersonSudonizer(new File("./resources/names.txt"))]
