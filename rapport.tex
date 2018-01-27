@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\title{Projet Industrie du TAL}
+\author{LI, Xining \and MARTINEZ, Hermes \and MICKUS, Timothee}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+étude des besoins (quels types de NE, dans quelles proportions, formatés comment),
+études des solutions (quels outils, avec quels prérequis, pour faire quoi),
+présentation du programme (technologies et ressources employées, architecture, inputs/outputs/options),
+présentation du projet (constitution des ressources, tests des outils, indications quantitatives des résultats),
+discussion (interprétations, points à améliorer, conclusion).
+
+\subsection{Présentation générale}
+\par
+L'un des défis majeurs des applications de Traitement Automatique du Langage (TAL) est d'ordre éthique: comment garantir le droit à l'anonymat des particuliers lorsqu'on utilise comme matières premières leurs informations personnelles?
+Cette question éthique est d'autant prégnante à ce jour que l'usage de données en quantités massives - on pensera évidemment aux applications "Big Data" - se répand et que le transfert d'informations s'accèlèrent - ce qu'a impliqué la révolution d'Internet.
+Ces nouvelles applications impliquent en outre le stockage et le traitement automatique des informations personnelles: si c'est une aubaine pour les domaines comme le TAL qui se consacrent à l'étude des informations que communique une personne, cela implique un débat sur les plans juridiques et éthiques quant à leur emploi à des fins qui peuvent être non seulement scientifiques, mais aussi commerciales, comme dans le cas du marketing ciblé.
+\par
+Le problème de la confidentialité des données personnelles est ancien: pour le domaine médical, il remonte à la Grèce Antique et à Hippocrate.
+On comprend que des informations personnelles, confiées à un particulier dans un cadre précis, devraient d'un point de vue moral ne pas être divulguées.
+Cependant comment établir les limites de ce cadre?
+Comment définir ce qu'est une information qui relève du domaine privé, et ce qu'est une information qui relève du domaine publique?
+\par
+L'anonymisation des données personnelles permet de résoudre une partie de ces problèmes: si l'on conserve les informations personnelles de chacun tout en empêchant l'identification desdites informations à la personne dont elles proviennent, on permet en un sens de protéger l'anonymat du particulier.
+En effet le particulier demeure certain que ses informations personnelles et privées ne sont pas connues comme étant les siennes.
+Si l'on divulgue les données personnelles, on empêche cependant qu'on puisse les associer à un individu particulier, ce qui rend moins saillant le problème éthique de cette divulgation.
+\par
+En revanche, plusieurs difficultés peuvent poindre dès qu'on anonymise un texte, et notamment dans le cas des applications en TAL.
+On doit notamment pouvoir s'appuyer sur une définition claire de ce qui constitue une mention d'un particulier à anonymiser.
+Typiquement, toute information permettant l'identification doit être retirée : on pensera évidemment à supprimer toute information permettant l'identification de manière directe, comme les noms, prénoms, adresses physiques et électroniques, numéros de téléphones...
+Mais selon cette logique, on devrait aussi retirer toute information permettant une identification indirecte: aussi les données qui, recoupées, permettent de distinguer un individu en particulier devraient de même être expurgées des données exploitées.
+Cependant ces données permettant une identification indirecte se retrouvent d'une part être difficles à détecter, d'autre part pontentiellement constituer l'intégralité des données exploitables.
+Une autre difficulté tout aussi évidente est que retirer toute mention d'un particulier rend la lecture difficile, et conduit aussi à l'introduction d'un artefact dans les données que traitera l'application.
+\par
+S'il est difficile de rémédier à la première de ces deux problématiques, la seconde, en revanche, peut trouver une réponse dans la pseudonymisation.
+Plutôt que du supprimer brutalement les références directes, on préférera leur substituer des informations neutralisées, ne correspondant à aucun individu réel.
+On souligne aussi souvent, en outre, que la première problématique est difficile à exploiter, car exploiter de telles données pour une identification indirecte demande des moyens conséquents.
+La pseudonymisation s'avère donc, en pratique, une solution envisageable à la question éthique de la protection des informations privées.
+
+\subsection{Définitions}
+Nous utiliserons les termes suivants au cours de ce rapport:
+\paragraph{Traitement automatique du Langage} (TAL): Domaine scientifique et technologique se rapportant à l'étude des traces langagières de manière automatique (en particulier informatique).
+\paragraph{Entités Nommées} ("\textit{Named Entities}", NE) : Référence dans un texte à un individu du monde réel, ou permettent d'identifier un individu du monde réel particulier.
+En particulier: noms, prénoms, noms d'entreprises ou de lieux, adresses physiques ou éléctroniques (emails, URL et IP), numéros de téléphones ou identifiants administratifs.
+\paragraph{Reconnaissance d'Entités Nommées} ("\textit{Named Entities Recognition}", NER): Tâche de TAL correspondant à indiquer, dans un texte donné, quelles NE sont présentes, et à quel endroit ddu texte.
+\paragraph{Anonymisation}: Tâche de TAL correspondant à la suppression des Entités Nommées dans un texte.
+\paragraph{Pseudonymisation}: Tâche de TAL correspondant au remplacement des Entités Nommées dans un texte par une séquence ne référant à aucun individu du monde réel.
+
+
+\section{Présentation du projet}
+\subsection{Présentation de la tâche spécifique}
+
+\subsection{Données à traiter}
+ Le corpus d'Eron un corpus de plus 600,000 emails généré par 158 dans Enron Corporation, aquis par FERC durant son inverstigation sur la faillite de l'entreprise. 
+Ce corpus est un des rares collections de masse de mails accessible publiquement, dû aux restrictions de légales et des privées numériques des corpus de ce type.
+
+
+\section{Implémentation}
+Le projet consiste à anynomiser les données à caractère personel présent dans les mails d'Eron, pour ne pas perdre les informations pragmatiques sur les différents locuteurs(envoyeur, envoyé, la résolution d'anaphores, façon de parler, la reprise des sujets), on devrais utiliser la pseudonymisation au lieu d'anynomisation brutale.  
+Le résultat du projet sera un corpus anynomisé, qui permet des autres projets de recherche de les utilser sans perdre des informations apart des données à caractères personnels. 
+ 
+
+\subsection{Choix des outils}
+On a choisi groovy pour sa facilité pour la gestion des classpaths(avec @Grab),  car on utilise le toolkit Stanford CoreNLP pour la détection des différents types d'entités nommés, et aussi parce que son est syntaxe similaire à Java, son interfaçage facile avec les librairies Java.
+
+
+\subsection{Architecture}
+Le programme se constitue de 2 fichiers, extractor.gy et sudonizing.gy, le premier pour faire la lecture des mails sources Enrons et l'extraction des entités nommés qui contiennent des informations à anonymiser, le deuxième gère la pseudonymisation des entités nommés extraits. 
+
+
+\section{Résultats}
+
+\section{Conclusion}
+
+\end{document}
+

@@ -41,13 +41,19 @@ class SimpleSudonizer {
 	}
 }
 
+lName2fName2id = [:]
+
+
 class PersonWrapper {
-	def gender
 	def firstName
 	def lastName
 	
 	String toString() {
 		return firstName + (lastName == null ? "" : " $lastName")
+	}
+	
+	public boolean equals(Object other) {
+		return other instanceof PersonWrapper && other.firstName.equals(firstName) && other.lastName.equals(lastName)
 	}
 }
 
@@ -104,14 +110,14 @@ class PersonSudonizer implements Sudonizer {
 		usableMaleLastNames = usableMaleLastNames as List
 	}
 	
-	def addPerson(person) {
-		if (person.gender == "f") return addFemalePerson(person)
+	def addPerson(gender, person) {
+		if (gender == "f") return addFemalePerson(person)
 		return addMalePerson(person)
 	}
 	
 	def addFemalePerson(person) {
 		persons << person
-		def sudonized = new PersonWrapper(gender : person.gender, firstName : getFemaleFirstNameFor(person.firstName), lastName: getFemaleLastNameFor(person.lastName))
+		def sudonized = new PersonWrapper(firstName : getFemaleFirstNameFor(person.firstName), lastName: getFemaleLastNameFor(person.lastName))
 		person2Tolkienkin[person] = sudonized
 		tolkienkin2person[sudonized] = person
 		return sudonized
@@ -140,7 +146,7 @@ class PersonSudonizer implements Sudonizer {
 	
 	def addMalePerson(person) {
 		persons << person
-		def sudonized = new PersonWrapper(gender : person.gender, firstName : getMaleFirstNameFor(person.firstName), lastName: getMaleLastNameFor(person.lastName))
+		def sudonized = new PersonWrapper(firstName : getMaleFirstNameFor(person.firstName), lastName: getMaleLastNameFor(person.lastName))
 		person2Tolkienkin[person] = sudonized
 		tolkienkin2person[sudonized] = person
 		return sudonized
@@ -175,8 +181,8 @@ class PersonSudonizer implements Sudonizer {
 		if (info.size() != 1) {
 			lName = info[-1]
 		}
-		def person = new PersonWrapper(gender : rawInfos[0], firstName : fName, lastName :  lName)
-		if (person2Tolkienkin[person] == null) addPerson(person)
+		def person = new PersonWrapper(firstName : fName, lastName :  lName)
+		if (person2Tolkienkin[person] == null) addPerson(rawInfos[0], person)
 		return person2Tolkienkin[person]
 	}
 	
@@ -194,7 +200,6 @@ class OrgSudonizer implements Sudonizer {
 	}
 	
 	def generate() {
-
 		def idx1 = random.nextInt(voc.size())
 		def idx2 = random.nextInt(voc.size())
 		def idxSuffix = random.nextInt(suffixes.size())
