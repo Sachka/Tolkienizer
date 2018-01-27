@@ -27,8 +27,14 @@ import java.util.regex.Pattern
 // This function reads all mails and loads them into an ArrayList for testing purposes
 void loadMailsToArray(dataDir, mailList) throws IOException {
     dataDir.eachFile() { child ->
-        if (child.isFile()) mailList.add(new String(Files.readAllBytes(Paths.get(child.getAbsolutePath())), StandardCharsets.UTF_8))
-        else loadMailsToArray(child, mailList)
+        if (child.isFile()) {
+            pathAndMail = []
+            filePath = child.getParent() + "/" + child.getName()
+            mail = new String(Files.readAllBytes(Paths.get(child.getAbsolutePath())), StandardCharsets.UTF_8)
+            pathAndMail.add(filePath)
+            pathAndMail.add(mail)
+            mailList.add(pathAndMail)
+        } else { loadMailsToArray(child, mailList) }
     }
 }
 
@@ -55,11 +61,9 @@ def createSupplementaryNEList(mailList, regexMAP) {
         Pattern p = Pattern.compile((entry.getValue()))
         patternDict[entry.getKey()] = p
     }
-    println(patternDict)
-
     for (mail in mailList) {
         neList = []
-        tokenized_mail = mail
+        tokenized_mail = mail[1] // [0] corresponds to path, [1] is the mail itself
         patternDict.each { cat, p ->
             m = p.matcher(tokenized_mail)
             if (m.find()) {
@@ -79,11 +83,11 @@ def createSupplementaryNEList(mailList, regexMAP) {
 def createNEList(abstractSequenceClassifier, mailList, genderMapping) {
     entityList = []
     for (mail in mailList) {
-        offsetList = abstractSequenceClassifier.classifyToCharacterOffsets(mail)
+        offsetList = abstractSequenceClassifier.classifyToCharacterOffsets(mail[1])
         nameList = []
         for (item in offsetList) {
             triple = new Triple(String, String, String)
-            name = mail.substring(item.second(), item.third()).trim()
+            name = mail[1].substring(item.second(), item.third()).trim()
             triple.setFirst(item.first)
             triple.setSecond(name)
             triple.setThird("---")
@@ -118,12 +122,13 @@ corpusPath = new File("./resources/data/")
 mails = []
 loadMailsToArray(corpusPath, mails)
 println "$mails.size mails loaded correctly."
+println()
+println(mails[0])
 
 // LOADING PROPERTIES
 genderMapFile = "./resources/stanford_corenlp/gender_map"
 genderMap = new Properties()
 genderMap.load(new FileInputStream(genderMapFile))
-
 regexMapFile = "./resources/stanford_corenlp/email_url_regex"
 regexMap = new Properties()
 regexMap.load(new FileInputStream(regexMapFile))
@@ -133,19 +138,20 @@ regexMap.load(new FileInputStream(regexMapFile))
 // CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
 serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
 classifier = CRFClassifier.getClassifier(serializedClassifier)
-// List<List<Triple<String, String, String>>> NEList = createNEList(classifier, mails)
-// println(NEList.size()+ " mails analysed correctly.")
-// printNEInMail(856, mails, classifier)
-ll = createNEList(classifier, mails, genderMap)
-println(ll.get(10))
-rl = createSupplementaryNEList(mails, regexMap)
-println(rl.get(122))
-System.exit(0)
-println "$ll.size mails tagged."
+// ll = createNEList(classifier, mails, genderMap)
+// println(ll[0])
+// println "$ll.size mails tagged with a CRFCLassifier."
+println()
+
 
 // REGEX NE EXTRACTION
+rl = createSupplementaryNEList(mails, regexMap)
+println(rl[0])
+println "$rl.size mails tagged with a REGEX Classifier."
 
 
+
+System.exit(0)
 sudonizersMap =["LOCATION": new SimpleSudonizer(new File("./resources/places.txt")), "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt")), "PERSON": new PersonSudonizer(new File("./resources/names.txt"))]
 
 def sudonize(type, toSudonize) {
