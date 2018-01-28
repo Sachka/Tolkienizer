@@ -71,15 +71,22 @@ class SimpleSudonizer implements Sudonizer {
 
 
 class PersonWrapper {
+	def gender
 	def firstName
 	def lastName
 	
 	String toString() {
-		return firstName + (lastName == null ? "" : " $lastName")
+		def lastNameProper = ""
+		if (lastName != null)
+			if (lastName.startswith(" of "))
+				if (gender== "f") lastNameProper = " daughter$lastName"
+				else lastNameProper = " son$lastName"
+			else lastNameProper = lastName
+		return firstName + lastNameProper
 	}
 	
 	public boolean equals(Object other) {
-		return other instanceof PersonWrapper && other.firstName.equals(firstName) && other.lastName.equals(lastName)
+		return other instanceof PersonWrapper && other.firstName.equals(firstName) && other.lastName.equals(lastName) && other.gender.equals(gender)
 	}
 }
 
@@ -91,12 +98,10 @@ class PersonSudonizer implements Sudonizer {
 	def lastNameMapper = [:]
 	def usableFemaleFirstNames = [] as Set
 	def femaleIdx = 0
-	def usableFemaleLastNames = [] as Set
-	def femaleLastNameIdx = 0
 	def usableMaleFirstNames = [] as Set
 	def maleIdx = 0
-	def usableMaleLastNames = [] as Set
-	def maleLastNameIdx = 0
+	def usableLastNames = [] as Set
+	def lastNameIdx = 0
 	
 	def register = [:]
 	
@@ -109,12 +114,12 @@ class PersonSudonizer implements Sudonizer {
 				def lastName = id[0].split(" ")[1..-1].join(" ")
 				usableFemaleFirstNames << firstName
 				usableFemaleLastNames << lastName
-				usableFemaleLastNames << "daughter of " + firstName
-				usableMaleLastNames << "son of " + firstName
+				usableFemaleLastNames << " of " + firstName
+				usableMaleLastNames << " of " + firstName
 			} else {
 				usableFemaleFirstNames << id[0]
-				usableFemaleLastNames << "daughter of " + id[0]
-				usableMaleLastNames << "son of " + id[0]
+				usableFemaleLastNames << " of " + id[0]
+				usableLastNames << " of " + id[0]
 			}
 		}
 		for (maleName in  mappings.findAll({it.split("\t")[1] != "f"})) {
@@ -124,12 +129,11 @@ class PersonSudonizer implements Sudonizer {
 				def lastName = id[0].split(" ")[1..-1].join(" ")
 				usableMaleFirstNames << firstName
 				usableMaleLastNames << lastName
-				usableMaleLastNames << "son of " + firstName
-				usableFemaleLastNames << "daughter of " + firstName
+				usableLastNames << " of " + firstName
 			} else {
 				usableMaleFirstNames << id[0]
-				usableMaleLastNames << "son of " + id[0]
-				usableFemaleLastNames << "daughter of " + id[0]
+				usableMaleLastNames << " of " + id[0]
+				usableLastNames << " of " + id[0]
 			}
 		}
 		usableFemaleFirstNames = usableFemaleFirstNames as List
@@ -146,14 +150,14 @@ class PersonSudonizer implements Sudonizer {
 		register = globalRegister
 	}
 	
-	def addPerson(gender, person) {
-		if (gender == "f") return addFemalePerson(person)
+	def addPerson(person) {
+		if (person.gender == "f") return addFemalePerson(person)
 		return addMalePerson(person)
 	}
 	
 	def addFemalePerson(person) {
 		persons << person
-		def sudonized = new PersonWrapper(firstName : getFemaleFirstNameFor(person.firstName, person.lastName == null), lastName: getFemaleLastNameFor(person.lastName))
+		def sudonized = new PersonWrapper(gender:  person.gender, firstName: getFemaleFirstNameFor(person.firstName, person.lastName == null), lastName: getFemaleLastNameFor(person.lastName))
 		person2Tolkienkin[person] = sudonized
 		tolkienkin2person[sudonized] = person
 		return sudonized
@@ -185,7 +189,7 @@ class PersonSudonizer implements Sudonizer {
 	
 	def addMalePerson(person) {
 		persons << person
-		def sudonized = new PersonWrapper(firstName : getMaleFirstNameFor(person.firstName, person.lastName == null), lastName: getMaleLastNameFor(person.lastName))
+		def sudonized = new PersonWrapper(gender: person.gender, firstName: getMaleFirstNameFor(person.firstName, person.lastName == null), lastName: getMaleLastNameFor(person.lastName))
 		person2Tolkienkin[person] = sudonized
 		tolkienkin2person[sudonized] = person
 		return sudonized
@@ -223,8 +227,8 @@ class PersonSudonizer implements Sudonizer {
 		if (info.size() != 1) {
 			lName = info[-1]
 		}
-		def person = new PersonWrapper(firstName : fName, lastName :  lName)
-		if (person2Tolkienkin[person] == null) addPerson(rawInfos[0], person)
+		def person = new PersonWrapper(gender: rawInfos[0], firstName : fName, lastName :  lName)
+		if (person2Tolkienkin[person] == null) addPerson(person)
 		register[rawString] = person2Tolkienkin[person].toString()
 		return person2Tolkienkin[person]
 	}
