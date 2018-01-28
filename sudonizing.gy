@@ -25,7 +25,7 @@ class AwareSudonizer implements Sudonizer {
 	
 	def sudonize(rawString) {
 		if(register[rawString] != null) return register[rawString] 
-		sudo = sudonizer.sudonize(rawString)
+		def sudo = sudonizer.sudonize(rawString)
 		register[rawString] = sudo
 		return sudo
 	}
@@ -35,16 +35,20 @@ class AwareSudonizer implements Sudonizer {
 
 class AwareEmailSudonizer extends AwareSudonizer {
 	
-	AwareEmailSudonizer(baseSudonizer globalRegister) {
+	def mails2sudo = [:]
+	
+	AwareEmailSudonizer(baseSudonizer, globalRegister) {
 		super(baseSudonizer, globalRegister)
 	}
 	
 	def sudonize(rawString, annotations) {
+		if (mails2sudo[rawString] !=null) return mails2sudo[rawString]
 		def sudotokens = ""
 		for (annotation in annotations[0..-1])
 			if (annotation != "@") sudotokens += "${sudonize(annotation)}."
 			else sudotokens += "${annotation}"
-		sudotokens += annotation[-1]
+		sudotokens += annotations[-1]
+		mails2sudo[rawString] = sudotokens
 		return sudotokens
 	}
 }

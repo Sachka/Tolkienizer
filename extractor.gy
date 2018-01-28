@@ -239,7 +239,7 @@ sudonizersMap =[
     "LOCATION": new SimpleSudonizer(new File("./resources/places.txt"), globalRegister),
     "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt"), globalRegister),
     "PERSON": new PersonSudonizer(new File("./resources/names.txt"), globalRegister),
-    "DEFAULT" : new AwareSudonizer(new SimpleSudonizer(new File("./resources/voc.txt"), globalRegister), globalRegister)
+    "EMAIL" : new AwareEmailSudonizer(new SimpleSudonizer(new File("./resources/voc.txt"), globalRegister), globalRegister)
 ]
 
 // TRANSFORMATION PROCESS
