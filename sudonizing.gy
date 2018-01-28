@@ -49,6 +49,7 @@ class AwareEmailSudonizer extends AwareSudonizer {
 			if (annotation != "@") sudotokens += "${sudonize(annotation)}."
 			else sudotokens = sudotokens[0..-1] + "${annotation}"
 		sudotokens += annotations[-1]
+		sudotokens = sudotokens.replace(" ", "_").toLowerCase()
 		mails2sudo[rawString] = sudotokens
 		return sudotokens
 	}
