@@ -8,16 +8,38 @@ void main() {
 
 interface Sudonizer {
 	def sudonize(rawString)
+	
+	def getRegister()
 }
 
-class SimpleSudonizer {
+class AwareSudonizer implements Sudonizer {
+	def register = [:]
+	def sudonizer = null
+	
+	AwareSudonizer(baseSudonizer, globalRegister) {
+		sudonizer = baseSudonizer
+		register = globalRegister
+	}
+	
+	def sudonize(rawString) {
+		if(register[rawString] != null) return register[rawString] 
+		sudo = sudonizer.sudonize(rawString)
+		register[rawString] = sudo
+		return sudo
+	}
+}
+
+class SimpleSudonizer implements Sudonizer {
     def ne2tolkien = [:]
     def tolkien2ne = [:]
     def usableNames = []
 	def idx = 0 //cyclic reading
     
-    SimpleSudonizer(namesFile) {
+	def register =[:]
+	
+    SimpleSudonizer(namesFile, globalRegister) {
         usableNames = namesFile.readLines()
+		register = globalRegister
     }
     
     void addEntityMapping(entity) {
@@ -25,6 +47,7 @@ class SimpleSudonizer {
 		idx = ++idx % usableNames.size() //cyclic reading
 		ne2tolkien[entity] = nextName
         tolkien2ne[nextName] = entity
+		register[entity] = nextName
     }
     
    	def getSudoMapped(entity) {
@@ -39,9 +62,12 @@ class SimpleSudonizer {
 		if (getSudoMapped(rawString) == null) addEntityMapping(rawString)
 		return getSudoMapped(rawString)
 	}
+	
+	def geRegister() {
+		return register
+	}
 }
 
-lName2fName2id = [:]
 
 
 class PersonWrapper {
@@ -72,7 +98,9 @@ class PersonSudonizer implements Sudonizer {
 	def usableMaleLastNames = [] as Set
 	def maleLastNameIdx = 0
 	
-	PersonSudonizer(mappingFile) {
+	def register = [:]
+	
+	PersonSudonizer(mappingFile, globalRegister) {
 		def mappings = mappingFile.readLines()
 		for (femaleName in  mappings.findAll({it.split("\t")[1] == "f"})) {
 			def id = femaleName.split("\t")
@@ -108,6 +136,8 @@ class PersonSudonizer implements Sudonizer {
 		usableFemaleLastNames = usableFemaleLastNames as List
 		usableMaleFirstNames = usableMaleFirstNames as List
 		usableMaleLastNames = usableMaleLastNames as List
+		
+		register = globalRegister
 	}
 	
 	def addPerson(gender, person) {
@@ -183,7 +213,12 @@ class PersonSudonizer implements Sudonizer {
 		}
 		def person = new PersonWrapper(firstName : fName, lastName :  lName)
 		if (person2Tolkienkin[person] == null) addPerson(rawInfos[0], person)
+		register[rawString] = person2Tolkienkin[person]
 		return person2Tolkienkin[person]
+	}
+	
+	def geRegister() {
+		return register
 	}
 	
 }
@@ -195,8 +230,11 @@ class OrgSudonizer implements Sudonizer {
 	def entityToSudo = [:]
 	def sudoToEntity = [:]
 	
-	OrgSudonizer(vocFile) {
+	def register = [:]
+	
+	OrgSudonizer(vocFile, globalRegister) {
 		voc = vocFile.readLines()
+		register = globalRegister
 	}
 	
 	def generate() {
@@ -216,8 +254,11 @@ class OrgSudonizer implements Sudonizer {
 			entityToSudo[rawString] = sudo
 			sudoToEntity[sudo] = rawString
 		}
+		register[rawString] = entityToSudo[rawString]
 		return entityToSudo[rawString]
 	}
 	
-	
+	def geRegister() {
+		return register
+	}
 }
