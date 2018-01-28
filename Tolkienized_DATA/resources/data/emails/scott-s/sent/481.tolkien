@@ -1,0 +1,41 @@
+Message-ID: <5149977.1075846799725.JavaMail.null>
+Date: Wed, 29 Nov 2000 01:13:00 -0800 (PST)
+From: _of_gilly._of_gorbag.@dor_firn-i-cúarthol__&_walls_of_the_night_energy_company.closed_door.com
+To: larry.may@enron.com
+Subject: gas daily forward start options__ Modified Valuation Version
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-From:  of Haldan M Scott
+X-To: Elrohir May
+X-cc: 
+X-bcc: 
+nullSent
+null
+null
+
+The deals included below are strictly index flat gas daily options.  I'm 
+going to send Shouan an Index +/- deal as well so that he can verify that the 
+basis offset is valuing correctly in both situations.
+
+---------------------- Forwarded by  of Haldan M Scott/HOU/ECT on 11/29/2000 09:03 
+AM ---------------------------
+
+
+Marmadoc son of Finarfin
+11/28/2000 06:00 PM
+To:  of Haldan M Scott/HOU/ECT@ECT
+cc: Fréa Wong/HOU/ECT@ECT 
+Subject: gas daily forward start options__ Modified Valuation Version
+
+Hi  of Haldan,
+
+I changed the code so that it feeds the Ostrip model as Elrohir requested by 
+using the formula to derive BasisOffset. In the attached file is the 
+comparison between the old valuation and the one after the modification. 
+Please note the changes on the premiums. Please let me know if you or Elrohir 
+have any questions/comments on this. 
+
+Shouan
+
+

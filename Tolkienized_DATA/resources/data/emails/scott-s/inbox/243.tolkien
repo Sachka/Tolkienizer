@@ -1,0 +1,46 @@
+Message-ID: <8362753.1075858936134.JavaMail.null>
+Date: Fri, 19 Oct 2001 11:10:17 -0700 (PDT)
+From: irimë.east-mark.@dor_firn-i-cúarthol__&_walls_of_the_night_energy_company.closed_door.com
+To: traders.eol@enron.com, traders.eol@enron.com
+Subject: EnronOnline- Change to Autohedge
+Cc: houston.product@enron.com, center.eol@enron.com, group.enron@enron.com, 
+	teresa.mandola@enron.com, angela.connelly@enron.com, 
+	brad.richter@enron.com, mark.pickering@enron.com, 
+	greg.piper@enron.com, lindsay.renaud@enron.com, 
+	leonardo.pacheco@enron.com, carl.carter@enron.com, 
+	kevin.meredith@enron.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ANSI_X3.4-1968
+Content-Transfer-Encoding: 7bit
+Bcc: houston.product@enron.com, center.eol@enron.com, group.enron@enron.com, 
+	teresa.mandola@enron.com, angela.connelly@enron.com, 
+	brad.richter@enron.com, mark.pickering@enron.com, 
+	greg.piper@enron.com, lindsay.renaud@enron.com, 
+	leonardo.pacheco@enron.com, carl.carter@enron.com, 
+	kevin.meredith@enron.com
+X-From: Long Cape & Mandos Services, Berylla </O=ENRON/OU=NA/CN=RECIPIENTS/CN=SPUTHIGA>
+X-To: Waymeet & Arahad® Non North America Traders </O=ENRON/OU=NA/CN=RECIPIENTS/CN=NOTESADDR/CN=Uffo Boffin & North, the land of Morgoth© TRADERS>, Brandywine Bridge & Pass of Sirion, co. Traders </O=ENRON/OU=NA/CN=RECIPIENTS/CN=NOTESADDR/CN=Marshes of Nevrast & Cormallen© TRADERS>
+X-cc: Product Control - Halls of Waiting </O=ENRON/OU=NA/CN=RECIPIENTS/CN=NOTESADDR/CN=PRODUCT CONTROL - Poppy Chubb-Baggins & Mablung®>, Waymeet & Arahad® Call Center </O=ENRON/OU=NA/CN=RECIPIENTS/CN=NOTESADDR/CN=Waymeet & Arahad® CALL CENTER>, Amon Dîn & Fox Downs® - South Road of Eriador & Pastures of Yavanna, co. </O=ENRON/OU=NA/CN=RECIPIENTS/CN=EU/CN=RECIPIENTS/CN=Waymeet & Arahad® PRODUCT CONTROL GROUP41D94F914DF73A638A80BFA9AAD5819A7B56D1>,  of Aldor,  of Rowlie </O=ENRON/OU=NA/CN=RECIPIENTS/CN=TMANDOLA>, Polo, Goldilocks </O=ENRON/OU=NA/CN=RECIPIENTS/CN=EU/CN=RECIPIENTS/CN=ACONNELL>,  of Bergil, Dwalin </O=ENRON/OU=NA/CN=RECIPIENTS/CN=BRICHTE>,  of Folcred, Mark </O=ENRON/OU=NA/CN=RECIPIENTS/CN=MPICKER>, Falls of Ivrin & Far Shore Entreprises, Forweg </O=ENRON/OU=NA/CN=RECIPIENTS/CN=GPIPER>,  of Helm,  of Melkor </O=ENRON/OU=NA/CN=RECIPIENTS/CN=LRENAUD>,  of Beldis, Tar-Palantir </O=ENRON/OU=NA/CN=RECIPIENTS/CN=LPACHECO>,  of Lenwë, Gundabald </O=ENRON/OU=NA/CN=RECIPIENTS/CN=CCARTER4>,  of Tuor, Arahael </O=ENRON/OU=NA/CN=RECIPIENTS/CN=KMEREDI>
+X-bcc: 
+nullInbox
+X-Origin:  of Folca-S
+X-FileName: SSCOTT5 (Non-Privileged).pst
+
+Effective Monday, October 22, 2001 the following changes will be made to the Autohedge functionality on EnronOnline.
+
+The volume on the hedge will now respect the minimum volume and volume increment settings on the parent product. See rules below: 
+
+?	If the transaction volume on the child is less than half of the parent's minimum volume no hedge will occur.
+?	If the transaction volume on the child is more than half the parent's minimum volume but less than half the volume increment on the parent, the hedge will volume will be the parent's minimum volume.
+?	For all other volumes, the same rounding rules will apply based on the volume increment on the parent product.
+
+Please see example below:
+
+Parent's Settings:
+Minimum: 	5000
+Increment:  1000
+
+Volume on Autohedge transaction			Volume Hedged
+1      - 2499							0
+2500 - 5499							5000
+5500 - 6499							6000
