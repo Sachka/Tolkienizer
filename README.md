@@ -16,7 +16,7 @@ This program was created in order to annonymize the Eron email dataset.
 
 ## Built With
 
-* [Stanford CoreNLP](http://www.dropwizard.io/1.0.2/docs/) - The NLP framework used
+* [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/) - The NLP framework used
 * [Groovy](https://groovy-lang.org/) - Programming Language
 
 
