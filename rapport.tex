@@ -51,9 +51,9 @@ La pseudonymisation s'avère donc, en pratique, une solution envisageable à la 
 \subsection{Définitions}
 Nous utiliserons les termes suivants au cours de ce rapport:
 \paragraph{Traitement automatique du Langage} (TAL) Domaine scientifique et technologique se rapportant à l'étude des traces langagières de manière automatique (en particulier informatique).
-\paragraph{Entités Nommées} ("Named Entities", NE) Référence dans un texte à un individu du monde réel, ou permettent d'identifier un individu du monde réel particulier.
+\paragraph{Entités Nommées} ("\textit{Named Entities}", NE) Référence dans un texte à un individu du monde réel, ou permettent d'identifier un individu du monde réel particulier.
 En particulier: noms, prénoms, noms d'entreprises ou de lieux, adresses physiques ou éléctroniques (emails, URL et IP), numéros de téléphones ou identifiants administratifs.
-\paragraph{Reconnaissance d\'Entités Nommées} ("Named Entities Recognition", NER) Tâche de TAL correspondant à indiquer, dans un texte donné, quelles NE sont présentes, et à quel endroit du texte.
+\paragraph{Reconnaissance d'Entités Nommées} ("\textit{Named Entities Recognition}", NER) Tâche de TAL correspondant à indiquer, dans un texte donné, quelles NE sont présentes, et à quel endroit du texte.
 \paragraph{Anonymisation} Tâche de TAL correspondant à la suppression des Entités Nommées dans un texte.
 \paragraph{Pseudonymisation} Tâche de TAL correspondant au remplacement des Entités Nommées dans un texte par une séquence ne référant à aucun individu du monde réel.
 \paragraph{Coréférence} Les NE qui renvoient au même individu réel partagent la même coréférence. 
@@ -217,7 +217,7 @@ En particulier les numéros de téléphones, ou identifiants administratifs ou a
 Nous avons étudié une centaine de mails pseudonymisés pour nous faire une idée de la validité des résultats obtenus.
 Pour les NE que nous extrayons, nous avons eu une vingtaine de cas \textit{stricto sensu} mal détectés.
 Les problèmes associés sont en général des mauvaises délimitations des NE qui inclut du texte à ne pas pseudonymiser, des mauvaises classifications dues à un token ambigu, ou plus rarement des mauvaises délimitations par tokens manquants, en général lié à la présence d'un token ambigu. 
-Les cas de NE entièrement non détectés sont plus fréquents, nous comptons au total aux alentours de 89\% de précision.
+Les cas de NE entièrement non détectés sont plus fréquents, nous comptons au total aux alentours de 89 \% de précision.
 Ils peuvent correspondent à plusieurs schémas: soit des noms isolés (signatures, apostrophes en début de mails, etc.) soit des surnoms mal identifiés (souvent à cause de ce qu'ils sont orthographiés en minuscules), soit des cas ambigus.
 Le classifieur par expression régulière implémenté dans le script extractor.gy aurait normalement pu détecter ces cas de manière globale, pour peu qu'on ajoutât manuellement les expressions régulières aux ressources.
 Le temps nous a cependant manqué pour effectuer cette maintenance nécessaire.
@@ -248,3 +248,4 @@ Conjugué au point précédent que nous soulevions : la multiplicité des formes
 \par
 En résumé, le travail présenté ici présente les points problématiques saillants d'une tâche de pseudonymisation; et propose de plus plusieurs outils pour les résoudre.
 
+\end{document}
