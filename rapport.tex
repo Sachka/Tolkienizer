@@ -5,7 +5,7 @@
 \usepackage[french]{babel}
 \usepackage{hyperref}
 
-\title{Projet Industrie du TAL}
+\title{Tolkienizer}
 \author{LI, Xining \and MARTINEZ, Hermes \and MICKUS, Timothee}
 
 \begin{document}
@@ -14,15 +14,13 @@
 
 \clearpage
 
-\section{Introduction}
+\section{Présentation générale}
+\par
+Le présent document correspond au rapport sur le développement et l'analyse du projet 2018 d'Industrialisation du TAL pour l'Université Paris Diderot.
+Le projet consistait en l'implémentation d'un script de pseudonymisation d'un sous-ensemble du corpus ENRON.
+Il reprend tous les éléments nécessaires à la compréhension de la tâche, du script implémenté, et à l'analyse des résultats produits.
 
-étude des besoins (quels types de NE, das quelles proportions, formatés comment),
-études des solutions (quels outils, avec quels prérequis, pour faire quoi),
-présentation du programme (technologies et ressources employées, architecture, inputs/outputs/options),
-présentation du projet (constitution des ressources, tests des outils, indications quantitatives des résultats),
-discussion (interprétations, points à améliorer, conclusion).
-
-\subsection{Présentation générale}
+\subsection{Éléments introductifs}
 \par
 L'un des défis majeurs des applications de Traitement Automatique du Langage (TAL) est d'ordre éthique: comment garantir le droit à l'anonymat des particuliers lorsqu'on utilise comme matières premières leurs informations personnelles?
 Cette question éthique est d'autant prégnante à ce jour que l'usage de données en quantités massives - on pensera évidemment aux applications "Big Data" - se répand et que le transfert d'informations s'accèlèrent - ce qu'a impliqué la révolution d'Internet.
@@ -59,14 +57,13 @@ En particulier: noms, prénoms, noms d'entreprises ou de lieux, adresses physiqu
 \paragraph{Pseudonymisation} Tâche de TAL correspondant au remplacement des Entités Nommées dans un texte par une séquence ne référant à aucun individu du monde réel.
 \paragraph{Coréférence} Les NE qui renvoient au même individu réel partagent la même coréférence. 
 
-
-\section{Présentation du projet}
-\subsection{Présentation de la tâche spécifique}
+\subsection{Présentation du projet}
+\subsubsection{Présentation de la tâche spécifique}
+\par
 Ce projet consiste en l'implémentation d'un outil pour pseudonynmiser un sous-ensemble du corpus ENRON, sans rien perdre des informations pragmatiques quant aux différents locuteurs (locuteur, allocutaire, coréférences, registres de langue, anaphores...).
 Ce corpus correspond à une collection d'emails envoyés et stockés par la société Enron et sortis du domaine privé.
 La tâche inclut également une évaluation des performances de l'outil, les mo<yens qu'il met en oeuvre et une analyse de ses limites.
-
-\subsection{Données à traiter}
+\subsubsection{Données à traiter}
 \par
 Le corpus ENRON est une collection de mails écrits et reçus par la société Enron.
 Il a été constitué au cours de la banqueroute de la société due à des manipulations fiscales frauduleuses, afin d'alimenter l'enquête subséquente au dépôt de bilan.
@@ -112,7 +109,8 @@ Enfin, nous avons mis en place un dépôt git afin de disposer d'un système de 
 Les différents choix techniques que nous avons faits nous ont conduit à créer manuellement plusieurs ressources.
 \par
 Le plus urgent a été la collection de noms de lieux et de personnes issues de l'univers de J.R.R. Tolkien.
-Pour ce faire, nous avons capturé la structure de pages issues de ressources libres: les noms de personnes ont étés récupérés du DOM la page \href{https://www.behindthename.com/namesakes/list/tolkien/alpha}{Behind The Name}, et les noms de lieux de la structure wiki de la page \href{http://tolkiengateway.net/w/index.php?title=List_of_Place_Names}{Tolkien Gateway}.
+Pour ce faire, nous avons capturé la structure de pages issues de ressources libres.
+Les noms de personnes ont étés récupérés du DOM la page \href{https://www.behindthename.com/namesakes/list/tolkien/alpha}{Behind The Name}; les noms de lieux de la structure wiki de la page \href{http://tolkiengateway.net/w/index.php?title=List_of_Place_Names}{Tolkien Gateway} et du dom de plusieurs pages issues du site \href{http://www.glyphweb.com/arda/default.asp}{The encyclopedia of Arda}.
 Les DOM ont ensuite été transformés à l'aide d'utilitaires UNIX, notamment grep et sed.
 Nous avons converti la structure tabulaire du tableau de Behind The Name en format csv, utilisant la tabulation comme séparateur.
 Certains noms de familles (notamment les indices dynastiques comme "Thorin III") ont été supprimés pour des raisons d'utilité à la tâche.
@@ -124,10 +122,50 @@ Les deux fichiers ont été concaténés pour produire le fichier voc.txt, que n
 Le second type de ressources que nous avons traité consiste en l'extraction de modèles pour la librairie Stanford CoreNLP.
 
 \subsection{Architecture}
-Le programme se constitue de 2 fichiers, extractor.gy et sudonizing.gy, le premier pour faire la lecture des mails sources Enrons et l'extraction des entités nommés qui contiennent des informations à anonymiser, le deuxième gère la pseudonymisation des entités nommés extraits. 
+\par
+Le programme en lui-même se constitue de deux fichiers, extractor.gy et sudonizing.gy.
+Le second gère la pseudonymisation des NE extraites.
+Le premier permet de gérer le processus itératif : lire les mails source, extraire les NE à pseudonymiser, gérer l'appel au second fichier pour pseudonymiser les NE, puis enregistrer les mails pseudonymisés.
+Les deux fichiers groovy sont déclarés dans le même package afin d'en simplifier l'usage.
+Les ressources utilisées par les scripts sont consignés dans le répertoire ressource.
+\par
+TODO : define extractor.gy
+\par
+Le fichier sudonyzing.gy contient plusieurs classes pour gérer la pseudonymisation des NE.
+La classe PersonWrapper est une classe cannonique qui permet simplement de simplifier la lecture pour les NE référent à des êtres humains.
+\par
+Les autres classes implémentent toutes l'interface Sudonizer, qui typologiquement définit un objet qui peut substituer de manière systématique un pseudonyme à une NE.
+Cette interface déclare deux méthodes: sudonize(rawString), qui correspond à pseudonymiser un exemple, et getRegister(), qui correspond à obtenir le registre de correspondances entre NE et pseudonymes.
+\par
+La classe SimpleSudonizer est l'implémentation la plus basique de cette interface.
+Elle correpsond à la substition systématique et directe d'une chaîne de caractère par une autre, et ne met en jeu aucun autre mécanisme.
+\par
+La classe AwareSudonizer est une implémentation qui permet de pseudonymiser en étant conscient des pseudonymes précédemment donnés.
+Elle est conçue comme un wrapper: elle se base sur la prédiction d'un autre objet Sudonizer si elle ne trouve aucun pseudonyme dans le registre.
+L'intérêt de cette classe est par ailleurs que le registre peut être global, ce qui permet alors de proposer un pseudonyme qui soit consistent avec l'ensemble des pseudonymes des Sudonizer partageant le même registre global.
+\par
+La classe PersonSudonizer est une implémentation de l'interface Sudonizer spécifiquement dédiée à la pseudonymisation des êtres humains.
+Elle permet de conserver les informations quant au genre de la personne, ainsi que de conserver la forme de la mention, et ce de manière systématique.
+Différents individus partageant le même prénom partageront (au moins en partie) le même pseudonyme, et différents individus possédant le même nom de famille partageront le même nom de famille en pseudonyme.
+Qui plus est la forme de la mention est respectée: si l'on mentionne seulement un prénom ou un nom, alors le pseudonyme associé n'est composé que d'un prénom ou d'un nom.
+Parreillement si l'on mentionne une identité complète, alors le pseudonyme retourné contiendra un prénom et un nom.
+\par
+La classe OrgSudonizer est une implémentation qui permet de pseudonymiser un nom d'organisation.
+Elle repose sur un mécanisme génératif : les pseudonymes qu'elle propose sont construits semi-aléatoirement, en associant deux noms tirés d'un fichier vocabulaire et un suffixe tiré d'une brève liste pour rendre lisible le fait qu'il s'agisse d'un nom d'entreprise.
+En effet nous n'avons pas trouvé dans l'univers de J.R.R. Tolkien un ensemble d'organisations (qu'il s'agisse d'ethnies, de pays, de magasins ou autres) qui fut assez grand pour s'appliquer à l'ensemble des noms d'organisations présent dans notre corpus.
+La stratégie générative s'est donc avérée ici nécessaire.
 
+\subsection{Emploi du script}
 
-\section{Résultats}
+\section{Discussion}
+\subsection{Limitations}
+\par
+Le script possède plusieurs limitations dues à sa conception d'une part, dues à la qualité des outils d'autre part, et enfin, dues à la tâche de pseudonymisation elle-même.
+\par
+Les limitations internes à l'outil peuvent se distinguer en deux groupes.
+Premièrement, le script est conçu selon la lecture de ressources.
+Notamment, les classes pour la pseudonymisation (et en particulier SimpleSudonizer) sont extrêmement dépendante d'un vocabulaire préalablement constitué, et ce pour toutes les substitutions effectuées.
+Un exemple parlant est celui des 
 
 \section{Conclusion}
 
