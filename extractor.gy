@@ -26,8 +26,13 @@ import java.util.regex.Pattern
 import org.apache.commons.lang3.StringUtils
 
 
+// FILE CONSTANTS
+final corpusPath = new File("resources/demo")
+final genderMapFile = "./resources/stanford_corenlp/gender_map"
+final regexMapFile = "./resources/stanford_corenlp/email_url_regex"
+final serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
 
-// This function reads all mails and loads them into an ArrayList for testing purposes
+// This function reads all mails and loads them into an ArrayList 
 void loadMailsToArray(dataDir, mailList) throws IOException {
     dataDir.eachFile() { child ->
         if (child.isFile()) {
@@ -41,6 +46,7 @@ void loadMailsToArray(dataDir, mailList) throws IOException {
     }
 }
 
+// This function writes down mails to a directory in argument
 def writeTolkienizedMails(directory, listToWrite) throws IOException {
     outputDir = new File(directory)
     if (!outputDir.exists()) {
@@ -49,14 +55,6 @@ def writeTolkienizedMails(directory, listToWrite) throws IOException {
     }
     for (element in listToWrite) {
         outputFilePath = directory + "/" + element[0] + "tolkien"
-        // dirList = element[0].split("/")
-        // currentDir = directory
-        // for (int i = 0; i < dirList.size() - 1; i++) {
-        //     currentDir = currentDir + "/" + dirList[i]
-        //     creator = new File(currentDir)
-        //     if (!creator.exists())
-        //     creator.mkdir()
-        // }
         mailFile = new File(outputFilePath)
         parentFolder = new File(mailFile.getParent())
         parentFolder.mkdirs()
@@ -138,6 +136,7 @@ def createNEList(abstractSequenceClassifier, mailList, genderMapping) {
     return entityList
 }
 
+// @TEST
 // This prints a mail (int) with tagged NE, from a list of mails, using a classifier to show NE tags
 void printNEInMail(ImailNumber, listOfMails, abstractSequenceClassifier) {
     if (mailNumber < listOfMails.size()) println abstractSequenceClassifier.classifyWithInlineXML(listOfMails.get(mailNumber))
@@ -145,6 +144,7 @@ void printNEInMail(ImailNumber, listOfMails, abstractSequenceClassifier) {
 }
 
 
+// This function recreates an emailList with annonimized NE
 def tolkienize(mailList, neMap) {
     if (mailList.size() != neMap.size()) {
         println("Impossible to tolkienize")
@@ -157,6 +157,7 @@ def tolkienize(mailList, neMap) {
     return tolkienizedMailList
 }
 
+// This function replaces keys in a String "text" by values from a "definitions" dictionary 
 def annonymize(text, definitions) {
     keys = new ArrayList<String>()
     values = new ArrayList<String>()
@@ -169,6 +170,7 @@ def annonymize(text, definitions) {
     return StringUtils.replaceEach(text, kArray, vArray)
 }
 
+// This function grabs two same size list of corresponding NE and SU NE and gives a dictionary
 def entityMapping(orig, annon) {
     if (orig.size() != annon.size()) {
         println("Impossible to map")
@@ -185,14 +187,17 @@ def entityMapping(orig, annon) {
     return mappingList
 }
 
+// this function generates a MAP of Tolkien Characters for the NE given
 def sudonize(triple) {
     return sudonizersMap[triple.first()] == null ? null : sudonizersMap[triple.first()].sudonize(String.valueOf(triple.second), String.valueOf(triple.third))
 }
 
+// this function generates a MAP of Tolkien Characters for the NE given as a list
 def sudonizeAll(listOfMails) {
     return  listOfMails.collect({ NETriplets -> NETriplets.collect( { ne -> sudonize(ne.first(), ne.second() ) }) })
 }
 
+// this function generates an equivalent list of Tolkien NE from a list of Eron NE
 def createTolkienList(llEntities) {
     llEntities.collect({ listOfTriples ->
         listOfTriples.collect({ triple ->
@@ -204,24 +209,20 @@ def createTolkienList(llEntities) {
 // ** ITERATIVE PROGRAM **
 
 // LOADING MAILS TO MEMORY
-corpusPath = new File("resources/demo")
 eronEmailList= []
 loadMailsToArray(corpusPath, eronEmailList)
 println "$eronEmailList.size mails loaded correctly."
 println()
 
 // LOADING PROPERTIES
-genderMapFile = "./resources/stanford_corenlp/gender_map"
 genderMap = new Properties()
 genderMap.load(new FileInputStream(genderMapFile))
-regexMapFile = "./resources/stanford_corenlp/email_url_regex"
 regexMap = new Properties()
 regexMap.load(new FileInputStream(regexMapFile))
 
 
 
 // CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
-serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
 classifier = CRFClassifier.getClassifier(serializedClassifier)
 ll = createNEList(classifier, eronEmailList, genderMap)
 println "$ll.size mails tagged with a CRFCLassifier."
