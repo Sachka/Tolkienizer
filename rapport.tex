@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{hyperref}
+\usepackage{etex}
 
 \title{Tolkienizer}
 \author{LI, Xining \and MARTINEZ, Hermes \and MICKUS, Timothee}
@@ -50,12 +51,13 @@ La pseudonymisation s'avère donc, en pratique, une solution envisageable à la 
 \subsection{Définitions}
 Nous utiliserons les termes suivants au cours de ce rapport:
 \paragraph{Traitement automatique du Langage} (TAL) Domaine scientifique et technologique se rapportant à l'étude des traces langagières de manière automatique (en particulier informatique).
-\paragraph{Entités Nommées} ("\textit{Named Entities}", NE) Référence dans un texte à un individu du monde réel, ou permettent d'identifier un individu du monde réel particulier.
+\paragraph{Entités Nommées} ("Named Entities", NE) Référence dans un texte à un individu du monde réel, ou permettent d'identifier un individu du monde réel particulier.
 En particulier: noms, prénoms, noms d'entreprises ou de lieux, adresses physiques ou éléctroniques (emails, URL et IP), numéros de téléphones ou identifiants administratifs.
-\paragraph{Reconnaissance d'Entités Nommées} ("\textit{Named Entities Recognition}", NER) Tâche de TAL correspondant à indiquer, dans un texte donné, quelles NE sont présentes, et à quel endroit du texte.
+\paragraph{Reconnaissance d\'Entités Nommées} ("Named Entities Recognition", NER) Tâche de TAL correspondant à indiquer, dans un texte donné, quelles NE sont présentes, et à quel endroit du texte.
 \paragraph{Anonymisation} Tâche de TAL correspondant à la suppression des Entités Nommées dans un texte.
 \paragraph{Pseudonymisation} Tâche de TAL correspondant au remplacement des Entités Nommées dans un texte par une séquence ne référant à aucun individu du monde réel.
 \paragraph{Coréférence} Les NE qui renvoient au même individu réel partagent la même coréférence. 
+\paragraph{Forme de mention} Les chaînes de caractères de NE qui coréfèrent au même individu (en particulier, à la même personne) sont des formes de mentions du même individu.
 
 \subsection{Présentation du projet}
 \subsubsection{Présentation de la tâche spécifique}
@@ -119,7 +121,8 @@ Les noms de lieux de Tolkien Gateway ont été manuellement normalisés, puis tr
 La liste en sortie a été sauvegardée dans le fichier places.txt.
 Les deux fichiers ont été concaténés pour produire le fichier voc.txt, que nous utilisons pour la production de noms d'organisations.
 \par
-Le second type de ressources que nous avons traité consiste en l'extraction de modèles pour la librairie Stanford CoreNLP.
+Le second type de ressources que nous avons traité consiste en l'extraction de modèles et la compilation d'expressions régulières pour la librairie Stanford CoreNLP.
+Ces éléments sont étudiés par les classifieurs isssus de la librairie: les modèles permettent l'emploi direct, sans entraînement, du classifieur CRF (préfixé ll dans notre code); tandis que les expressions régulières servent pour le classifieur basé sur des expressions régulières (préfixé rl dans notre code).
 
 \subsection{Architecture}
 \par
@@ -129,7 +132,14 @@ Le premier permet de gérer le processus itératif : lire les mails source, extr
 Les deux fichiers groovy sont déclarés dans le même package afin d'en simplifier l'usage.
 Les ressources utilisées par les scripts sont consignés dans le répertoire ressource.
 \par
-TODO : define extractor.gy
+Le script extractor.gy gère le déroulément essentiel de ce projet: un script simple et précis sur plusieurs étapes pour achever la pseudonymisation du corpus Eron.
+Il contient en outre du déroulement itératif pluisieurs fonctions supplémentaires pour parcourir listes et hashmaps.
+Le déroulement itératif commence avec une fonction loadMailsToArray qui charge les fichiers sources dans une liste, et garde les path de chaque email ansi que l'ordre des dossiers parcourus.
+Secondement, on génère un classifieur CRF à l'aide du framework coreNLP capable de repérer trois types de NE (Personne, Lieu, Organisation) à l'aide d'une fonction createNElist.
+On utilise aussi des properties (liste de modèles de coreNLP) pour associer un genre à chaque NE de type Personne trouvée.
+Pour les NE restantes (de type email) la fonction createSuplementaryNEList crée a partir d'un fichier properties de regex une liste de NE. 
+On passe alors a la génération de pseudonymes tirés de la literature de tolkien avec l'aide des classes déclarées danssudonizing.gy (cf. infra) : la fonction createTolkienList prend en argument la liste des NE précedemment extraites et génère une liste équivalente "tolkienisée". 
+Celle-ci est mise en regard de la liste de NE originelle pour enfin créer une nouvelle liste de mails pseudonymisés via la fonction tolkienize qu'on écrit dans un fichier en sortie.
 \par
 Le fichier sudonyzing.gy contient plusieurs classes pour gérer la pseudonymisation des NE.
 La classe PersonWrapper est une classe cannonique qui permet simplement de simplifier la lecture pour les NE référent à des êtres humains.
@@ -156,18 +166,85 @@ En effet nous n'avons pas trouvé dans l'univers de J.R.R. Tolkien un ensemble d
 La stratégie générative s'est donc avérée ici nécessaire.
 
 \subsection{Emploi du script}
+\par
+Le script s'emploie simplement en appelant le script principal: groovy extractor.gy, pour peu qu'on ait déjà compilé les sources: groovyc extractor.gy sudonizing.gy.
+Le seul prérequis est d'avoir groovy installé.
 
 \section{Discussion}
-\subsection{Limitations}
+\subsection{Limitations du script implémenté}
 \par
-Le script possède plusieurs limitations dues à sa conception d'une part, dues à la qualité des outils d'autre part, et enfin, dues à la tâche de pseudonymisation elle-même.
+Le script possède plusieurs limitations dues à sa conception d'une part, dues aux outils d'autre part, et enfin, dues à la tâche de pseudonymisation elle-même.
 \par
 Les limitations internes à l'outil peuvent se distinguer en deux groupes.
-Premièrement, le script est conçu selon la lecture de ressources.
-Notamment, les classes pour la pseudonymisation (et en particulier SimpleSudonizer) sont extrêmement dépendante d'un vocabulaire préalablement constitué, et ce pour toutes les substitutions effectuées.
-Un exemple parlant est celui des 
+Premièrement, le script est basé sur la lecture de ressources externes
+En particulier les classes pour la pseudonymisation (et en particulier SimpleSudonizer) sont extrêmement dépendantes d'un vocabulaire préalablement constitué, et ce pour toutes les substitutions effectuées.
+Un exemple parlant est celui des noms de lieux.
+En effet, nous avons recensé 2,734 noms de lieux dans le corpus originel; mais notre base de données n'en comporte que 1,834.
+Concrètement, cela signifie que des noms de lieux différents dans le corpus originel peuvent (et vont) recevoir le même pseudonyme.
+L'un des moyens de contournement que nous aurions pu mettre en place aurait été un modèle génératif, comme nous l'avons fait pour les noms d'organisations.
+Un détail du vocabulaire nous a cependant arrêté: les noms listés peuvent contenir des indications topographiques (comme "River", "River of", "Mountain of"...); aussi une stratégie générative ne nous garantie ni cohérence ni lisibilité des pseudonymes.
+\par
+La seconde catégorie de limitations internes au script est due aux besoins spécifiques à un corpus.
+Si l'on regarde les différentes classes pour la pseudonymisation, on comprend qu'elles sont avant tout définies pour leur usage.
+De celà, il suit que le script ne peut traiter que les types d'entités qui ont été définies pour le corpus.
+En d'autres termes, le script est spécifique à ce sous-ensemble du corpus ENRON, et à l'analyse que nous en avons fait.
+Si certaines de ces analyses peuvent être modifiées aisément grâce au système de properties Regexp, d'autres sont intrinsèquement liées au code lui-même.
+\par
+Un exemple possible est celui des noms : bien qu'il y ait une forme de génération dans la composition de l'identité, les différentes formes de mentions sont dépendantes de ce que l'on possède comme information.
+Les initiales par exemple ne sont pas gérées, ou alors en tant que prénom à part entière, auquel cas on perd le lien entre les formes de mention "S. Scott" et "Susan Scott". 
+De même les deuxièmes prénoms sont purement ignorés, puisque les formes de mentions sont trop peu régulières pour que nous puissions distinguer un nom d'un prénom.
+En bref, les pseudonymes proposés par le script évoquent en partie seulement les NE extraites, et ce suivant des décisions préalables à l'implémentation.
+\par
+Les limitations inhérentes à la qualité et la forme de la sortie des outils forment un second ensemble de difficultés.
+Les classifieurs de Stanford CoreNLP fonctionnent selon des algorithmes \textit{conditionnal random field} ou \textit{conditional markov model}.
+Par conséquent les résultats sont d'un ordre statistique, et non déterministe, conduisant parfois à des faux négatifs (NE non détectées), des faux positifs (NE détectée à tort), ou des mauvaises classifications (type de NE mal détecté).
+Enfin les prédictions se faisant au niveau du token, les limites d'une forme de mention de NE sont parfois dures à établir dans le cas où plusieurs NE du même type se suivent.
+\par
+Dernièrement, il existe des limitations dûes à la tâche de pseudonymisation elle-même.
+Il est difficile d'établir exactement toutes les formes que peuvent prendre des informations privées permettant l'identification directe dans un texte libre.
+Les documents suivants un format strict (formulaire, etc.) peuvent être assez trivialement pseudonymisés, cependant des productions libres sont toujours susceptibles de donner des informations permettant l'identification directe d'une manière inattendu.
+L'exemple le plus évident est la description périphrastique, qu'il est impossible de détecter via une tâche de NER;
+Un autre cas plus fréquent encore, et plus pertinent dans le cadre de la pseudonymisation, est celui du surnom, qui peut avoir comme base un nom autant qu'une description univoque de l'individu en question.
+Aussi la tâche de pseudonymisation d'un texte libre est vouée à se limiter à ce que l'on peut formellement désigner.
+
+\subsection{Résultats obtenus}
+\par
+Nous n'avons pas rencontré de problèmes d'encodages spécifiques, ce qui nous a permis de traiter l'entièreté du corpus.
+Nous avons traité les types de NE suivants: Personne, Lieu, Organisation et e-mail.
+Par conséquent tout ce qui ne correspondait pas à l'une de ces catégories n'a pas été pseudonymisée.
+En particulier les numéros de téléphones, ou identifiants administratifs ou autre n'ont pas été traités par ce script.
+\par
+Nous avons étudié une centaine de mails pseudonymisés pour nous faire une idée de la validité des résultats obtenus.
+Pour les NE que nous extrayons, nous avons eu une vingtaine de cas \textit{stricto sensu} mal détectés.
+Les problèmes associés sont en général des mauvaises délimitations des NE qui inclut du texte à ne pas pseudonymiser, des mauvaises classifications dues à un token ambigu, ou plus rarement des mauvaises délimitations par tokens manquants, en général lié à la présence d'un token ambigu. 
+Les cas de NE entièrement non détectés sont plus fréquents, nous comptons au total aux alentours de 89\% de précision.
+Ils peuvent correspondent à plusieurs schémas: soit des noms isolés (signatures, apostrophes en début de mails, etc.) soit des surnoms mal identifiés (souvent à cause de ce qu'ils sont orthographiés en minuscules), soit des cas ambigus.
+Le classifieur par expression régulière implémenté dans le script extractor.gy aurait normalement pu détecter ces cas de manière globale, pour peu qu'on ajoutât manuellement les expressions régulières aux ressources.
+Le temps nous a cependant manqué pour effectuer cette maintenance nécessaire.
+\par
+La pseudonymisation des NE extraites n'a pas posé de problèmes, du moins dans le cadre défini par les limitations exposées ci-dessus.
+Les noms de lieux détectés, en particulier et comme déjà mentionnés plus haut, ne sont pas systématiquement associés à des pseudonymes distincts.
+Le même problème peut théoriquement se poser pour les NE de type Personne, mais le problème n'a pas été avéré dans l'étude rapide du corpus que nous avons faite.
+Notons que pour qu'un cas de deux NE Personnes associées au même pseudonyme se présente, il faudrait que les nombres de NE Personnes déjà détectées respectifs à chacune soient congruents modulo le nombre de noms de familles et modulo le nombre de prénoms, ce qui rend le cas relativement peu probable.
+Un élément que nous pouvons cependant souligner à ce sujet est que nous n'avons pas su faire correspondre de très près les emails et les personnes, et ce malgré l'emploi d'un registre global. 
 
 \section{Conclusion}
-
-\end{document}
+\par
+Le présent rapport a pu mettre en avant deux points majeurs.
+\par
+D'une part, qu'il est d'une part difficile de définir strictement et formellement tout ce qui doit être pseudonymisé dans un corpus, ni dans quelle mesure le lien entre différentes formes de citations doit être conservé.
+Rajouter des contraintes pour pouvoir gérer tel ou tel cas de figure conduit souvent à des modèles de plus en plus complexes; et pouvoir faire le lien entre entités de types différents de manière cohérente s'avère rapidement peu gérable.
+En dehors de la question de l'implémentation, les surnoms, abbréviations, libertés orthographiques  ou emplois inattendus (on pensera par exemple aux noms de répertoires qui peuvent être nommés d'après une personne, une entreprise...) introduisent un degré de variation qu'il faut aussi prendre en compte.
+Enfin la question de quelle information il est envisageable de perdre n'est pas non plus annodine: les différentes formes de mentions d'une NE doivent(elles être systématiquement distinguées? faut-il conserver et pseudonymiser les métadonnées?
+\par
+D'autre part, on touche aussi ici aux limitations des outils de NER.
+Nous avons décidé d'employer deux classifieurs, lesquels se sont avérés, après usage, posséder des défauts assez peu contournables.
+Le classifieur CRF est d'ordre statistique, et non pas déterministe.
+Dans le cadre de données sous format libre, en particulier, dès lors qu'on atteint un volume conséquent, on obtient la certitude de faux négatifs: des NE qu'on devrait pseudonymiser, et qui ne le sont pas.
+Si l'exigence est d'ordre moral, éthique ou juridique comme c'est souvent le cas dans les tâches d'anonymisation, cette caractéristique est très peu appréciable.
+Le classifieur par expression régulière évite cet écueil, en revanche il réclame une mise en place très coûteuse.
+Pour être précis, le classifieur doit posséder pour chaque élément qui doit être pseudonymisé une règle qui y correspond, et ces règles sont pour l'essentiel écrites et intégrées manuellement.
+Conjugué au point précédent que nous soulevions : la multiplicité des formes de mentions et la difficulté de la formalisation de celles-ci, on comprend alors que la somme de travail à investir croît presque exponentiellement avec chaque nouveau cas de figure.
+\par
+En résumé, le travail présenté ici présente les points problématiques saillants d'une tâche de pseudonymisation; et propose de plus plusieurs outils pour les résoudre.
 
