@@ -42,11 +42,12 @@ class AwareEmailSudonizer extends AwareSudonizer {
 	}
 	
 	def sudonize(rawString, annotations) {
+		annotations = annotations.split(" ")
 		if (mails2sudo[rawString] !=null) return mails2sudo[rawString]
 		def sudotokens = ""
 		for (annotation in annotations[0..-1])
 			if (annotation != "@") sudotokens += "${sudonize(annotation)}."
-			else sudotokens += "${annotation}"
+			else sudotokens = sudotokens[0..-1] + "${annotation}"
 		sudotokens += annotations[-1]
 		mails2sudo[rawString] = sudotokens
 		return sudotokens
