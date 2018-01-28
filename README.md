@@ -7,7 +7,7 @@ This program uses the Stanford CoreNLP API to detect Named Entities NE from a te
 ```
 "Scott Kennedy works for General Electric, his email is scott_kennedy@ge.com, he lives in New York."
 ```
-coul be annonimized as follows:
+coul be annonymized as follows:
 ```
 "Bilbo Baggins works for Dwarves from Moria inc., his email is bilbo_baggins@moria.com, he lives in Bag End."
 ```
