@@ -113,12 +113,10 @@ class PersonSudonizer implements Sudonizer {
 				def firstName = id[0].split(" ")[0]
 				def lastName = id[0].split(" ")[1..-1].join(" ")
 				usableFemaleFirstNames << firstName
-				usableFemaleLastNames << lastName
-				usableFemaleLastNames << " of " + firstName
-				usableMaleLastNames << " of " + firstName
+				usableLastNames << lastName
+				usableLastNames << " of " + firstName
 			} else {
-				usableFemaleFirstNames << id[0]
-				usableFemaleLastNames << " of " + id[0]
+				usableFemaleFirstNames << id[0]]
 				usableLastNames << " of " + id[0]
 			}
 		}
@@ -128,11 +126,10 @@ class PersonSudonizer implements Sudonizer {
 				def firstName = id[0].split(" ")[0]
 				def lastName = id[0].split(" ")[1..-1].join(" ")
 				usableMaleFirstNames << firstName
-				usableMaleLastNames << lastName
+				usableLastNames << lastName
 				usableLastNames << " of " + firstName
 			} else {
 				usableMaleFirstNames << id[0]
-				usableMaleLastNames << " of " + id[0]
 				usableLastNames << " of " + id[0]
 			}
 		}
