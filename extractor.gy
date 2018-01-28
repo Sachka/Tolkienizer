@@ -51,7 +51,7 @@ def writeTolkienizedMails(directory, listToWrite) throws IOException {
         outputFilePath = directory + "/" + element[0] + "tolkien"
         mailFile = new File(outputFilePath)
         parentFolder = new File(mailFile.getParent())
-        parentFolder.mkdir()
+        parentFolder.mkdirs()
         mailFile.createNewFile()
         writer = new OutputStreamWriter(new FileOutputStream(mailFile))
         writer.write(element[1])
@@ -158,7 +158,7 @@ def annonymize(text, definitions) {
     kArray = keys.toArray(new String[keys.size()])
     vArray = values.toArray(new String[values.size()]) 
     return StringUtils.replaceEach(text, kArray, vArray)
-    }
+}
 
 def entityMapping(orig, annon) {
     if (orig.size() != annon.size()) {
