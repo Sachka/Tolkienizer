@@ -101,7 +101,7 @@ def createSupplementaryNEList(mailList, regexMAP) {
                 triple.setSecond(m.group(0))
                 triple.setThird("---")
                 if (cat.equals("EMAIL"))
-                    triple.setThird(m.group(2) + " " + m.group(3) + " " + m.group(4) + " " + m.group(5))
+                    triple.setThird(m.group(2) + " " + m.group(3) + " " + m.group(4) + " " + m.group(5) + " " + m.group(6))
                 neList.add(triple)
             }
         }
@@ -200,7 +200,6 @@ def createTolkienList(llEntities) {
         })
     }) 
 }
-
 
 // ** ITERATIVE PROGRAM **
 
