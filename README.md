@@ -19,7 +19,7 @@ In order to run the script type the following commands:
 $ groovyc extractor.gy sudonizing.gy
 $ groovy extractor.gy
 ```
-A Tolkienized_DATA folder will be created will annonymized data.
+A Tolkienized_DATA folder will be created with annonymized data.
 
 
 ## Built With
