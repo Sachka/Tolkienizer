@@ -137,6 +137,12 @@ class PersonSudonizer implements Sudonizer {
 		usableMaleFirstNames = usableMaleFirstNames as List
 		usableMaleLastNames = usableMaleLastNames as List
 		
+		Collections.shuffle usableFemaleFirstNames
+		Collections.shuffle usableMaleFirstNames
+		Collections.shuffle usableFemaleLastNames
+		Collections.shuffle usableMaleLastNames
+		
+		
 		register = globalRegister
 	}
 	
@@ -147,13 +153,16 @@ class PersonSudonizer implements Sudonizer {
 	
 	def addFemalePerson(person) {
 		persons << person
-		def sudonized = new PersonWrapper(firstName : getFemaleFirstNameFor(person.firstName), lastName: getFemaleLastNameFor(person.lastName))
+		def sudonized = new PersonWrapper(firstName : getFemaleFirstNameFor(person.firstName, person.lastName == null), lastName: getFemaleLastNameFor(person.lastName))
 		person2Tolkienkin[person] = sudonized
 		tolkienkin2person[sudonized] = person
 		return sudonized
 	}
 	
-	def getFemaleFirstNameFor(nonsudo) {
+	def getFemaleFirstNameFor(nonsudo, isLastNameNull) {
+		if (isLastNameNull && lastNameMapper[nonsudo] != null) {
+			return lastNameMapper[nonsudo]
+		}
 		if (firstNameMapper[nonsudo] != null) {
 			return firstNameMapper[nonsudo]
 		}
@@ -176,13 +185,16 @@ class PersonSudonizer implements Sudonizer {
 	
 	def addMalePerson(person) {
 		persons << person
-		def sudonized = new PersonWrapper(firstName : getMaleFirstNameFor(person.firstName), lastName: getMaleLastNameFor(person.lastName))
+		def sudonized = new PersonWrapper(firstName : getMaleFirstNameFor(person.firstName, person.lastName == null), lastName: getMaleLastNameFor(person.lastName))
 		person2Tolkienkin[person] = sudonized
 		tolkienkin2person[sudonized] = person
 		return sudonized
 	}
 	
-	def getMaleFirstNameFor(nonsudo) {
+	def getMaleFirstNameFor(nonsudo, isLastNameNull) {
+		if (isLastNameNull && lastNameMapper[nonsudo] != null) {
+			return lastNameMapper[nonsudo]
+		}
 		if (firstNameMapper[nonsudo] != null) {
 			return firstNameMapper[nonsudo]
 		}
