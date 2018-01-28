@@ -32,6 +32,18 @@ final genderMapFile = "./resources/stanford_corenlp/gender_map"
 final regexMapFile = "./resources/stanford_corenlp/email_url_regex"
 final serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
 
+// SUDONIZER PARAMETERS
+globalRegister =[:]
+sudonizersMap =[
+    "LOCATION": new SimpleSudonizer(new File("./resources/places.txt"), globalRegister),
+    "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt"), globalRegister),
+    "PERSON": new PersonSudonizer(new File("./resources/names.txt"), globalRegister),
+    "EMAIL" : new AwareEmailSudonizer(new SimpleSudonizer(new File("./resources/voc.txt"), globalRegister), globalRegister)
+]
+
+
+// SCRIP FUNCTIONS FOR THE TASK OF ANNONIMIZATION
+
 // This function reads all mails and loads them into an ArrayList 
 void loadMailsToArray(dataDir, mailList) throws IOException {
     dataDir.eachFile() { child ->
@@ -233,21 +245,13 @@ println()
 rl = createSupplementaryNEList(eronEmailList, regexMap)
 println "$rl.size mails tagged with a REGEX Classifier."
 
-// SUDONIZER PARAMETERS
-globalRegister =[:]
-sudonizersMap =[
-    "LOCATION": new SimpleSudonizer(new File("./resources/places.txt"), globalRegister),
-    "ORGANIZATION":  new OrgSudonizer(new File("./resources/voc.txt"), globalRegister),
-    "PERSON": new PersonSudonizer(new File("./resources/names.txt"), globalRegister),
-    "EMAIL" : new AwareEmailSudonizer(new SimpleSudonizer(new File("./resources/voc.txt"), globalRegister), globalRegister)
-]
 
 // TRANSFORMATION PROCESS
 // Creating first equivalent Tolkien Entities for NE (ll) and REGEXED NE (rl)
 tolkienLL = createTolkienList(ll)
-// println(ll)
 tolkienRL = createTolkienList(rl)
-// println(rl)
+
+
 
 
 // Creation of list of mappings ERON TO TOLKIEN
@@ -262,6 +266,15 @@ tolkienEmailList = tolkienize(partialEmailList, eronToTolkienLL)
 
 // Writing results to DIR in first argument
 writeTolkienizedMails("Tolkien", tolkienEmailList)
+
+
+// DEBUG PRINT
+// println(ll)
+// println(rl)
+// println(tolkienLL)
+// println(tolkienRL)
+
+
 println()
 println("End of Program.")
 
