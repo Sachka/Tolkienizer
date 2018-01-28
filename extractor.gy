@@ -125,8 +125,7 @@ void tolkienize(mailList, neList, neExtendedList, tNElist, tNEextendedList) {
 corpusPath = new File("./resources/data/")
 mails = []
 loadMailsToArray(corpusPath, mails)
-println "$mails.size mails loaded correctly."
-println()
+println "$mails.size mails loaded correctly.\n"
 println(mails[0])
 
 // LOADING PROPERTIES
@@ -137,6 +136,7 @@ regexMapFile = "./resources/stanford_corenlp/email_url_regex"
 regexMap = new Properties()
 regexMap.load(new FileInputStream(regexMapFile))
 
+println "properties loaded"
 
 
 // CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
@@ -144,14 +144,13 @@ serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.casel
 classifier = CRFClassifier.getClassifier(serializedClassifier)
 ll = createNEList(classifier, mails, genderMap)
 println(ll[0])
-println "$ll.size mails tagged with a CRFCLassifier."
-println()
+println "$ll.size mails tagged with a CRFCLassifier.\n"
 
 
 // REGEX NE EXTRACTION
 rl = createSupplementaryNEList(mails, regexMap)
 println(rl[0])
-println "$rl.size mails tagged with a REGEX Classifier."
+println "$rl.size mails tagged with a REGEX Classifier.\n"
 
 
 globalRegister =[:]
@@ -162,8 +161,8 @@ sudonizersMap =[
     "DEFAULT" : new AwareSudonizer(new SimpleSudonizer(new File("./resources/voc.txt"), globalRegister), globalRegister)
 ]
 
-def sudonize(type, toSudonize) {
-	return sudonizersMap[type] == null ? null : sudonizersMap[type].sudonize(toSudonize)
+def sudonize(triple) {
+    return sudonizersMap[triple.first()] == null ? null : sudonizersMap[triple.first()].sudonize(triple.second(), triple.third())
 }
 
 org = [] as Set
@@ -172,21 +171,23 @@ loc = [] as Set
 for (mail in ll) {
     for (tlist in mail) {
         for (t in tlist) {
+            println t
             if (t.first().equals("PERSON")) {
                 person << t.second()
-                println sudonize(t.first(), "m " + t.second())
+                println sudonize(t)
             }
             else if (t.first().equals("ORGANIZATION")) {
                 org << t.second()
-                println sudonize(t.first(), t.second())
+                println sudonize(t)
             }
             else if (t.first().equals("LOCATION")) {
                 loc << t.second()
-                println sudonize(t.first(), t.second())
+                println sudonize(t)
             }
         }
     }
 }
+println ""
 println "${org.size()} ORGS"
 println "${loc.size()} LOCS"
 println "${person.size()} HUMANS"

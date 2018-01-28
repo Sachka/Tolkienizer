@@ -6,10 +6,12 @@ void main() {
 	;
 }
 
-interface Sudonizer {
-	def sudonize(rawString)
+trait Sudonizer {
+	abstract def sudonize(rawString)
 	
-	def getRegister()
+	abstract def getRegister()
+	
+	def sudonize(rawString, annotations) { return sudonize(rawString) }
 }
 
 class AwareSudonizer implements Sudonizer {
@@ -27,6 +29,8 @@ class AwareSudonizer implements Sudonizer {
 		register[rawString] = sudo
 		return sudo
 	}
+	
+	
 }
 
 class SimpleSudonizer implements Sudonizer {
@@ -116,7 +120,7 @@ class PersonSudonizer implements Sudonizer {
 				usableLastNames << lastName
 				usableLastNames << " of " + firstName
 			} else {
-				usableFemaleFirstNames << id[0]]
+				usableFemaleFirstNames << id[0]
 				usableLastNames << " of " + id[0]
 			}
 		}
@@ -134,15 +138,12 @@ class PersonSudonizer implements Sudonizer {
 			}
 		}
 		usableFemaleFirstNames = usableFemaleFirstNames as List
-		usableFemaleLastNames = usableFemaleLastNames as List
+		usableLastNames = usableLastNames as List
 		usableMaleFirstNames = usableMaleFirstNames as List
-		usableMaleLastNames = usableMaleLastNames as List
 		
 		Collections.shuffle usableFemaleFirstNames
 		Collections.shuffle usableMaleFirstNames
-		Collections.shuffle usableFemaleLastNames
-		Collections.shuffle usableMaleLastNames
-		
+		Collections.shuffle usableLastNames
 		
 		register = globalRegister
 	}
@@ -178,8 +179,8 @@ class PersonSudonizer implements Sudonizer {
 		if (lastNameMapper[nonsudo] != null) {
 			return lastNameMapper[nonsudo]
 		}
-		def nextName = usableFemaleLastNames[femaleLastNameIdx]
-		femaleLastNameIdx = ++femaleLastNameIdx % usableFemaleLastNames.size() //cyclic reading
+		def nextName = usableLastNames[lastNameIdx]
+		lastNameIdx = ++lastNameIdx % usableLastNames.size() //cyclic reading
 		lastNameMapper[nonsudo] = nextName
 		return nextName
 	}
@@ -210,8 +211,8 @@ class PersonSudonizer implements Sudonizer {
 		if (lastNameMapper[nonsudo] != null) {
 			return lastNameMapper[nonsudo]
 		}
-		def nextName = usableMaleLastNames[maleLastNameIdx]
-		maleLastNameIdx = ++maleLastNameIdx % usableMaleLastNames.size() //cyclic reading
+		def nextName = usableLastNames[lastNameIdx]
+		lastNameIdx = ++lastNameIdx % usableLastNames.size() //cyclic reading
 		lastNameMapper[nonsudo] = nextName
 		return nextName
 	}
@@ -225,6 +226,20 @@ class PersonSudonizer implements Sudonizer {
 			lName = info[-1]
 		}
 		def person = new PersonWrapper(gender: rawInfos[0], firstName : fName, lastName :  lName)
+		if (person2Tolkienkin[person] == null) addPerson(person)
+		register[rawString] = person2Tolkienkin[person].toString()
+		return person2Tolkienkin[person]
+	}
+	
+	def sudonize(rawString, annotation) {
+		def gender = annotation == "FEMALE" ? "f" : "m"
+		def info =  rawString.split(" ")
+		def fName = info[0]
+		def lName = null
+		if (info.size() != 1) {
+			lName = info[-1]
+		}
+		def person = new PersonWrapper(gender: gender, firstName : fName, lastName :  lName)
 		if (person2Tolkienkin[person] == null) addPerson(person)
 		register[rawString] = person2Tolkienkin[person].toString()
 		return person2Tolkienkin[person]
