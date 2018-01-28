@@ -2,7 +2,7 @@
 ## A J.R.R. Tolkien Based Text Annonymizer
 This program uses the Stanford CoreNLP API to detect Named Entities NE from a text file, it then generates an equivalent for each entity based on the universe of Middle Earth (The Hobbit, The Lord of The Rings and The Silmarilion).
 
-### EXAMPLE
+### Example
 
 ```
 "Scott Kennedy works for General Electric, his email is scott_kennedy@ge.com, he lives in New York."
@@ -12,7 +12,15 @@ coul be annonimized as follows:
 "Bilbo Baggins works for Dwarves from Moria inc., his email is bilbo_baggins@moria.com, he lives in Bag End."
 ```
 
+### Task
 This program was created in order to annonymize the Eron email dataset.
+In order to run the script type the following commands:
+```
+$ groovyc extractor.gy sudonizing.gy
+$ groovy extractor.gy
+```
+A Tolkienized_DATA folder will be created will annonymized data.
+
 
 ## Built With
 

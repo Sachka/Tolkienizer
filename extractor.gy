@@ -27,7 +27,8 @@ import org.apache.commons.lang3.StringUtils
 
 
 // FILE CONSTANTS
-final corpusPath = new File("resources/demo")
+// final corpusPath = new File("resources/demo")
+final corpusPath = new File("resources/data")
 final resultPath = "Tolkienized_DATA"
 final genderMapFile = "./resources/stanford_corenlp/gender_map"
 final regexMapFile = "./resources/stanford_corenlp/email_url_regex"
@@ -175,11 +176,12 @@ def annonymize(text, definitions) {
     keys = new ArrayList<String>()
     values = new ArrayList<String>()
     for (entry in definitions.entrySet()) {
-        keys.add(entry.getKey())
-            values.add(String.valueOf(entry.getValue()))
+        keys.add(String.valueOf(entry.getKey()))
+        values.add(String.valueOf(entry.getValue()))
     }
     kArray = keys.toArray(new String[keys.size()])
     vArray = values.toArray(new String[values.size()]) 
+
     return StringUtils.replaceEach(text, kArray, vArray)
 }
 
@@ -234,17 +236,19 @@ regexMap = new Properties()
 regexMap.load(new FileInputStream(regexMapFile))
 
 
-
 // CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
 classifier = CRFClassifier.getClassifier(serializedClassifier)
 ll = createNEList(classifier, eronEmailList, genderMap)
-println "$ll.size mails tagged with a CRFCLassifier."
+println("Extracting NE with a CRF Classifier")
+println "$ll.size mails tagged with a CRF CLassifier."
 println()
 
 
 // REGEX NE EXTRACTION
 rl = createSupplementaryNEList(eronEmailList, regexMap)
+println("Extracting NE with a REGEX Classifier")
 println "$rl.size mails tagged with a REGEX Classifier."
+println()
 
 
 // TRANSFORMATION PROCESS
@@ -261,6 +265,7 @@ eronToTolkienRL = entityMapping(rl, tolkienRL)
 
 // Creation of a partial email list with REGEXED replaced entities
 partialEmailList = tolkienize(eronEmailList, eronToTolkienRL)
+partialEmailList = tolkienize(partialEmailList, eronToTolkienRL)
 
 // Creation of a complete email list with CRF Classifier replaced entities
 tolkienEmailList = tolkienize(partialEmailList, eronToTolkienLL)
@@ -274,6 +279,8 @@ writeTolkienizedMails(resultPath, tolkienEmailList)
 // println(rl)
 // println(tolkienLL)
 // println(tolkienRL)
+// println(eronToTolkienLL)
+// println(eronToTolkienRL)
 
 
 println()
