@@ -100,6 +100,8 @@ def createSupplementaryNEList(mailList, regexMAP) {
                 triple.setFirst(cat)
                 triple.setSecond(m.group(0))
                 triple.setThird("---")
+                if (cat.equals("EMAIL"))
+                    triple.setThird(m.group(2) + " " + m.group(3) + " " + m.group(4) + " " + m.group(5))
                 neList.add(triple)
             }
         }
@@ -243,7 +245,9 @@ sudonizersMap =[
 // TRANSFORMATION PROCESS
 // Creating first equivalent Tolkien Entities for NE (ll) and REGEXED NE (rl)
 tolkienLL = createTolkienList(ll)
+// println(ll)
 tolkienRL = createTolkienList(rl)
+// println(rl)
 
 
 // Creation of list of mappings ERON TO TOLKIEN
