@@ -33,6 +33,22 @@ class AwareSudonizer implements Sudonizer {
 	
 }
 
+class AwareEmailSudonizer extends AwareSudonizer {
+	
+	AwareEmailSudonizer(baseSudonizer globalRegister) {
+		super(baseSudonizer, globalRegister)
+	}
+	
+	def sudonize(rawString, annotations) {
+		def sudotokens = ""
+		for (annotation in annotations[0..-1])
+			if (annotation != "@") sudotokens += "${sudonize(annotation)}."
+			else sudotokens += "${annotation}"
+		sudotokens += annotation[-1]
+		return sudotokens
+	}
+}
+
 class SimpleSudonizer implements Sudonizer {
     def ne2tolkien = [:]
     def tolkien2ne = [:]
