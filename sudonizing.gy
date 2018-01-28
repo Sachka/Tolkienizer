@@ -225,7 +225,7 @@ class PersonSudonizer implements Sudonizer {
 		}
 		def person = new PersonWrapper(firstName : fName, lastName :  lName)
 		if (person2Tolkienkin[person] == null) addPerson(rawInfos[0], person)
-		register[rawString] = person2Tolkienkin[person]
+		register[rawString] = person2Tolkienkin[person].toString()
 		return person2Tolkienkin[person]
 	}
 	
