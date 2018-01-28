@@ -3,6 +3,7 @@
 package tolkienizer
 
 @Grab ('edu.stanford.nlp:stanford-corenlp:3.8.0')
+@Grab ('org.apache.commons:commons-lang3:3.7')
 @Grab ('org.slf4j:slf4j-log4j12:1.7.10')
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
@@ -19,8 +20,10 @@ import edu.stanford.nlp.process.PTBTokenizer
 import edu.stanford.nlp.ling.HasWord
 import edu.stanford.nlp.process.CoreLabelTokenFactory
 import java.io.FileInputStream
+import java.io.OutputStreamWriter
 import java.util.regex.Matcher
 import java.util.regex.Pattern
+import org.apache.commons.lang3.StringUtils
 
 
 
@@ -35,6 +38,24 @@ void loadMailsToArray(dataDir, mailList) throws IOException {
             pathAndMail.add(mail)
             mailList.add(pathAndMail)
         } else { loadMailsToArray(child, mailList) }
+    }
+}
+
+def writeTolkienizedMails(directory, listToWrite) throws IOException {
+    outputDir = new File(directory)
+    if (!outputDir.exists()) {
+        println("Writing mails to " + outputDir.getName())
+        outputDir.mkdir()
+    for (element in listToWrite) {
+        outputFilePath = directory + "/" + element[0] + "tolkien"
+        mailFile = new File(outputFilePath)
+        parentFolder = new File(mailFile.getParent())
+        parentFolder.mkdir()
+        mailFile.createNewFile()
+        writer = new OutputStreamWriter(new FileOutputStream(mailFile))
+        writer.write(element[1])
+        writer.close()
+        }
     }
 }
 
@@ -96,7 +117,7 @@ def createNEList(abstractSequenceClassifier, mailList, genderMapping) {
             if (item.first.equals("PERSON")) {
                 gender = genderMapping.get(fname.toLowerCase())
                 if (gender == null) gender = "UNDEFINED"
-                triple.setSecond(gender[0].toLowerCase() + " " + name)
+                // triple.setSecond(gender[0].toLowerCase() + " " + name)
                 triple.setThird(gender)
             }
             // >>>>>
@@ -113,10 +134,62 @@ void printNEInMail(ImailNumber, listOfMails, abstractSequenceClassifier) {
     else println "Invalid mail number"
 }
 
-void tolkienize(mailList, neList, neExtendedList, tNElist, tNEextendedList) {
-    println("TODO")
+
+def tolkienize(mailList, neMap) {
+    if (mailList.size() != neMap.size()) {
+        println("Impossible to tolkienize")
+        return null
+    }
+    tolkienizedMailList = []
+    for (int i = 0; i < mailList.size(); i++) {
+        tolkienizedMailList.add([mailList[i][0], annonymize(mailList[i][1], neMap[i])])
+    }
+    return tolkienizedMailList
 }
-    
+
+def annonymize(text, definitions) {
+    keys = new ArrayList<String>()
+    values = new ArrayList<String>()
+    for (entry in definitions.entrySet()) {
+        keys.add(entry.getKey())
+            values.add(String.valueOf(entry.getValue()))
+    }
+    kArray = keys.toArray(new String[keys.size()])
+    vArray = values.toArray(new String[values.size()]) 
+    return StringUtils.replaceEach(text, kArray, vArray)
+    }
+
+def entityMapping(orig, annon) {
+    if (orig.size() != annon.size()) {
+        println("Impossible to map")
+        return null
+    }
+    mappingList = []
+    for (int i = 0; i < orig.size(); i++) {
+        HashMap<String,String> mapping = new HashMap<String,String>()
+        for (int j = 0; j < orig[i].size(); j++) {
+            mapping.put(orig[i][j].second, annon[i][j].second)
+        }
+        mappingList.add(mapping)
+    }
+    return mappingList
+}
+
+def sudonize(triple) {
+    return sudonizersMap[triple.first()] == null ? null : sudonizersMap[triple.first()].sudonize(triple)
+}
+
+def sudonizeAll(listOfMails) {
+    return  listOfMails.collect({ NETriplets -> NETriplets.collect( { ne -> sudonize(ne.first(), ne.second() ) }) })
+}
+
+def createTolkienList(llEntities) {
+    llEntities.collect({ listOfTriples ->
+        listOfTriples.collect({ triple ->
+            return new Triple(triple.first(), sudonize(triple), triple.third())
+        })
+    }) 
+}
 
 
 // ** ITERATIVE PROGRAM **
@@ -125,8 +198,8 @@ void tolkienize(mailList, neList, neExtendedList, tNElist, tNEextendedList) {
 corpusPath = new File("./resources/data/")
 mails = []
 loadMailsToArray(corpusPath, mails)
-println "$mails.size mails loaded correctly.\n"
-println(mails[0])
+println "$mails.size mails loaded correctly."
+println()
 
 // LOADING PROPERTIES
 genderMapFile = "./resources/stanford_corenlp/gender_map"
@@ -136,22 +209,19 @@ regexMapFile = "./resources/stanford_corenlp/email_url_regex"
 regexMap = new Properties()
 regexMap.load(new FileInputStream(regexMapFile))
 
-println "properties loaded"
 
 
 // CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
 serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
 classifier = CRFClassifier.getClassifier(serializedClassifier)
-ll = createNEList(classifier, mails, genderMap)
-println(ll[0])
-println "$ll.size mails tagged with a CRFCLassifier.\n"
+// ll = createNEList(classifier, mails, genderMap)
+// println "$ll.size mails tagged with a CRFCLassifier."
+println()
 
 
 // REGEX NE EXTRACTION
-rl = createSupplementaryNEList(mails, regexMap)
-println(rl[0])
-println "$rl.size mails tagged with a REGEX Classifier.\n"
-
+// rl = createSupplementaryNEList(mails, regexMap)
+// println "$rl.size mails tagged with a REGEX Classifier."
 
 globalRegister =[:]
 sudonizersMap =[
@@ -161,9 +231,38 @@ sudonizersMap =[
     "DEFAULT" : new AwareSudonizer(new SimpleSudonizer(new File("./resources/voc.txt"), globalRegister), globalRegister)
 ]
 
-def sudonize(triple) {
-    return sudonizersMap[triple.first()] == null ? null : sudonizersMap[triple.first()].sudonize(triple.second(), triple.third())
-}
+exampleMail = " FROM: carla@gmail.com TO: hermesm@gmail.com \
+this is an email, sent by ERON to detect websites like www.google.com, places like Central Park or New York,\
+name entities like Scott Kennedy and John Lennon and organizations like Umbrella Corp."
+
+exampleMail2 = " FROM: carla@gmail.com TO: hermesm@gmail.com \
+this is an email, sent by Sandra Stanner to detect websites like www.google.com, places like Central Area or New York,\
+name entities like Scott Green and Jane Lennon and organizations like Umbrella Corp."
+
+// Procedure
+exampleList = [["Temp/1.", exampleMail]]
+exampleList.add(["Temp/2.", exampleMail2])
+
+ll = createNEList(classifier, exampleList, genderMap)
+
+
+tl = createTolkienList(ll)
+
+listofMap = entityMapping(ll, tl)
+
+exampleTolkienized = tolkienize(exampleList, listofMap)
+
+// println(exampleList[0])
+
+
+
+writeTolkienizedMails("T", exampleTolkienized)
+
+
+
+System.exit(0)
+
+
 
 org = [] as Set
 person = [] as Set
@@ -171,23 +270,23 @@ loc = [] as Set
 for (mail in ll) {
     for (tlist in mail) {
         for (t in tlist) {
-            println t
             if (t.first().equals("PERSON")) {
                 person << t.second()
-                println sudonize(t)
+                println sudonize(t.first(), "m " + t.second())
             }
             else if (t.first().equals("ORGANIZATION")) {
                 org << t.second()
-                println sudonize(t)
+                println sudonize(t.first(), t.second())
             }
             else if (t.first().equals("LOCATION")) {
                 loc << t.second()
-                println sudonize(t)
+                println sudonize(t.first(), t.second())
             }
         }
     }
 }
-println ""
 println "${org.size()} ORGS"
 println "${loc.size()} LOCS"
 println "${person.size()} HUMANS"
+
+
