@@ -39,7 +39,6 @@ void loadMailsToArray(dataDir, mailList) throws IOException {
             mailList.add(pathAndFile)
         } else { loadMailsToArray(child, mailList) }
     }
-    println(mailList)
 }
 
 def writeTolkienizedMails(directory, listToWrite) throws IOException {
@@ -47,17 +46,25 @@ def writeTolkienizedMails(directory, listToWrite) throws IOException {
     if (!outputDir.exists()) {
         println("Writing mails to " + outputDir.getName())
         outputDir.mkdir()
+    }
     for (element in listToWrite) {
         outputFilePath = directory + "/" + element[0] + "tolkien"
+        dirList = element[0].split("/")
+        currentDir = directory
+        for (int i = 0; i < dirList.size() - 1; i++) {
+            currentDir = currentDir + "/" + dirList[i]
+            creator = new File(currentDir)
+            if (!creator.exists())
+            creator.mkdir()
+        }
         mailFile = new File(outputFilePath)
-        parentFolder = new File(mailFile.getParent())
-        parentFolder.mkdir()
+        // parentFolder = new File(mailFile.getParent())
+        // parentFolder.mkdir()
         mailFile.createNewFile()
         writer = new OutputStreamWriter(new FileOutputStream(mailFile))
         writer.write(element[1])
         writer.close()
         }
-    }
 }
 
 // This function returns a tokenized string
@@ -251,7 +258,8 @@ tolkienEmailList = tolkienize(partialEmailList, eronToTolkienLL)
 
 // Writing results to DIR in first argument
 writeTolkienizedMails("Tolkien", tolkienEmailList)
-println("end of program.")
+println()
+println("End of Program.")
 
 
 
