@@ -7,5 +7,3 @@ TYPE1_FOLDER=(X-Folder: \\\\.*\\\\)
 TYPE2_FOLDER=(X-Folder: \\/.*\\/)
 TYPE1_ORIGIN=(X-Origin: [A-Z._%+-]{2,8})
 TYPE1_FILENAME=(X-FileName: [a-z0-9._%+-]+\\.[a-z]{2,3})
-PERSON=(Susan):
-PERSON=Bill
