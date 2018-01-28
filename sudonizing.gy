@@ -25,7 +25,7 @@ class AwareSudonizer implements Sudonizer {
 	
 	def sudonize(rawString) {
 		if(register[rawString] != null) return register[rawString] 
-		sudo = sudonizer.sudonize(rawString)
+		def sudo = sudonizer.sudonize(rawString)
 		register[rawString] = sudo
 		return sudo
 	}
