@@ -82,7 +82,7 @@ class PersonWrapper {
 	String toString() {
 		def lastNameProper = ""
 		if (lastName != null)
-			if (lastName.startswith(" of "))
+			if (lastName.startsWith(" of "))
 				if (gender== "f") lastNameProper = " daughter$lastName"
 				else lastNameProper = " son$lastName"
 			else lastNameProper = lastName
