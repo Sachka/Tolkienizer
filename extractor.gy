@@ -28,7 +28,7 @@ import org.apache.commons.lang3.StringUtils
 
 // FILE CONSTANTS
 final corpusPath = new File("resources/demo")
-final resultPath = new File("Tolkienized_DATA")
+final resultPath = "Tolkienized_DATA"
 final genderMapFile = "./resources/stanford_corenlp/gender_map"
 final regexMapFile = "./resources/stanford_corenlp/email_url_regex"
 final serializedClassifier = "./resources/stanford_corenlp/english.nowiki.3class.caseless.distsim.crf.ser.gz"
