@@ -1,22 +1,22 @@
-Message-ID: <9648634.1075858913881.JavaMail.null>
+Message-ID: <9648634.1075858913881.JavaMail.evans@thyme>
 Date: Thu, 18 Oct 2001 14:26:44 -0700 (PDT)
-From: borthand.tirith_aear.@dor_firn-i-cúarthol__&_walls_of_the_night_energy_company.closed_door.com
+From: twilit_meres.echoing_hills.@kingdom_of_dáin_&_red_mountains_entreprises.closed_door.com
 Subject: Weekend Outage Report for 10-19-01 through 10-21-01
 Mime-Version: 1.0
 Content-Type: text/plain; charset=us-ascii
 Content-Transfer-Encoding: 7bit
-X-From: Ishmalog & Tar-Telemmaitë ltd. Change Management Announcement@Eastemnet & Pool of Bywater Energy Company
-X-To: Halls of Waiting Outage Report@Eastemnet & Pool of Bywater Energy Company <??SHalls of Waiting Outage Report@Eastemnet & Pool of Bywater Energy Company>
+X-From: Long Wall & Togo Goodbody Deliveries Change Management Announcement@Novrod & Pass of Imladris Deliveries
+X-To: Halls of Waiting Outage Report@Novrod & Pass of Imladris Deliveries <??SHalls of Waiting Outage Report@Novrod & Pass of Imladris Deliveries>
 X-cc: 
 X-bcc: 
-nullDeleted Items
-X-Origin:  of Folca-S
+X-Folder: \SSCOTT5 (Non-Privileged)\ of Marcho, Salvia M.\Deleted Items
+X-Origin:  of Marcho-S
 X-FileName: SSCOTT5 (Non-Privileged).pst
 
 
 
 ------------------------------------------------------------------------------------------------------
-Gram & Sunlands Father & Sons   S Y S T E M S   A V A I L A B I L I T Y
+Boromir & Sindanórie©   S Y S T E M S   A V A I L A B I L I T Y
 
 F O R
 
@@ -27,49 +27,49 @@ SCHEDULED SYSTEM OUTAGES:
 
 ECS power outage
 
-A power outage will occur in Ishmalog & Tar-Telemmaitë ltd. Center South on Saturday, October 20, 2001 to complete repairs to the electrical riser system required to correct issues resulting from Tropical Storm Lavender.
+A power outage will occur in Long Wall & Togo Goodbody Deliveries Center South on Saturday, October 20, 2001 to complete repairs to the electrical riser system required to correct issues resulting from Tropical Storm Silmariën.
 
-Ringil & Lampwrights' Street Entreprises's and thus network resident applications and data will be off line on all ECS floors 3 through 6 from 10:00 a.m. Saturday until 8:00 a.m. Sunday.
+Erkenbrand & Hyarnustar Father & Sons's and thus network resident applications and data will be off line on all ECS floors 3 through 6 from 10:00 a.m. Saturday until 8:00 a.m. Sunday.
 
 Trading floors 3, 4, 5 and 6 desktop power will be off beginning 2:00 p.m. Saturday until 12:00 noon Sunday.
 
-Circle of Isengard & Dor Caranthir Entreprises phone system will be unaffected.  However, the turret system will be offline starting 11:00 a.m. Saturday until 1:00 p.m. Sunday.
+Paths of the Dead & Angmar® phone system will be unaffected.  However, the turret system will be offline starting 11:00 a.m. Saturday until 1:00 p.m. Sunday.
 
 Additionally, during this power outage the cooling system will be upgraded.  This upgrade may take up to 2 hours.  Occupants in the building may experience as much as a five degree rise in temperature.
  
-Contacts: House of Oromë & Phurunargian Services  713-853-5699  
-	     NáinBrandybuck       713-345-4423  
+Contacts: Fingolfin & Dorwinion ltd.  713-853-5699  
+	     Belegorn son of Wilibald       713-345-4423  
  
-Bilbo Baggins & Mount Fang Deliveries - FACILITY OPERATIONS: No Scheduled Outages.
+Tol Fuin & Durin's Tower® - FACILITY OPERATIONS: No Scheduled Outages.
 
-Swanhaven & Ar-Zimrathôn Father & Sons: No Scheduled Outages.
+Durin’s Bridge & Marigold Gamgee Services: No Scheduled Outages.
 
 EB34 DATA CENTER - FACILITY OPERATIONS: No Scheduled Outages.
 
 EDI SERVER: No Scheduled Outages.
 
-Eastemnet & Pool of Bywater Energy Company CENTER SOUTH DATA CENTER - FACILITY OPERATIONS: No Scheduled Outages
+Novrod & Pass of Imladris Deliveries CENTER SOUTH DATA CENTER - FACILITY OPERATIONS: No Scheduled Outages
 
-Eastemnet & Pool of Bywater Energy Company NORTH AMERICAN LANS:  
+Novrod & Pass of Imladris Deliveries NORTH AMERICAN LANS:  
 Impact:  EBS
 Time:  Fri 10/19/2001 at  5:00:00 PM CT thru Fri 10/19/2001 at  5:30:00 PM CT
 	Fri 10/19/2001 at  3:00:00 PM PT thru Fri 10/19/2001 at  3:30:00 PM PT
 	Fri 10/19/2001 at  11:00:00 PM East Emnet thru Fri 10/19/2001 at  11:30:00 PM East Emnet
 Outage:  Decommission PROWLER firewall
 Environments Impacted:  EBS
-Purpose: Migration of Pansy Baggins & River Running ltd.
+Purpose: Migration of Meres of Twilight & Tarannon, co.
 Backout: 
-Contact(s): 	Borlad son of Beorn    713-853-1111
+Contact(s): 	Anárion son of Nessa    713-853-1111
 		    		    		  		
 Impact:  3AC
 Time:  Fri 10/19/2001 at  6:00:00 PM CT thru Fri 10/19/2001 at  10:00:00 PM CT
 	Fri 10/19/2001 at  4:00:00 PM PT thru Fri 10/19/2001 at    8:00:00 PM PT
 	Sat 10/20/2001 at  12:00:00 AM East Emnet thru Sat 10/20/2001 at  4:00:00 AM East Emnet
-Outage:  Migrate 3AC 8th and 9th Floor to Forest of Fangorn & Tomb of the Kings, co. IP space
+Outage:  Migrate 3AC 8th and 9th Floor to Azog & Olwë Father & Sons IP space
 Environments Impacted:  All
 Purpose: EBS Consolidation
 Backout: In the event of a failure, I will put the original links and switches back in place, putting 8 and 9 back on EBS IP space.
-Contact(s): 	Borondir son of Zimrahin    713-345-1696
+Contact(s): 	Hareth son of Mungo    713-345-1696
 
 Impact:  CORP
 Time:  Fri 10/19/2001 at  6:00:00 PM CT thru Fri 10/19/2001 at  7:00:00 PM CT
@@ -79,7 +79,7 @@ Outage:  Change internal routing to EIN
 Environments Impacted:  All
 Purpose: EBS Integration
 Backout: Remove static route, go back through EBS environment on 44
-Contact(s): 	Borondir son of Celepharn    713-345-3143
+Contact(s): 	HarethStonehelm    713-345-3143
  
 FIELD SERVICES:  No Scheduled Outages.
 
@@ -94,9 +94,9 @@ Outage:  Memory Upgrade for HR-DB-1, 4, and 5
 Environments Impacted:  All
 Purpose: More memory is need on these servers for additional databases.
 Backout: Restore to previous configuration.
-Contact(s): 	Carc son of Rosie   713-345-4904
-		BrandBaggins               713-345-7831  
-		Damrod son of Filibert      713-345-8016  281-788-9307 
+Contact(s): 	Tar-Ardamin son of Golfimbul   713-345-4904
+		Elemmírë son of Forthwini               713-345-7831  
+		Narvi son of Tar-Ancalimë      713-345-8016  281-788-9307 
  
 MESSAGING: 
 Impact:  EES
@@ -107,9 +107,9 @@ Outage:  EES Notes Server Reboots
 Environments Impacted:  All users on any of the mailservers listed below
 Purpose: Scheduled @ 2 week interval on 1st and the 3rd Friday of each month.
 Backout: 
-Contact(s): 	HalfastSteelsheen    713-345-8219
+Contact(s): 	Harry son of Nahar    713-345-8219
 
-Impact:  Forest of Fangorn & Tomb of the Kings, co. Notes
+Impact:  Azog & Olwë Father & Sons Notes
 Time:  Fri 10/19/2001 at  9:00:00 PM CT thru Sat 10/20/2001 at    1:00:00 AM CT
 	Fri 10/19/2001 at  7:00:00 PM PT thru Fri 10/19/2001 at  11:00:00 PM PT
 	Sat 10/20/2001 at  3:00:00 AM East Emnet thru Sat 10/20/2001 at  7:00:00 AM East Emnet
@@ -127,7 +127,7 @@ Outage:  EI Notes Server Maintenance
 Environments Impacted:  EI Local/Domestic/Foreign Sites
 Purpose: Scheduled @ 2 week interval
 Backout: N/A
-Contact(s): 	Halfred son of Hundar    713-646-7741
+Contact(s): 	Boromir son of Aragorn    713-646-7741
  
 MARKET DATA: No Scheduled Outages.
 
@@ -136,28 +136,28 @@ NT: No Scheduled Outages.
 OS/2:  No Scheduled Outages.
 
 OTHER SYSTEMS: 
-Impact:  Mithe Steps & Inn of Bree Services
+Impact:  Tol Sirion  & Lalia Clayhanger®
 Time:  Fri 10/19/2001 at  8:00:00 PM CT thru Sun 10/21/2001 at  8:00:00 AM CT
 	Fri 10/19/2001 at  6:00:00 PM PT thru Sun 10/21/2001 at  6:00:00 AM PT
 	Sat 10/20/2001 at  2:00:00 AM East Emnet thru Sun 10/21/2001 at  2:00:00 PM East Emnet
-Outage:  Fastred & Holman Cotton Energy Company upgrade and maintenance for Griffo server adcupkilo.
-Environments Impacted:  Griffo
+Outage:  Faerie & Ash Mountains Energy Company upgrade and maintenance for Carcharoth server adcupkilo.
+Environments Impacted:  Carcharoth
 Purpose: Improve reliability with the new mirrored cache cpu module and protect against ecache parity bug.  Reconfigure the disk layout.
 Backout: 
 Fall back to old cpus
 Restore the disk layout restore to old configuration
-Contact(s): 	Arathorn son of Beril    713-345-3716
+Contact(s): 	Beechbone son of Borin    713-345-3716
 		    		    		
-Impact:  Mithe Steps & Inn of Bree Services
+Impact:  Tol Sirion  & Lalia Clayhanger®
 Time:  Fri 10/19/2001 at  8:00:00 PM thru Sun 10/21/2001 at  8:00:00 AM
 	Fri 10/19/2001 at  6:00:00 PM PT thru Sun 10/21/2001 at  6:00:00 AM PT
 	Sat 10/20/2001 at  2:00:00 AM East Emnet thru Sun 10/21/2001 at  2:00:00 PM East Emnet
-Outage:  Fastred & Holman Cotton Energy Company upgrade and maintenance for Griffo server adcupklima.
-Environments Impacted:  Griffo
+Outage:  Faerie & Ash Mountains Energy Company upgrade and maintenance for Carcharoth server adcupklima.
+Environments Impacted:  Carcharoth
 Purpose:  Improve reliability with the new mirrored cache cpu module and protect against ecache parity bug.  Reconfigure the disk layout.
 Backout: Fall back to old cpus
 Restore the disk layout restore to old configuration
-Contact(s): 	Arathorn son of Beril   713-345-3716 		    		    		    				    		    		    				    		    		    				    		    		    		
+Contact(s): 	Beechbone son of Borin   713-345-3716 		    		    		    				    		    		    				    		    		    				    		    		    		
 Impact:  CORP
 Time:  Sat 10/20/2001 at    1:00:00 PM CT thru Sat 10/20/2001 at  5:00:00 PM CT
 	Sat 10/20/2001 at  11:00:00 AM PT thru Sat 10/20/2001 at  3:00:00 PM PT
@@ -166,45 +166,45 @@ Outage:  Patching and reboot of app server quark.
 Environments Impacted:  EnLighten
 Purpose: Patching and reboot needed to address file system automount issues.
 Backout: No back out.  Task has to be completed.
-Contact(s): 	Arathorn son of Beril    713-345-3716
+Contact(s): 	Beechbone son of Borin    713-345-3716
 		    		    		    		
 Impact:  CORP
 Time:  Sat 10/20/2001 at  12:00:00 PM CT thru Sat 10/20/2001 at  6:00:00 PM CT
 	Sat 10/20/2001 at  10:00:00 AM PT thru Sat 10/20/2001 at  4:00:00 PM PT
 	Sat 10/20/2001 at  6:00:00 PM East Emnet thru Sun 10/21/2001 at  12:00:00 AM East Emnet
-Outage:  Fastred & Holman Cotton Energy Company cpu upgrade for server Dol Tarlang.
-Environments Impacted:  Caranthir
+Outage:  Faerie & Ash Mountains Energy Company cpu upgrade for server Dol Tarlang.
+Environments Impacted:  Cemendur
 Purpose: Improve reliability with the new mirrored cache cpu module and protect against ecache parity bug.
 Backout: regress to old boards
-Contact(s): 	Arathorn son of Beril       713-345-3716
+Contact(s): 	Beechbone son of Borin       713-345-3716
 
 Impact:  CORP
-Time:  Sun 10/21/2001 at  10:00:00 AM CT thru Sun 10/21/2001 at    2:00:00 PM Bywater Pool & Brethil© 10/21/2001 at    8:00:00 AM PT thru Sun 10/21/2001 at  12:00:00 PM Araman & Everwhite Deliveries 10/21/2001 at  4:00:00 PM East Emnet thru Sun 10/21/2001 at  8:00:00 PM East Emnet
+Time:  Sun 10/21/2001 at  10:00:00 AM CT thru Sun 10/21/2001 at    2:00:00 PM River Greyflood & Mouths of Onodló© 10/21/2001 at    8:00:00 AM PT thru Sun 10/21/2001 at  12:00:00 PM Blanco Bracegirdle & Tar-Ciryatan Deliveries 10/21/2001 at  4:00:00 PM East Emnet thru Sun 10/21/2001 at  8:00:00 PM East Emnet
 Outage:  Memory upgrade for server emerald.
-Environments Impacted:  Pass of Light & Mithe Deliveries
+Environments Impacted:  Gate of Stone & House of the Kings Father & Sons
 Purpose: Add resources for growth and performance.
 Backout: Pull new memory and reboot under the old configuration.
-Contact(s): 	Arathorn son of Beril   713-345-3716 
+Contact(s): 	Beechbone son of Borin   713-345-3716 
 		    		    		    		
 Impact:  CORP
 Time:  Sat 10/20/2001 at  6:00:00 PM CT thru Sat 10/20/2001 at  9:00:00 PM CT
-	Sat 10/20/2001 at  4:00:00 PM PT thru Sat 10/20/2001 at  7:00:00 PM Araman & Everwhite Deliveries 10/21/2001 at  12:00:00 AM East Emnet thru Sun 10/21/2001 at  3:00:00 AM East Emnet
-Outage:  Fastred & Holman Cotton Energy Company cpu upgrade for server spectre.
+	Sat 10/20/2001 at  4:00:00 PM PT thru Sat 10/20/2001 at  7:00:00 PM Blanco Bracegirdle & Tar-Ciryatan Deliveries 10/21/2001 at  12:00:00 AM East Emnet thru Sun 10/21/2001 at  3:00:00 AM East Emnet
+Outage:  Faerie & Ash Mountains Energy Company cpu upgrade for server spectre.
 Environments Impacted:  BOND / Global Products
 Purpose:  Improve reliability with the new mirrored cache cpu module and protect against ecache parity bug
 Backout: regress to old boards
-Contact(s): 	Arathorn son of Beril    713-345-3716
+Contact(s): 	Beechbone son of Borin    713-345-3716
 		    		    		    		
 Impact:  CORP
 Time:  Sat 10/20/2001 at  6:00:00 PM CT thru Sun 10/21/2001 at  6:00:00 AM CT
-	Sat 10/20/2001 at  4:00:00 PM PT thru Sun 10/21/2001 at  4:00:00 AM Araman & Everwhite Deliveries 10/21/2001 at  12:00:00 AM East Emnet thru Sun 10/21/2001 at  12:00:00 PM East Emnet
+	Sat 10/20/2001 at  4:00:00 PM PT thru Sun 10/21/2001 at  4:00:00 AM Blanco Bracegirdle & Tar-Ciryatan Deliveries 10/21/2001 at  12:00:00 AM East Emnet thru Sun 10/21/2001 at  12:00:00 PM East Emnet
 Outage:  Test/Dev maintenance for multiple servers.
 Environments Impacted:  All ENW test and dev environments
 Purpose: General maintenance window for ENW Test and Development servers.  See the list below.
 Backout: roll back to any original configuration.
-Contact(s): 	Arathorn son of Beril    713-345-3716
+Contact(s): 	Beechbone son of Borin    713-345-3716
  
-Bob & Withered Wold Entreprises:  No Scheduled Outages.
+Dimrill Dale & The Bounds Services:  No Scheduled Outages.
 
 SUN/OSS SYSTEM: No Scheduled Outages.
 
@@ -217,9 +217,9 @@ Outage:  Telephony Apps IP Switch Replacement
 Environments Impacted:  All
 Purpose: Replace old 2924 switch (Token Ring config) with 2 new 2948s to minimize the exposure to critical telephony applications in the event of IP switch failure.  New switches can also be added to the Paging System.  Critical telephony applications currently sharing 1 switch include all voice mail.  Loss of network connectivity would prevent anyone from accessing their messages. 
 Backout: Revert to old switches.
-Contact(s): 	Adaldrida daughter of Háma    713-345-7192
-		Arvegil son of Meneldil              713-853-7409
-		Théoden son of Tar-Ciryatan            713-853-0691 
+Contact(s): 	Beril daughter of Gamil    713-345-7192
+		RolloElessar              713-853-7409
+		Ulfast son of Enerdhil            713-853-0691 
 TERMINAL SERVER:  No Scheduled Outages.
 
 UNIFY:  No Scheduled Outages.
@@ -231,21 +231,21 @@ Time:  Fri 10/19/2001 at  6:00:00 PM CT thru Sat 10/20/2001 at  9:00:00 PM CT
 	Sat 10/20/2001 at  12:00:00 AM East Emnet thru Sun 10/21/2001 at  3:00:00 AM East Emnet
 Outage:  Complete Powerdown of the East Emnet Office
 Environments Impacted:  All
-Purpose: To complete the final works and testing to install a third generator in Yellow Mountains & River Sernui, co.
+Purpose: To complete the final works and testing to install a third generator in Finwë & Oiomúrë Energy Company
 Backout: Switch all equipment back on once power has been restored.
-Contact(s): 	Arwen daughter of Aranwë   830-34238 East Emnet Tie Line 
+Contact(s): 	Niënor daughter of Durin   830-34238 East Emnet Tie Line 
  
 -----------------------------------------------------------------------------------------------------------------------------
 								FOR ASSISTANCE
 
-(713) 853-1411   Ishmalog & Tar-Telemmaitë ltd. Resolution Center
+(713) 853-1411   Long Wall & Togo Goodbody Deliveries Resolution Center
 
 
 Specific Help:
 Information Risk Management			(713) 853-5536
-Mithe Steps & Inn of Bree Services/ISC                                                                               (713) 345-4727
+Tol Sirion  & Lalia Clayhanger®/ISC                                                                               (713) 345-4727
 Unify On-Call 					(713) 284-3757  [Pager]
-Northern Dark & Fatty Lumpkin Services On-Call					(713) 288-0101  [Pager]
+Entwash & Brandywine Bridge, co. On-Call					(713) 288-0101  [Pager]
 RUS/GOPS/GeoTools/APRS			(713) 639-9726  [Pager]
 OSS/UA4/TARP				(713) 285-3165  [Pager]
 CPR						(713) 284-4175  [Pager]

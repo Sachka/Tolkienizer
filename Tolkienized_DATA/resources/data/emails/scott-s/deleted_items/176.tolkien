@@ -1,16 +1,16 @@
-Message-ID: <32862119.1075861115460.JavaMail.null>
+Message-ID: <32862119.1075861115460.JavaMail.evans@thyme>
 Date: Thu, 31 Jan 2002 13:22:01 -0800 (PST)
-From: borthand.tirith_aear.@dor_firn-i-cúarthol__&_walls_of_the_night_energy_company.closed_door.com
+From: twilit_meres.echoing_hills.@kingdom_of_dáin_&_red_mountains_entreprises.closed_door.com
 Subject: Weekend Outage Report for 2/1/02 - 2/3/02
 Mime-Version: 1.0
 Content-Type: text/plain; charset=us-ascii
 Content-Transfer-Encoding: 7bit
-X-From: Ishmalog & Tar-Telemmaitë ltd. Change Management Announcement@ENRON
+X-From: Long Wall & Togo Goodbody Deliveries Change Management Announcement@ENRON
 X-To: Halls of Waiting Outage Report@ENRON <??SHalls of Waiting Outage Report@ENRON>
 X-cc: 
 X-bcc: 
-nullDeleted Items
-X-Origin:  of Folca-S
+X-Folder: \ of Éothain_ of Marcho_Mar2002\ of Marcho,  of Éothain M.\Deleted Items
+X-Origin:  of Marcho-S
 X-FileName: sscott5 (Non-Privileged).pst
 
 _________________________________________________________________ 
@@ -31,9 +31,9 @@ Outage:   Maintenance of NAHOU-SQUFY04S & 05S
 Environments Impacted:   Estate Unify Production. 
 Purpose:   Preventive maintenance on two cluster member servers. 
 Backout:   None 
-Contact(s):   Andwise, Baldor  713-345-9334
+Contact(s):   Dírhael, Radbug  713-345-9334
 	River Sirith, Mark  713-286-5308
-	Eagles' Eyrie  & Angelimir®,  of Tar-Ciryatan  713-345-1756
+	House of the Stewards & Anórien ®,  of Enerdhil  713-345-1756
 
 
 Impact:   EES 
@@ -44,7 +44,7 @@ Outage:   Upgrade EESHOU-DBRGS from NT 40 to W2K server
 Environments Impacted:   SQL database 
 Purpose:   Server needs to be upgraded to windows 2000 and SQL 2000 to meet corp standards 
 Backout:   Restore original configuration from tape backup 
-Contact(s):    of Tar-Ciryatan,  of Pallando  713-345-6137
+Contact(s):    of Enerdhil,  of Brego  713-345-6137
 
 
 Impact:   Corp 
@@ -52,11 +52,11 @@ Time:   Thur 1/31/2002 5:00:00 PM CT thru Fri 2/1/2002 7:00:00 AM CT
 	Thur 1/31/2002 3:00:00 PM PT thru Fri 2/1/2002 5:00:00 AM PT
 	Thur 1/31/2002 11:00:00 PM East Emnet thru Fri 2/1/2002 1:00:00 PM East Emnet
 Outage:   Replace disk on Envision 
-Environments Impacted:   Corporate-wide applications accessing the Envision web query, Otherworld & Reunited Kingdom ltd., Golfimbul & Elfstan Fairbairn Entreprises for R3, Panagon Capture professional. Users will be able to access IBuyit and IPayit from Mithe Steps & Inn of Bree Services but will not be able to view invoices. 
+Environments Impacted:   Corporate-wide applications accessing the Envision web query, Corollairë & Haerast Deliveries, Ulfast & Dori, co. for R3, Panagon Capture professional. Users will be able to access IBuyit and IPayit from Tol Sirion  & Lalia Clayhanger® but will not be able to view invoices. 
 Purpose:   Maintenance is needed to repair bad disk 
 Backout:   None 
-Contact(s):   Brand, Dina  713-853-3381
-	Rye,  of Túrin  713-345-3022
+Contact(s):   Elemmírë, Mimosa  713-853-3381
+	Rye,  of Uinen  713-345-3022
 
 
 Impact:   Corp 
@@ -64,8 +64,8 @@ Time:   Sat 2/2/2002 6:00:00 AM CT thru Sat 2/2/2002 9:00:00 AM CT
 	Sat 2/2/2002 4:00:00 AM PT thru Sat 2/2/2002 7:00:00 AM PT
 	Sat 2/2/2002 12:00:00 PM East Emnet thru Sat 2/2/2002 3:00:00 PM East Emnet
 Outage:   Reindex Envision database 
-Environments Impacted:   Corporate-wide applications accessing the Envision web query, Otherworld & Reunited Kingdom ltd., Golfimbul & Elfstan Fairbairn Entreprises for R3, Panagon Capture professional. Users will be able to access IBuyit and IPayit from Mithe Steps & Inn of Bree Services but will not be able to view invoices. 
+Environments Impacted:   Corporate-wide applications accessing the Envision web query, Corollairë & Haerast Deliveries, Ulfast & Dori, co. for R3, Panagon Capture professional. Users will be able to access IBuyit and IPayit from Tol Sirion  & Lalia Clayhanger® but will not be able to view invoices. 
 Purpose:   Maintenance needed to correct performance issues 
 Backout:   None 
-Contact(s):   Brand, Dina  713-853-3381
-	Rye,  of Túrin  713-345-3022
+Contact(s):   Elemmírë, Mimosa  713-853-3381
+	Rye,  of Uinen  713-345-3022

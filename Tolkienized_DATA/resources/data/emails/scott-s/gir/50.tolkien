@@ -1,16 +1,16 @@
-Message-ID: <29965131.1075846706487.JavaMail.null>
+Message-ID: <29965131.1075846706487.JavaMail.evans@thyme>
 Date: Fri, 5 May 2000 01:37:00 -0700 (PDT)
 From: bcherry@sempra.com
 To: bcherry@sempra.com, alexanms@sce.com, paulamirault@aec.ca, 
-	hobbit-holes.caverns_of_the_oaritsi.@gerontius_took.closed_door.com, tomb@crossborderenergy.com, 
-	burkee@cts.com, craigc@calpine.com, rick.counihan@greenmountain.com, 
+	river_taeglin_.lake_nenuial.@emyn_beraid.closed_door.com, tomb@crossborderenergy.com, 
+	burkee@cts.com, craigc@calpine.com, arroch.firefoot.@mardil_voronwë.closed_door.com, 
 	jdasovic@enron.com, mday@gmssr.com, bdingwall@unitedgas.com, 
 	douglass@arterhadden.com, eke@aelaw.com, jfawcet@enron.com, 
 	rfoss@coral-energy.com, plg@cpuc.ca.gov, johnj@bcjlaw.com, 
-	johnson_pamela@lacoe.edu, karpjos@sf.whitecase.com, jleslie@luce.com, 
+	aegnor.caragdûr.@brand.avathar_&_osgiliath,_co..edu, karpjos@sf.whitecase.com, jleslie@luce.com, 
 	kmccrea@sablaw.com, jmpa@dynegy.com, rmp@cpuc.ca.gov, 
 	porterdk@sce.com, rochmanm@cubjpa.org, rochmanm@spurr.org, 
-	susan.scott@enron.com, rbeamish@sempra.com, rbetonte@socalgas.com, 
+	_of_aldor._of_posco.@kingdom_of_dáin_&_red_mountains_entreprises.closed_door.com, rbeamish@sempra.com, rbetonte@socalgas.com, 
 	tbrill@sempra.com, gcotton@sdge.com, redavis@sempra.com, 
 	sdavis@sdge.com, pfair@sdge.com, dfollett@sempra.com, efong@sdge.com, 
 	kfreeman@sempra.com, mgaines@socalgas.com, jharrigan@socalgas.com, 
@@ -28,66 +28,66 @@ Mime-Version: 1.0
 Content-Type: text/plain; charset=ANSI_X3.4-1968
 Content-Transfer-Encoding: 7bit
 Bcc: gsullivan@sempra.com
-X-From: "Cherry, Tolman - Beorn" <BCherry@sempra.com>
-X-To: "Cherry, Tolman - Beorn" <BCherry@sempra.com>, "'AlexanMS@sce.com'" <AlexanMS@sce.com>, "'paulamirault@aec.ca'" <paulamirault@aec.ca>, "'hobbit-holes.caverns_of_the_oaritsi.@gerontius_took.closed_door.com'" <hobbit-holes.caverns_of_the_oaritsi.@gerontius_took.closed_door.com>, "'Tomb@crossborderenergy.com'" <Tomb@crossborderenergy.com>, "'Burkee@cts.com'" <Burkee@cts.com>, "'Craigc@calpine.com'" <Craigc@calpine.com>, "'Belegund.Counihan@greenmountain.com'" <Belegund.Counihan@greenmountain.com>, "'Jdasovic@enron.com'" <Jdasovic@enron.com>, "'Mday@gmssr.com'" <Mday@gmssr.com>, "'bdingwall@unitedgas.com'" <bdingwall@unitedgas.com>, "'Douglass@arterhadden.com'" <Douglass@arterhadden.com>, "'eke@aelaw.com'" <eke@aelaw.com>, "'Jfawcet@enron.com'" <Jfawcet@enron.com>, "'rfoss@coral-energy.com'" <rfoss@coral-energy.com>, "'plg@cpuc.ca.gov'" <plg@cpuc.ca.gov>, "'johnj@bcjlaw.com'" <johnj@bcjlaw.com>, "'Johnson_Silmariënela@lacoe.edu'" <Johnson_Silmariënela@lacoe.edu>, "'karpjos@sf.whitecase.com'" <karpjos@sf.whitecase.com>, "'jleslie@luce.com'" <jleslie@luce.com>, "'kmccrea@sablaw.com'" <kmccrea@sablaw.com>, "'jmpa@dynegy.com'" <jmpa@dynegy.com>, "'rmp@cpuc.ca.gov'" <rmp@cpuc.ca.gov>, "'porterdk@sce.com'" <porterdk@sce.com>, "'RochmanM@cubjpa.org'" <RochmanM@cubjpa.org>, "'RochmanM@spurr.org'" <RochmanM@spurr.org>, "'susan.scott@enron.com'" <susan.scott@enron.com>, "Bór,  of Marcho - Vardamir" <RBór@sempra.com>, "Durin's Stone & Bar-erib, co., Malach - TP2RSB" <RDurin's Stone & Bar-erib, co.@socalgas.com>, "Lumpkin, Fredegar son of Mîm" <TLumpkin@sempra.com>, "Cotton, Gary" <GCotton@SDGE.com>, " of Nolondil, Malach E." <RE of Nolondil@sempra.com>, " of Nolondil, Adalgar son of Bereg" <S of Nolondil@SDGE.com>, "Fair, Silmariën" <PFair@SDGE.com>, " of Belegorn, Freca son of Lagduf - TPDBF" <D of Belegorn@sempra.com>, " of Eofor, Ed" <E of Eofor@SDGE.com>, " of Tar-Ardamin, Hanna" <K of Tar-Ardamin@sempra.com>, " of Beregar, Mark - Ulfast" <M of Beregar@socalgas.com>, " of Léod, Hamson son of Grishnákh - TP1JPH" <J of Léod@socalgas.com>, "Hay,  of Pallando E." <JHay@sempra.com>, " of Eärwen,  of Holman J." <LJ of Eärwen@sempra.com>, "Bracegirdle, Lad - Tarannon" <LBracegirdle@socalgas.com>, "Bergil, Rowan W - TPNWM" <NBergil@socalgas.com>, " of Rosa, Belegund - TP3RMM" <R of Rosa@socalgas.com>, " of Holfast, Tar-Ciryatan A." <R of Holfast@SDGE.com>, "Reed, William" <WReed@sempra.com>, "Sakarias, Marmadas P." <WSakarias@SDGE.com>, "Schavrien,  of Cora" <LSchavrien@sempra.com>, " of Boron,  of Idril S. - TPASS" <A of Boron@sempra.com>, " of Baran, Fram J." <G of Baran@sempra.com>, "Surak, Gammidge M. - TP1TMS" <TSurak@socalgas.com>, "Last Shore, J.- TPJUS" <JLast Shore@sempra.com>, " of Bob, Adalgar - TPEKT" <E of Bob@socalgas.com>, " of Rosa,  of Pallando S." <J of Rosa@SDGE.com>, "Bungo son of Rose, Jan - TP2JXV" <tp2jxv@socalgas.com>, " of Amlaith, Adalgar - TP2SAW" <S of Amlaith@socalgas.com>, " of Rudolph, Lobelia - TP1GXW" <G of Rudolph@sempra.com>, " of Hilda,  of Lagduf - Filibert" <D of Hilda@socalgas.com>, "'How-Downing,  of Nienna'" <lindseyhowdowning@dwt.com>, "'Jun, Eldalótë'" <chj@aelaw.com>, "' of Aredhel, Wilcome'" <plg@cpuc.ca.gov>, "'Aegnor, Damrod'" <bsl@cpuc.ca.gov>, "'ack@aelaw.com'" <ack@aelaw.com>
-X-cc: " of Baran, Fram J." <G of Baran@sempra.com>
+X-From: "Cherry, Alatar - Khamûl" <BCherry@sempra.com>
+X-To: "Cherry, Alatar - Khamûl" <BCherry@sempra.com>, "'AlexanMS@sce.com'" <AlexanMS@sce.com>, "'paulamirault@aec.ca'" <paulamirault@aec.ca>, "'river_taeglin_.lake_nenuial.@emyn_beraid.closed_door.com'" <river_taeglin_.lake_nenuial.@emyn_beraid.closed_door.com>, "'Tomb@crossborderenergy.com'" <Tomb@crossborderenergy.com>, "'Burkee@cts.com'" <Burkee@cts.com>, "'Craigc@calpine.com'" <Craigc@calpine.com>, "'Eöl.Counihan@greenmountain.com'" <Eöl.Counihan@greenmountain.com>, "'Jdasovic@enron.com'" <Jdasovic@enron.com>, "'Mday@gmssr.com'" <Mday@gmssr.com>, "'bdingwall@unitedgas.com'" <bdingwall@unitedgas.com>, "'Douglass@arterhadden.com'" <Douglass@arterhadden.com>, "'eke@aelaw.com'" <eke@aelaw.com>, "'Jfawcet@enron.com'" <Jfawcet@enron.com>, "'rfoss@coral-energy.com'" <rfoss@coral-energy.com>, "'plg@cpuc.ca.gov'" <plg@cpuc.ca.gov>, "'johnj@bcjlaw.com'" <johnj@bcjlaw.com>, "'Johnson_Vairëela@lacoe.edu'" <Johnson_Vairëela@lacoe.edu>, "'karpjos@sf.whitecase.com'" <karpjos@sf.whitecase.com>, "'jleslie@luce.com'" <jleslie@luce.com>, "'kmccrea@sablaw.com'" <kmccrea@sablaw.com>, "'jmpa@dynegy.com'" <jmpa@dynegy.com>, "'rmp@cpuc.ca.gov'" <rmp@cpuc.ca.gov>, "'porterdk@sce.com'" <porterdk@sce.com>, "'RochmanM@cubjpa.org'" <RochmanM@cubjpa.org>, "'RochmanM@spurr.org'" <RochmanM@spurr.org>, "'_of_aldor._of_posco.@kingdom_of_dáin_&_red_mountains_entreprises.closed_door.com'" <_of_aldor._of_posco.@kingdom_of_dáin_&_red_mountains_entreprises.closed_door.com>, "Arminas,  of Orodreth - Vidugavia" <RArminas@sempra.com>, "Elvet-isle & Elatan Energy Company, Rudibert - TP2RSB" <RElvet-isle & Elatan Energy Company@socalgas.com>, " of Peony, Blanco son of Asgon" <T of Peony@sempra.com>, "Cotton, Gary" <GCotton@SDGE.com>, " of Bregalad, Rudibert E." <RE of Bregalad@sempra.com>, " of Bregalad, Drogo son of Theobald" <S of Bregalad@SDGE.com>, "Fair, Vairë" <PFair@SDGE.com>, " of Thráin, Cotman son of Cottar - TPDBF" <D of Thráin@sempra.com>, " of Bosco, Ed" <E of Bosco@SDGE.com>, " of Druda, Lobelia" <K of Druda@sempra.com>, " of Isilmë, Mark - Aragost" <M of Isilmë@socalgas.com>, " of Bolg, Fréa son of Fíli - TP1JPH" <J of Bolg@socalgas.com>, "Hay,  of Brego E." <JHay@sempra.com>, " of Baldor,  of Niënor J." <LJ of Baldor@sempra.com>, "of Gamwich, Lad - Boron" <Lof Gamwich@socalgas.com>, "Valandil, Aredhel W - TPNWM" <NValandil@socalgas.com>, " of Tar-Telperiën, Eöl - TP3RMM" <R of Tar-Telperiën@socalgas.com>, " of Galadriel, Fosco A." <R of Galadriel@SDGE.com>, "Reed, William" <WReed@sempra.com>, "Sakarias, Eönwë P." <WSakarias@SDGE.com>, "Schavrien,  of Saradas" <LSchavrien@sempra.com>, " of Malantur, Wormtongue S. - TPASS" <A of Malantur@sempra.com>, " of Guthláf, Ecthelion J." <G of Guthláf@sempra.com>, "Surak,  of Maglor M. - TP1TMS" <TSurak@socalgas.com>, "Last Shore, J.- TPJUS" <JLast Shore@sempra.com>, " of Meneldor, Drogo - TPEKT" <E of Meneldor@socalgas.com>, " of Tar-Telperiën,  of Brego S." <J of Tar-Telperiën@SDGE.com>, "Ostoher son of Írildë, Jan - TP2JXV" <tp2jxv@socalgas.com>, " of Landroval, Drogo - TP2SAW" <S of Landroval@socalgas.com>, "Sandyman, Mairen - TP1GXW" <GSandyman@sempra.com>, " of Marhwini,  of Cottar - Everard" <D of Marhwini@socalgas.com>, "'How-Downing,  of Almiel'" <lindseyhowdowning@dwt.com>, "'Jun, Pervinca'" <chj@aelaw.com>, "' of Yávien, Barliman'" <plg@cpuc.ca.gov>, "'Telchar, Narvi'" <bsl@cpuc.ca.gov>, "'ack@aelaw.com'" <ack@aelaw.com>
+X-cc: " of Guthláf, Ecthelion J." <G of Guthláf@sempra.com>
 X-bcc: 
-nullGir
-null
-null
+X-Folder: \Susan_Scott_Dec2000_June2001_1\Notes Folders\Gir
+X-Origin: SCOTT-S
+X-FileName: sscott3.nsf
 
 I am resending this because many of you have noted to me that you never 
 received it.? It appears we are still having difficulty transmitting from 
-Arandor?? I am asking Fram son of Baran, once he receives this, to re-forward it to 
+Arandor?? I am asking Ecthelion son of Guthláf, once he receives this, to re-forward it to 
 you.? He is on a system that is working.
 
 -----Original Message----- 
-From:?? Cherry, Tolman - Beorn 
+From:?? Cherry, Alatar - Khamûl 
 Sent:?? Friday, May 05, 2000 8:05 AM 
-To:???? Cherry, Tolman - Beorn; 'AlexanMS@sce.com'; 'paulamirault@aec.ca'; 
-'hobbit-holes.caverns_of_the_oaritsi.@gerontius_took.closed_door.com'; 'Tomb@crossborderenergy.com'; 'Burkee@cts.com'; 
-'Craigc@calpine.com'; 'Belegund.Counihan@greenmountain.com'; 
+To:???? Cherry, Alatar - Khamûl; 'AlexanMS@sce.com'; 'paulamirault@aec.ca'; 
+'river_taeglin_.lake_nenuial.@emyn_beraid.closed_door.com'; 'Tomb@crossborderenergy.com'; 'Burkee@cts.com'; 
+'Craigc@calpine.com'; 'Eöl.Counihan@greenmountain.com'; 
 'Jdasovic@enron.com'; 'Mday@gmssr.com'; 'bdingwall@unitedgas.com'; 
 'Douglass@arterhadden.com'; 'eke@aelaw.com'; 'Jfawcet@enron.com'; 
 'rfoss@coral-energy.com'; 'plg@cpuc.ca.gov'; 'johnj@bcjlaw.com'; 
-'Johnson_Silmariënela@lacoe.edu'; 'karpjos@sf.whitecase.com'; 'jleslie@luce.com'; 
+'Johnson_Vairëela@lacoe.edu'; 'karpjos@sf.whitecase.com'; 'jleslie@luce.com'; 
 'kmccrea@sablaw.com'; 'jmpa@dynegy.com'; 'rmp@cpuc.ca.gov'; 
 'porterdk@sce.com'; 'RochmanM@cubjpa.org'; 'RochmanM@spurr.org'; 
-'susan.scott@enron.com'; Bór,  of Marcho - Vardamir; Durin's Stone & Bar-erib, co., Malach - TP2RSB; 
-Lumpkin, Fredegar son of Mîm; Cotton, Aragorn son of Nolondil, Malach E.;  of Nolondil, Adalgar son of Bereg; Fair, 
-Silmariën;  of Belegorn, Freca son of Lagduf - TPDBF;  of Eofor, Ed;  of Tar-Ardamin, Hanna;  of Beregar, Mark - 
-Ulfast;  of Léod, Hamson son of Grishnákh - TP1JPH; Hay, Hamson son of Eärwen,  of Holman J.; Bracegirdle, 
-Lad - Tarannon; Bergil, Rowan W - TPNWM;  of Rosa, Belegund - TP3RMM;  of Holfast, Tar-Ciryatan A.; 
-Reed, Tom son of Bill, Marmadas son of Orgulas,  of Cora;  of Boron,  of Idril S. -? TPASS; 
- of Baran, Fram J.; Surak, Gammidge M. - TP1TMS; Last Shore, J.- TPJUS;  of Bob, 
-Adalgar - TPEKT;  of Rosa, Hamson son of Rose, Jan - TP2JXV;  of Amlaith, Adalgar - 
-TP2SAW;  of Rudolph, Lobelia - TP1GXW;  of Hilda,  of Lagduf - Filibert; 'How-Downing, 
- of Nienna'; 'Jun, Eldalótë'; ' of Aredhel, Wilcome'; 'Aegnor, Damrod'; 'ack@aelaw.com'
+'_of_aldor._of_posco.@kingdom_of_dáin_&_red_mountains_entreprises.closed_door.com'; Arminas,  of Orodreth - Vidugavia; Elvet-isle & Elatan Energy Company, Rudibert - TP2RSB; 
+ of Peony, Blanco son of Asgon; Cotton, Adrahil son of Bregalad, Rudibert E.;  of Bregalad, Drogo son of Theobald; Fair, 
+Vairë;  of Thráin, Cotman son of Cottar - TPDBF;  of Bosco, Ed;  of Druda, Lobelia;  of Isilmë, Mark - 
+Aragost;  of Bolg, Fréa son of Fíli - TP1JPH; Hay, Fréa son of Baldor,  of Niënor J.; of Gamwich, 
+Lad - Boron; Valandil, Aredhel W - TPNWM;  of Tar-Telperiën, Eöl - TP3RMM;  of Galadriel, Fosco A.; 
+Reed, Elladan son of Araglas, Eönwë son of Gimilkhâd,  of Saradas;  of Malantur, Wormtongue S. -? TPASS; 
+ of Guthláf, Ecthelion J.; Surak,  of Maglor M. - TP1TMS; Last Shore, J.- TPJUS;  of Meneldor, 
+Drogo - TPEKT;  of Tar-Telperiën, Fréa son of Írildë, Jan - TP2JXV;  of Landroval, Drogo - 
+TP2SAW; Sandyman, Mairen - TP1GXW;  of Marhwini,  of Cottar - Everard; 'How-Downing, 
+ of Almiel'; 'Jun, Pervinca'; ' of Yávien, Barliman'; 'Telchar, Narvi'; 'ack@aelaw.com'
 
 Subject:??????? e-mail Alert and Testimony Finalization 
 
 As a result of the ILOVEYOU virus that was sent out yesterday, e-mail traffic 
-from and to House of Elrond & Forest under Nightshade Father & Sons, Great Fens & Forgotten Villages Services and the Moria & Beleg Cúthalion ltd. Companies was interfered with and 
+from and to Amdír & Hundar Energy Company, Aerandir & Bindbole Wood Entreprises and the Great Middle Haven & Amon Amarth ltd. Companies was interfered with and 
 was not received.? If there were substantive changes requested for Lad or 
-Siriondil's testimony, then please let me know ASAP.? I believe we are now able to 
+Odovacar's testimony, then please let me know ASAP.? I believe we are now able to 
 receive and send e-mail.
 
-After reviewing Halbarad son of Ted's order, we need to pre-mark our exhibits.? TURN 
+After reviewing Maeglin son of Belemir's order, we need to pre-mark our exhibits.? TURN 
 and SCGC will be marking their testimony and exhibits as 100-999.? The 
 Comprehensive Settlement parties will be marking their exhibits beginning 
 from 1-99.? Here's my suggestion on how the exhibits should be marked:
 
 Exhibit 1?? Comprehensive Settlement Document?? 
-Exhibit 2?? Lad Bracegirdle Testimony 
-Exhibit 3?? Siriondil Nelson Testimony 
-Exhibit 4?? Brand son of Holman Testimony 
-Exhibit 5?? Theobald son of Herion Testimony 
-Exhibit 6?? Celeborn son of Harry Testimony 
-Exhibit 7?? Belegund son of Berúthiel Testimony 
-Exhibit 8?? Arminas son of Aghan Testimony 
-Exhibit 9?? Tar-Telemmaitë son of Fëanor Testimony 
-Exhibit 10 Nienna daughter of Everard Testimony 
-Exhibit 11? Tar-TelemmaitëGardner Testimony 
+Exhibit 2?? Lad of Gamwich Testimony 
+Exhibit 3?? Odovacar Nelson Testimony 
+Exhibit 4?? Elemmírë son of Niënor Testimony 
+Exhibit 5?? Huor son of Argonui Testimony 
+Exhibit 6?? Belen son of Hamfast Testimony 
+Exhibit 7?? Eöl son of Beleg Testimony 
+Exhibit 8?? Elrond son of Erendis Testimony 
+Exhibit 9?? Celebrimbor son of Grimbold Testimony 
+Exhibit 10 Vardilmë daughter of Imrahil Testimony 
+Exhibit 11? Celebrimbor son of Uglúk Testimony 
 
 I hope I haven't left anyone out.? If we can agree on the exhibit 
 designation, mark the testimony in the upper right hand section of the front 

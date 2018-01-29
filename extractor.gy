@@ -99,21 +99,24 @@ def createSupplementaryNEList(mailList, regexMAP) {
     entityList = []
     patternDict = [:]
     for (entry in regexMap.entrySet()) {
-        Pattern p = Pattern.compile((entry.getValue()))
-        patternDict[entry.getKey()] = p
+        Pattern r = Pattern.compile((entry.getValue()))
+        patternDict[entry.getKey()] = r
     }
     for (mail in mailList) {
         neList = []
         tokenized_mail = mail[1] // [0] corresponds to path, [1] is the mail itself
-        patternDict.each { cat, p ->
+        for (patt in patternDict.entrySet()) {
+            cat = patt.getKey()
+            p = patt.getValue()
             m = p.matcher(tokenized_mail)
-            if (m.find()) {
+            while (m.find()) {
                 triple = new Triple(String, String, String)
                 triple.setFirst(cat)
                 triple.setSecond(m.group(0))
                 triple.setThird("---")
-                if (cat.equals("EMAIL"))
+                if (cat.equals("EMAIL")) {
                     triple.setThird(m.group(2) + " " + m.group(3) + " " + m.group(4) + " " + m.group(5) + " " + m.group(6))
+                }
                 neList.add(triple)
             }
         }
@@ -237,22 +240,23 @@ regexMap.load(new FileInputStream(regexMapFile))
 
 
 // CRF CLASSIFIER STANFORD CORENLP NE EXTRACTION
+println("Extracting NE with a CRF Classifier.")
 classifier = CRFClassifier.getClassifier(serializedClassifier)
 ll = createNEList(classifier, eronEmailList, genderMap)
-println("Extracting NE with a CRF Classifier")
 println "$ll.size mails tagged with a CRF CLassifier."
 println()
 
 
 // REGEX NE EXTRACTION
+println("Extracting NE with a REGEX Classifier.")
 rl = createSupplementaryNEList(eronEmailList, regexMap)
-println("Extracting NE with a REGEX Classifier")
 println "$rl.size mails tagged with a REGEX Classifier."
 println()
 
 
 // TRANSFORMATION PROCESS
 // Creating first equivalent Tolkien Entities for NE (ll) and REGEXED NE (rl)
+println("Creating Tolkien based NE.") 
 tolkienLL = createTolkienList(ll)
 tolkienRL = createTolkienList(rl)
 
@@ -260,17 +264,20 @@ tolkienRL = createTolkienList(rl)
 
 
 // Creation of list of mappings ERON TO TOLKIEN
+println("Mapping Eron NE to Tolkien based NE.") 
 eronToTolkienLL = entityMapping(ll, tolkienLL)
 eronToTolkienRL = entityMapping(rl, tolkienRL)
 
 // Creation of a partial email list with REGEXED replaced entities
+println("Preparing new emails.") 
 partialEmailList = tolkienize(eronEmailList, eronToTolkienRL)
-partialEmailList = tolkienize(partialEmailList, eronToTolkienRL)
 
 // Creation of a complete email list with CRF Classifier replaced entities
+println("Creating new emails.") 
 tolkienEmailList = tolkienize(partialEmailList, eronToTolkienLL)
 
 // Writing results to DIR in first argument
+println("Writing files to disks.") 
 writeTolkienizedMails(resultPath, tolkienEmailList)
 
 
@@ -327,8 +334,6 @@ println "${org.size()} ORGANIZATION RECOGNIZED."
 println "${loc.size()} LOCATIONS RECOGNIZED."
 println "${person.size()} PEOPLE RECOGNIZED."
 println "${email.size()} EMAILS RECOGNIZED."
-println "${url.size()} URL RECOGNIZED."
-println "${misc.size()} OTHER ENTITIES RECOGNIZED."
 println()
 
 println("End of Program.")
